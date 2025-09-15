@@ -44,7 +44,7 @@ const ComparisonSection = () => {
     <section id="comparaison" className="py-20 bg-muted/30">
       <div className="container mx-auto px-4">
         <div className="text-center space-y-4 mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground">
+          <h2 className="text-3xl md:text-5xl font-extrabold text-foreground">
             Pourquoi choisir ColisGo ?
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -53,7 +53,7 @@ const ComparisonSection = () => {
         </div>
 
         <div className="max-w-5xl mx-auto">
-          <div className="bg-card rounded-3xl p-8 card-elevation overflow-hidden">
+          <div className="bg-gray-100 rounded-3xl p-8  overflow-hidden">
             <div className="grid grid-cols-3 gap-4 mb-8">
               <div className="text-center">
                 <h3 className="text-lg font-semibold text-muted-foreground">Critères</h3>
@@ -83,7 +83,7 @@ const ComparisonSection = () => {
                       </div>
                       <span className="font-medium text-foreground">{item.feature}</span>
                     </div>
-                    
+
                     <div className="text-center">
                       {typeof item.colisgo === 'boolean' ? (
                         item.colisgo ? (
@@ -101,7 +101,7 @@ const ComparisonSection = () => {
                         </span>
                       )}
                     </div>
-                    
+
                     <div className="text-center">
                       {typeof item.traditional === 'boolean' ? (
                         item.traditional ? (

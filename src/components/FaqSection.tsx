@@ -44,10 +44,10 @@ const FaqSection = () => {
   };
 
   return (
-    <section id="faq" className="py-20 bg-muted/30">
+    <section id="faq" className="py-20 bg-indigo-100 ">
       <div className="container mx-auto px-4">
         <div className="text-center space-y-4 mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground">
+          <h2 className="text-3xl md:text-4xl font-extrabold text-foreground">
             Questions fréquentes
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -58,7 +58,7 @@ const FaqSection = () => {
         <div className="max-w-4xl mx-auto">
           <div className="space-y-4">
             {faqs.map((faq, index) => (
-              <div key={index} className="bg-card rounded-2xl card-elevation overflow-hidden animate-fade-in" style={{animationDelay: `${index * 0.1}s`}}>
+              <div key={index} className="bg-card rounded-2xl card-elevation overflow-hidden animate-fade-in" style={{ animationDelay: `${index * 0.1}s` }}>
                 <button
                   onClick={() => toggleFaq(index)}
                   className="w-full text-left p-6 hover:bg-muted/50 transition-colors focus:outline-none focus:ring-2 focus:ring-primary/20 rounded-2xl"
@@ -72,7 +72,7 @@ const FaqSection = () => {
                     </div>
                   </div>
                 </button>
-                
+
                 {openIndex === index && (
                   <div className="px-6 pb-6 animate-fade-in">
                     <div className="pt-4 border-t border-border/50">
@@ -86,7 +86,7 @@ const FaqSection = () => {
             ))}
           </div>
 
-          <div className="text-center mt-12">
+          {/* <div className="text-center mt-12">
             <div className="bg-primary/10 rounded-2xl p-6">
               <h3 className="text-xl font-bold text-foreground mb-2">
                 Une autre question ?
@@ -99,7 +99,7 @@ const FaqSection = () => {
                 <span>Contactez notre support</span>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

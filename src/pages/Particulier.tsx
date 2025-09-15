@@ -3,8 +3,10 @@ import Footer from "@/components/Footer";
 import SecuritySection from "@/components/SecuritySection";
 import FeaturesSection from "@/components/FeaturesSection";
 import FaqSection from "@/components/FaqSection";
-import { Package, MapPin, CheckCircle, Clock, Shield, Euro, Users, Smartphone } from "lucide-react";
+import { Package, MapPin, CheckCircle, Clock, Shield, Euro, Users, Smartphone, Truck, Building2, Car, User } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import deliveryImg from "@/assets/hero-delivery.jpg";
+import CtaSection from "@/components/CtaSection";
 
 const senderSteps = [
   {
@@ -77,21 +79,21 @@ const Particulier = () => {
   return (
     <div className="min-h-screen">
       <Header />
-      
+
       {/* Hero Section */}
-      <section className="pt-20 pb-16 bg-gradient-to-br from-secondary/10 via-background to-primary/10">
+      <section className="pt-20 pb-16 ">
         <div className="container mx-auto px-4">
           <div className="text-center space-y-6 mb-16">
             <div className="inline-flex items-center space-x-2 bg-secondary/10 rounded-full px-4 py-2">
               <Package className="w-5 h-5 text-secondary" />
               <span className="text-secondary font-semibold">Espace Particulier</span>
             </div>
-            <h1 className="text-4xl md:text-6xl font-bold text-foreground">
+            <h1 className="text-4xl md:text-6xl font-extrabold text-foreground">
               Envoyez vos colis
               <span className="text-secondary block">en toute simplicité</span>
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Découvrez une nouvelle façon d'envoyer vos colis : plus rapide, moins cher 
+              Découvrez une nouvelle façon d'envoyer vos colis : plus rapide, moins cher
               et plus humain grâce à notre réseau de transporteurs vérifiés.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -124,69 +126,122 @@ const Particulier = () => {
         </div>
       </section>
 
-      {/* How it Works */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center space-y-4 mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground">
-              Comment envoyer avec ColisGo ?
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              En 3 étapes simples, votre colis est entre de bonnes mains
-            </p>
-          </div>
 
-          <div className="max-w-6xl mx-auto">
-            <div className="grid md:grid-cols-3 gap-8">
-              {senderSteps.map((step, index) => {
-                const Icon = step.icon;
-                return (
-                  <div key={index} className="relative">
-                    <div className="bg-card rounded-2xl p-8 card-elevation h-full">
-                      <div className="flex items-center space-x-4 mb-6">
-                        <div className="w-12 h-12 bg-secondary rounded-xl flex items-center justify-center text-white font-bold text-lg">
-                          {step.step}
-                        </div>
-                        <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-primary/10">
-                          <Icon className="w-6 h-6 text-primary" />
-                        </div>
-                      </div>
-                      
-                      <h3 className="text-xl font-bold text-foreground mb-3">
-                        {step.title}
-                      </h3>
-                      <p className="text-muted-foreground mb-6">
-                        {step.description}
-                      </p>
-                      
-                      <ul className="space-y-2">
-                        {step.details.map((detail, detailIndex) => (
-                          <li key={detailIndex} className="flex items-center text-sm text-muted-foreground">
-                            <div className="w-1.5 h-1.5 bg-secondary rounded-full mr-3"></div>
-                            {detail}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                    
-                    {index < senderSteps.length - 1 && (
-                      <div className="hidden md:block absolute top-1/2 -right-4 transform -translate-y-1/2">
-                        <div className="w-8 h-8 bg-secondary/10 rounded-full flex items-center justify-center">
-                          <CheckCircle className="w-4 h-4 text-secondary" />
-                        </div>
-                      </div>
-                    )}
-                  </div>
-                );
-              })}
+      <div className="space-y-20 rounded-t-[200px] overflow-hidden bg-white">
+
+
+        {/* Intro section: Envoyez ou recevez simplement */}
+        <section className="py-32">
+          <div className="container mx-auto px-4">
+            <div className="grid md:grid-cols-2 gap-12 items-start max-w-6xl mx-auto">
+              {/* Left text */}
+              <div>
+                <h2 className="text-3xl md:text-4xl font-extrabold text-foreground mb-4">
+                  Envoyez ou recevez simplement !
+                </h2>
+                <div className="space-y-4 text-muted-foreground">
+                  <p>
+                    Cocolis est une solution de livraison collaborative qui s'appuie sur une communauté de livreurs particuliers et professionnels pour permettre des livraisons moins chères, plus écologiques dans des délais très courts, de presque tout, partout en France.
+                  </p>
+                  <p>
+                    Cocolis permet la livraison de tout ce qui ne passe pas par les solutions d'envoi classiques ou qui coûte trop cher à expédier : mobilier, électroménager, vaisselle, objets de déco, miroirs, matériel de jardin, équipements de loisirs, etc.
+                  </p>
+                  <p>
+                    Vous envoyez ou recevez vos objets volumineux, lourds ou fragiles à moindre coût et rapidement. Cocolis vous met en relation avec quelqu'un qui fait déjà le trajet !
+                  </p>
+                  <p>
+                    Notre service fonctionne aussi pour les professionnels : si vous êtes commerçant et que vous avez besoin d'une nouvelle solution de livraison, contactez‑nous pour avoir plus d'infos !
+                  </p>
+                </div>
+                <Button className="mt-6">Déposer une annonce</Button>
+              </div>
+
+              {/* Right image with badge */}
+              <div className="relative w-full">
+                <img
+                  src={deliveryImg}
+                  alt="Colis en livraison"
+                  className="w-full rounded-2xl object-cover shadow-md"
+                />
+                <div className="absolute -top-6 -left-6 md:-top-8 md:-left-8 bg-white text-blue-600 font-bold text-xl md:text-2xl rounded-2xl shadow-lg px-6 py-4">
+                  <span className="block leading-tight">60%<span className="text-sm font-semibold align-top"> moins cher</span></span>
+                  <span className="block text-xs text-blue-700">(en passant par nous)</span>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <SecuritySection />
-      <FeaturesSection />
-      <FaqSection />
+        {/* Profiles section */}
+        <section className="pb-4">
+          <div className="container mx-auto px-4">
+            <div className="text-center max-w-3xl mx-auto">
+              <h3 className="text-2xl md:text-3xl font-extrabold text-foreground">
+                Comment ça marche, en fonction de votre profil.
+              </h3>
+              <p className="mt-2 text-sm md:text-base text-muted-foreground">
+                Expéditeur ? Transporteur ? Particulier ou professionnel ? Découvrez la meilleure façon d'utiliser ColisGo selon vos besoins :
+              </p>
+            </div>
+
+            <div className="mt-10 grid gap-6 md:grid-cols-4">
+              {/* Card 1 */}
+              <div className="bg-card rounded-2xl p-6 text-center card-elevation">
+                <div className="mx-auto mb-4 inline-flex w-12 h-12 items-center justify-center rounded-xl bg-secondary/10">
+                  <User className="w-6 h-6 text-secondary" />
+                </div>
+                <h4 className="font-semibold text-foreground">Je suis un particulier qui expédie</h4>
+                <p className="mt-2 text-sm text-muted-foreground">
+                  Vous voulez utiliser ColisGo en tant qu'expéditeur ou destinataire d'un colis ?
+                </p>
+                <Button variant="outline" size="sm" className="mt-4">En savoir plus</Button>
+              </div>
+
+              {/* Card 2 */}
+              <div className="bg-card rounded-2xl p-6 text-center card-elevation">
+                <div className="mx-auto mb-4 inline-flex w-12 h-12 items-center justify-center rounded-xl bg-secondary/10">
+                  <Car className="w-6 h-6 text-secondary" />
+                </div>
+                <h4 className="font-semibold text-foreground">Je suis un particulier qui transporte</h4>
+                <p className="mt-2 text-sm text-muted-foreground">
+                  Vous souhaitez rentabiliser vos trajets en transportant des colis sur votre route ?
+                </p>
+                <Button variant="outline" size="sm" className="mt-4">En savoir plus</Button>
+              </div>
+
+              {/* Card 3 */}
+              <div className="bg-card rounded-2xl p-6 text-center card-elevation">
+                <div className="mx-auto mb-4 inline-flex w-12 h-12 items-center justify-center rounded-xl bg-secondary/10">
+                  <Building2 className="w-6 h-6 text-secondary" />
+                </div>
+                <h4 className="font-semibold text-foreground">Je suis une entreprise qui expédie</h4>
+                <p className="mt-2 text-sm text-muted-foreground">
+                  Vous cherchez une solution flexible et économique pour livrer vos clients ?
+                </p>
+                <Button variant="outline" size="sm" className="mt-4">En savoir plus</Button>
+              </div>
+
+              {/* Card 4 */}
+              <div className="bg-card rounded-2xl p-6 text-center card-elevation">
+                <div className="mx-auto mb-4 inline-flex w-12 h-12 items-center justify-center rounded-xl bg-secondary/10">
+                  <Truck className="w-6 h-6 text-secondary" />
+                </div>
+                <h4 className="font-semibold text-foreground">Je suis un transporteur professionnel</h4>
+                <p className="mt-2 text-sm text-muted-foreground">
+                  Vous disposez d'une licence de transport et souhaitez trouver du fret sur ColisGo ?
+                </p>
+                <Button variant="outline" size="sm" className="mt-4">En savoir plus</Button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* <SecuritySection /> */}
+        {/* <FeaturesSection /> */}
+        <FaqSection />
+        <CtaSection />
+
+      </div>
       <Footer />
     </div>
   );

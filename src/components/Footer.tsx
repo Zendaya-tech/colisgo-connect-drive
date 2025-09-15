@@ -2,7 +2,7 @@ import { Smartphone, Mail, MapPin, Clock } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="bg-secondary text-secondary-foreground">
+    <footer className="bg-black text-secondary-foreground h-[80vh]">
       <div className="container mx-auto px-4 py-12">
         <div className="grid md:grid-cols-4 gap-8">
           {/* Logo & Description */}
@@ -14,11 +14,11 @@ const Footer = () => {
               <span className="text-xl font-bold">ColisGo</span>
             </div>
             <p className="text-secondary-foreground/80 text-sm">
-              La première application de livraison collaborative qui connecte les expéditeurs, 
+              La première application de livraison collaborative qui connecte les expéditeurs,
               voyageurs et destinataires.
             </p>
           </div>
-          
+
           {/* Navigation */}
           <div>
             <h4 className="font-semibold mb-4">Navigation</h4>
@@ -28,7 +28,7 @@ const Footer = () => {
               <li><a href="#temoignages" className="text-secondary-foreground/80 hover:text-secondary-foreground transition-smooth">Témoignages</a></li>
             </ul>
           </div>
-          
+
           {/* Support */}
           <div>
             <h4 className="font-semibold mb-4">Support</h4>
@@ -39,7 +39,7 @@ const Footer = () => {
               <li><a href="#" className="text-secondary-foreground/80 hover:text-secondary-foreground transition-smooth">Conditions générales</a></li>
             </ul>
           </div>
-          
+
           {/* Contact */}
           <div>
             <h4 className="font-semibold mb-4">Contact</h4>
@@ -59,7 +59,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        
+
         <div className="border-t border-secondary-foreground/20 mt-8 pt-8 text-center">
           <p className="text-secondary-foreground/60 text-sm">
             © 2024 ColisGo. Tous droits réservés. Révolutionnons ensemble la livraison collaborative.

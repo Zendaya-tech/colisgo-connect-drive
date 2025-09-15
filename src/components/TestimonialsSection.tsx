@@ -36,10 +36,10 @@ const TestimonialsSection = () => {
             Plus de 10 000 utilisateurs nous font confiance pour leurs envois
           </p>
         </div>
-        
+
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {testimonials.map((testimonial, index) => (
-            <div key={index} className="bg-card rounded-2xl p-6 card-elevation hover-lift transition-smooth animate-fade-in" style={{animationDelay: `${index * 0.2}s`}}>
+            <div key={index} className="bg-gray-200 rounded-2xl p-6 hover-lift transition-smooth animate-fade-in" style={{ animationDelay: `${index * 0.2}s` }}>
               <div className="flex items-center mb-4">
                 <div className="text-3xl mr-3">
                   {testimonial.avatar}
@@ -53,13 +53,13 @@ const TestimonialsSection = () => {
                   </p>
                 </div>
               </div>
-              
+
               <div className="flex items-center mb-4">
                 {[...Array(testimonial.rating)].map((_, i) => (
                   <Star key={i} className="w-4 h-4 text-primary fill-current" />
                 ))}
               </div>
-              
+
               <div className="relative">
                 <Quote className="absolute -top-2 -left-2 w-6 h-6 text-primary/20" />
                 <p className="text-muted-foreground italic pl-4">
@@ -69,7 +69,7 @@ const TestimonialsSection = () => {
             </div>
           ))}
         </div>
-        
+
         <div className="text-center mt-12">
           <div className="inline-flex items-center space-x-4 bg-card rounded-2xl px-8 py-4 card-elevation">
             <div className="flex items-center space-x-1">
