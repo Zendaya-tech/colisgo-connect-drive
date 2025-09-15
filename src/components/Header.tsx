@@ -19,8 +19,8 @@ const Header = () => {
           <a href="/transporteur" className="text-muted-foreground hover:text-foreground transition-smooth">
             Transporteurs
           </a>
-          <a href="#avantages" className="text-muted-foreground hover:text-foreground transition-smooth">
-            Avantages
+          <a href="/contact" className="text-muted-foreground hover:text-foreground transition-smooth">
+            Contact
           </a>
         </nav>
         
