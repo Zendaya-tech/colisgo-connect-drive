@@ -41,7 +41,7 @@ const comparisonFeatures = [
 
 const ComparisonSection = () => {
   return (
-    <section id="comparaison" className="py-20 bg-muted/30">
+    <section id="comparaison" className="py-24">
       <div className="container mx-auto px-4">
         <div className="text-center space-y-4 mb-16">
           <h2 className="text-3xl md:text-5xl font-extrabold text-foreground">
@@ -53,7 +53,7 @@ const ComparisonSection = () => {
         </div>
 
         <div className="max-w-5xl mx-auto">
-          <div className="bg-gray-100 rounded-3xl p-8  overflow-hidden">
+          <div className="bg-card rounded-3xl p-8 card-elevation overflow-hidden">
             <div className="grid grid-cols-3 gap-4 mb-8">
               <div className="text-center">
                 <h3 className="text-lg font-semibold text-muted-foreground">Critères</h3>

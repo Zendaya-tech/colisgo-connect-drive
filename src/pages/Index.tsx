@@ -7,21 +7,29 @@ import CommunitySection from "@/components/CommunitySection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import CtaSection from "@/components/CtaSection";
 import Footer from "@/components/Footer";
+import Recommendations from "@/components/Recommendations";
+import FeaturedProperties from "@/components/FeaturedProperties";
 
 const Index = () => {
   return (
     <div className="min-h-screen">
       <Header />
       <HeroSection />
-      <div className="space-y-20 rounded-t-[200px] overflow-hidden bg-white">
+      <div className="max-w-7xl mx-auto bg-white">
         <TestimonialsSection />
         <ComparisonSection />
-        <HowItWorksSection />
-        {/* <AdvantagesSection /> */}
-        {/* <CommunitySection /> */}
+        <Recommendations />
+        <FeaturedProperties />
 
-        <CtaSection />
       </div>
+
+      <HowItWorksSection />
+
+      {/* <AdvantagesSection /> */}
+      {/* <CommunitySection /> */}
+
+      <CtaSection />
+
 
       <Footer />
     </div>

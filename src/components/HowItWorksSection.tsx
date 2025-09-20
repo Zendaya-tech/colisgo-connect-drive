@@ -3,9 +3,9 @@ import { Button } from "@/components/ui/button";
 
 const HowItWorksSection = () => {
   return (
-    <section id="fonctionnement" className="py-20 ">
+    <section id="fonctionnement" className="py-20 bg-[#f5f5ff] ">
       <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-2 gap-10 lg:gap-16 items-start max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-10 lg:gap-16 items-start max-w-7xl mx-auto">
           {/* Left: textual steps */}
           <div className="space-y-10">
             <div>
@@ -42,7 +42,7 @@ const HowItWorksSection = () => {
             <div className="w-28 h-28 mb-6 ml-auto">
               <img src="/dancing.png" alt="Mascotte" className="w-full h-full object-contain" />
             </div>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-foreground max-w-xl md:text-right">
+            <h2 className="text-4xl md:text-5xl lg:text-5xl font-extrabold tracking-tight text-foreground max-w-xl md:text-right">
               Expédier ou recevoir un colis avec Cocolis, comment ça marche ?
             </h2>
           </div>

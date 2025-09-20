@@ -26,8 +26,8 @@ const testimonials = [
 
 const TestimonialsSection = () => {
   return (
-    <section id="temoignages" className="py-20 bg-muted/30">
-      <div className="container mx-auto px-4">
+    <section id="temoignages" className="py-24 bg-muted/30">
+      <div className=" mx-auto px-4">
         <div className="text-center space-y-4 mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground">
             Ce que disent nos utilisateurs
@@ -39,7 +39,7 @@ const TestimonialsSection = () => {
 
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {testimonials.map((testimonial, index) => (
-            <div key={index} className="bg-gray-200 rounded-2xl p-6 hover-lift transition-smooth animate-fade-in" style={{ animationDelay: `${index * 0.2}s` }}>
+            <div key={index} className=" rounded-2xl p-6 hover-lift transition-smooth  bg-slate-100 animate-fade-in" style={{ animationDelay: `${index * 0.2}s` }}>
               <div className="flex items-center mb-4">
                 <div className="text-3xl mr-3">
                   {testimonial.avatar}

@@ -110,7 +110,7 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-secondary text-foreground font-euclid antialiased;
+    @apply bg-white text-foreground font-euclid antialiased;
   }
   
   html {
