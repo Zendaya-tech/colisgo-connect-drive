@@ -3,7 +3,7 @@ import Footer from "@/components/Footer";
 import SecuritySection from "@/components/SecuritySection";
 import FeaturesSection from "@/components/FeaturesSection";
 import FaqSection from "@/components/FaqSection";
-import { Package, MapPin, CheckCircle, Clock, Shield, Euro, Users, Smartphone, Truck, Building2, Car, User } from "lucide-react";
+import { Package, MapPin, CheckCircle, Clock, Shield, Euro, Users, Smartphone, Truck, Building2, Car, User, Download, PlayCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import deliveryImg from "@/assets/hero-delivery.jpg";
 import CtaSection from "@/components/CtaSection";
@@ -75,54 +75,92 @@ const senderBenefits = [
   }
 ];
 
+const types = [
+  {
+    icon: Package,
+    title: "Je suis un particulier qui expédie",
+    description: "Vous voulez utiliser ColisGo en tant qu'expéditeur ou destinataire d'un colis ?",
+  },
+  {
+    icon: Truck,
+    title: "Je suis un particulier qui transporte",
+    description: "Vous souhaitez rentabiliser vos trajets en transportant des colis sur votre route ?",
+  },
+  {
+    icon: User,
+    title: "Je suis un transporteur professionnel",
+    description: "Vous disposez d'une licence de transport et souhaitez trouver du fret sur ColisGo ?",
+  },
+  {
+    icon: Building2,
+    title: "Je suis une entreprise qui expédie",
+    description: "Vous cherchez une solution flexible et économique pour livrer vos clients ?",
+  },
+
+];
+
 const Particulier = () => {
   return (
     <div className="min-h-screen">
       <Header />
 
       {/* Hero Section */}
-      <section className="pt-20 pb-16 bg-slate-200 ">
-        <div className="container mx-auto px-4">
-          <div className="text-center space-y-6 mb-16">
-            <div className="inline-flex items-center space-x-2 bg-secondary/10 rounded-full px-4 py-2">
-              <Package className="w-5 h-5 text-secondary" />
-              <span className="text-secondary font-semibold">Espace Particulier</span>
-            </div>
-            <h1 className="text-4xl md:text-6xl font-extrabold text-foreground">
-              Envoyez vos colis
-              <span className="text-secondary block">en toute simplicité</span>
-            </h1>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Découvrez une nouvelle façon d'envoyer vos colis : plus rapide, moins cher
-              et plus humain grâce à notre réseau de transporteurs vérifiés.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Button variant="secondary" size="lg" className="text-lg px-8 py-4">
-                <Package className="w-5 h-5 mr-2" />
-                Envoyer un Colis
-              </Button>
-              <Button variant="outline" size="lg" className="text-lg px-8 py-4">
-                Calculer le Prix
-              </Button>
-            </div>
-          </div>
+      <section className="relative overflow-hidden bg-[url('/car.png')]   bg-cover bg-center" >
+        <div className="absolute z-0 inset-0 bg-blue-300/50 pointer-events-none" />
+        <div className="container mx-auto px-4 pt-32 pb-20 z-10 relative">
+          <div className="flex flex-col  justify-center">
+            <div className="space-y-8 animate-fade-in flex flex-col  justify-center">
+              <div className="space-y-4 flex flex-col  justify-center">
+                <h1 className="text-4xl md:text-6xl lg:text-5xl font-extrabold text-white leading-tight tracking-tight">
+                  Envoyez.{" "}
+                  <span className="text-primary">Voyagez.</span>{" "}
+                  <span className="text-white">Recevez.</span>
+                </h1>
+                <h2 className="text-2xl md:text-3xl text-gray-200">
+                  En toute confiance.
+                </h2>
+              </div>
 
-          {/* Stats */}
-          {/* <div className="grid md:grid-cols-4 gap-6 max-w-4xl mx-auto">
-            {senderBenefits.map((benefit, index) => {
-              const Icon = benefit.icon;
-              return (
-                <div key={index} className="bg-card rounded-2xl p-6 text-center card-elevation">
-                  <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-secondary/10 mb-4">
-                    <Icon className="w-6 h-6 text-secondary" />
-                  </div>
-                  <div className="text-2xl font-bold text-secondary mb-1">{benefit.value}</div>
-                  <div className="text-sm text-muted-foreground mb-2">{benefit.subtitle}</div>
-                  <h3 className="font-semibold text-foreground text-sm">{benefit.title}</h3>
-                </div>
-              );
-            })}
+
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Button variant="hero" size="sm" className="hero-shadow ">
+                  <Download className="w-5 h-5" />
+                  Télécharger l'app
+                </Button>
+                <Button variant="outline" size="lg" className="transition-smooth hover-lift px-8 py-6 text-lg">
+                  <PlayCircle className="w-5 h-5" />
+                  Voir la démo
+                </Button>
+              </div>
+
+              {/* <div className="flex items-center space-x-6 pt-4">
+              <div className="text-center">
+                <div className="text-2xl font-bold text-primary">10K+</div>
+                <div className="text-sm text-muted-foreground">Utilisateurs</div>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl font-bold text-primary">5K+</div>
+                <div className="text-sm text-muted-foreground">Colis livrés</div>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl font-bold text-primary">98%</div>
+                <div className="text-sm text-muted-foreground">Satisfaction</div>
+              </div>
+            </div> */}
+            </div>
+
+            {/* <div className="relative flex justify-center lg:justify-end">
+            <div className="relative w-[420px] md:w-[520px]">
+              <img
+                src={"/hero.png"}
+                alt="ColisGo - Livraison collaborative"
+                className="w-full h-auto rounded-2xl shadow-2xl animate-float"
+              />
+              <div className="absolute -top-4 -left-4 w-10 h-10 bg-primary rounded-full opacity-90 animate-pulse-slow"></div>
+              <div className="absolute -bottom-4 -right-4 w-8 h-8 bg-secondary rounded-full opacity-90 animate-pulse-slow" style={{ animationDelay: '1s' }}></div>
+            </div>
           </div> */}
+          </div>
         </div>
       </section>
 
@@ -131,49 +169,10 @@ const Particulier = () => {
 
 
         {/* Intro section: Envoyez ou recevez simplement */}
-        <section className="py-32">
-          <div className="container mx-auto px-4">
-            <div className="grid md:grid-cols-2 gap-12 items-start max-w-6xl mx-auto">
-              {/* Left text */}
-              <div>
-                <h2 className="text-3xl md:text-4xl font-extrabold text-foreground mb-4">
-                  Envoyez ou recevez simplement !
-                </h2>
-                <div className="space-y-4 text-muted-foreground">
-                  <p>
-                    Cocolis est une solution de livraison collaborative qui s'appuie sur une communauté de livreurs particuliers et professionnels pour permettre des livraisons moins chères, plus écologiques dans des délais très courts, de presque tout, partout en France.
-                  </p>
-                  <p>
-                    Cocolis permet la livraison de tout ce qui ne passe pas par les solutions d'envoi classiques ou qui coûte trop cher à expédier : mobilier, électroménager, vaisselle, objets de déco, miroirs, matériel de jardin, équipements de loisirs, etc.
-                  </p>
-                  <p>
-                    Vous envoyez ou recevez vos objets volumineux, lourds ou fragiles à moindre coût et rapidement. Cocolis vous met en relation avec quelqu'un qui fait déjà le trajet !
-                  </p>
-                  <p>
-                    Notre service fonctionne aussi pour les professionnels : si vous êtes commerçant et que vous avez besoin d'une nouvelle solution de livraison, contactez‑nous pour avoir plus d'infos !
-                  </p>
-                </div>
-                <Button className="mt-6">Déposer une annonce</Button>
-              </div>
 
-              {/* Right image with badge */}
-              <div className="relative w-full">
-                <img
-                  src={"hero.png"}
-                  alt="Colis en livraison"
-                  className="w-full rounded-2xl object-cover shadow-md"
-                />
-                <div className="absolute -top-6 -left-6 md:-top-8 md:-left-8 bg-white text-orange-600 font-bold text-xl md:text-2xl rounded-2xl shadow-lg px-6 py-4">
-                  <span className="block leading-tight">60%<span className="text-sm font-semibold align-top"> moins cher</span></span>
-                  <span className="block text-xs text-blue-700">(en passant par nous)</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
 
         {/* Profiles section */}
-        <section className="pb-4">
+        <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="text-center max-w-3xl mx-auto">
               <h3 className="text-2xl md:text-3xl font-extrabold text-foreground">
@@ -185,53 +184,28 @@ const Particulier = () => {
             </div>
 
             <div className="mt-10 grid gap-6 md:grid-cols-4">
-              {/* Card 1 */}
-              <div className="bg-card rounded-2xl p-6 text-center card-elevation">
-                <div className="mx-auto mb-4 inline-flex w-12 h-12 items-center justify-center rounded-xl bg-secondary/10">
-                  <User className="w-6 h-6 text-secondary" />
-                </div>
-                <h4 className="font-semibold text-foreground">Je suis un particulier qui expédie</h4>
-                <p className="mt-2 text-sm text-muted-foreground">
-                  Vous voulez utiliser ColisGo en tant qu'expéditeur ou destinataire d'un colis ?
-                </p>
-                <Button variant="outline" size="sm" className="mt-4">En savoir plus</Button>
-              </div>
+              {/* Cards */}
+              {
+                types.map((type, index) => (
+                  <div className="bg-gray-100 rounded-2xl p-6 text-center ">
+                    <div className="mx-auto mb-4 inline-flex w-12 h-12 items-center justify-center rounded-xl bg-secondary/10">
+                      <type.icon className="w-6 h-6 text-secondary" />
+                    </div>
+                    <h4 className="font-semibold text-foreground">{type.title}</h4>
+                    <p className="mt-2 text-sm text-muted-foreground">
+                      {type.description}
+                    </p>
+                    <Button variant="outline" size="sm" className="mt-4">En savoir plus</Button>
+                  </div>
+                ))
+              }
 
-              {/* Card 2 */}
-              <div className="bg-card rounded-2xl p-6 text-center card-elevation">
-                <div className="mx-auto mb-4 inline-flex w-12 h-12 items-center justify-center rounded-xl bg-secondary/10">
-                  <Car className="w-6 h-6 text-secondary" />
-                </div>
-                <h4 className="font-semibold text-foreground">Je suis un particulier qui transporte</h4>
-                <p className="mt-2 text-sm text-muted-foreground">
-                  Vous souhaitez rentabiliser vos trajets en transportant des colis sur votre route ?
-                </p>
-                <Button variant="outline" size="sm" className="mt-4">En savoir plus</Button>
-              </div>
+              {/* Cards */}
 
-              {/* Card 3 */}
-              <div className="bg-card rounded-2xl p-6 text-center card-elevation">
-                <div className="mx-auto mb-4 inline-flex w-12 h-12 items-center justify-center rounded-xl bg-secondary/10">
-                  <Building2 className="w-6 h-6 text-secondary" />
-                </div>
-                <h4 className="font-semibold text-foreground">Je suis une entreprise qui expédie</h4>
-                <p className="mt-2 text-sm text-muted-foreground">
-                  Vous cherchez une solution flexible et économique pour livrer vos clients ?
-                </p>
-                <Button variant="outline" size="sm" className="mt-4">En savoir plus</Button>
-              </div>
 
-              {/* Card 4 */}
-              <div className="bg-card rounded-2xl p-6 text-center card-elevation">
-                <div className="mx-auto mb-4 inline-flex w-12 h-12 items-center justify-center rounded-xl bg-secondary/10">
-                  <Truck className="w-6 h-6 text-secondary" />
-                </div>
-                <h4 className="font-semibold text-foreground">Je suis un transporteur professionnel</h4>
-                <p className="mt-2 text-sm text-muted-foreground">
-                  Vous disposez d'une licence de transport et souhaitez trouver du fret sur ColisGo ?
-                </p>
-                <Button variant="outline" size="sm" className="mt-4">En savoir plus</Button>
-              </div>
+
+
+
             </div>
           </div>
         </section>

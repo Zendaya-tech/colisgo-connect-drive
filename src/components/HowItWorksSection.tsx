@@ -32,7 +32,7 @@ const HowItWorksSection = () => {
                 Nous transmettons votre demande d'envoi à notre communauté : des voyageurs et des transporteurs dont le trajet coïncide avec votre livraison.
               </p>
             </div>
-            <Button size="lg" className="inline-flex items-center gap-2">
+            <Button size="sm" className="inline-flex items-center gap-2">
               Comment ça marche
               <ArrowRight className="w-4 h-4" />
             </Button>

@@ -9,6 +9,7 @@ import CtaSection from "@/components/CtaSection";
 import Footer from "@/components/Footer";
 import Recommendations from "@/components/Recommendations";
 import FeaturedProperties from "@/components/FeaturedProperties";
+import FaqSection from "@/components/FaqSection";
 
 const Index = () => {
   return (
@@ -17,13 +18,14 @@ const Index = () => {
       <HeroSection />
       <div className="max-w-7xl mx-auto bg-white">
         <TestimonialsSection />
-        <ComparisonSection />
+        {/* <ComparisonSection /> */}
         <Recommendations />
         <FeaturedProperties />
 
       </div>
 
       <HowItWorksSection />
+      <FaqSection />
 
       {/* <AdvantagesSection /> */}
       {/* <CommunitySection /> */}

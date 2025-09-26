@@ -1,4 +1,3 @@
-import { ChevronDown } from "lucide-react";
 import { useState } from "react";
 
 const faqs = [
@@ -37,69 +36,58 @@ const faqs = [
 ];
 
 const FaqSection = () => {
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const [expanded, setExpanded] = useState<Set<number>>(new Set());
 
-  const toggleFaq = (index: number) => {
-    setOpenIndex(openIndex === index ? null : index);
+  const toggleExpand = (index: number) => {
+    setExpanded((prev) => {
+      const next = new Set(prev);
+      if (next.has(index)) {
+        next.delete(index);
+      } else {
+        next.add(index);
+      }
+      return next;
+    });
   };
 
   return (
-    <section id="faq" className="py-20 bg-indigo-100 ">
+    <section id="faq" className="py-20 bg-indigo-100">
       <div className="container mx-auto px-4">
-        <div className="text-center space-y-4 mb-16">
-          <h2 className="text-3xl md:text-4xl font-extrabold text-foreground">
-            Questions fréquentes
+        <div className="text-center space-y-3 mb-14">
+          <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight text-foreground">
+            FAQ Covoiturage
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Toutes les réponses à vos questions sur la sécurité, les coûts et le fonctionnement de ColisGo
+            Retrouvez les réponses aux questions les plus fréquentes.
           </p>
         </div>
 
-        <div className="max-w-4xl mx-auto">
-          <div className="space-y-4">
-            {faqs.map((faq, index) => (
-              <div key={index} className="bg-card rounded-2xl card-elevation overflow-hidden animate-fade-in" style={{ animationDelay: `${index * 0.1}s` }}>
-                <button
-                  onClick={() => toggleFaq(index)}
-                  className="w-full text-left p-6 hover:bg-muted/50 transition-colors focus:outline-none focus:ring-2 focus:ring-primary/20 rounded-2xl"
+        <div className="max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-6">
+            {faqs.map((faq, index) => {
+              const isOpen = expanded.has(index);
+              return (
+                <div
+                  key={index}
+                  className="bg-gray-100 rounded-2xl border border-border/60 shadow-sm hover:shadow-md transition-shadow p-6 animate-fade-in"
+                  style={{ animationDelay: `${index * 0.05}s` }}
                 >
-                  <div className="flex items-center justify-between">
-                    <h3 className="text-lg font-semibold text-foreground pr-4">
-                      {faq.question}
-                    </h3>
-                    <div className={`transition-transform duration-200 ${openIndex === index ? 'rotate-180' : ''}`}>
-                      <ChevronDown className="w-5 h-5 text-muted-foreground" />
-                    </div>
-                  </div>
-                </button>
-
-                {openIndex === index && (
-                  <div className="px-6 pb-6 animate-fade-in">
-                    <div className="pt-4 border-t border-border/50">
-                      <p className="text-muted-foreground leading-relaxed">
-                        {faq.answer}
-                      </p>
-                    </div>
-                  </div>
-                )}
-              </div>
-            ))}
+                  <h3 className="text-lg md:text-xl font-semibold text-foreground mb-2">
+                    {faq.question}
+                  </h3>
+                  <p className={`text-muted-foreground leading-relaxed ${isOpen ? '' : 'line-clamp-3'}`}>
+                    {faq.answer}
+                  </p>
+                  <button
+                    onClick={() => toggleExpand(index)}
+                    className="mt-3 text-secondary font-semibold hover:underline focus:outline-none"
+                  >
+                    {isOpen ? 'Lire moins' : 'Lire la suite'}
+                  </button>
+                </div>
+              );
+            })}
           </div>
-
-          {/* <div className="text-center mt-12">
-            <div className="bg-primary/10 rounded-2xl p-6">
-              <h3 className="text-xl font-bold text-foreground mb-2">
-                Une autre question ?
-              </h3>
-              <p className="text-muted-foreground mb-4">
-                Notre équipe est disponible 24/7 pour vous accompagner
-              </p>
-              <div className="inline-flex items-center space-x-2 text-primary font-semibold">
-                <span>💬</span>
-                <span>Contactez notre support</span>
-              </div>
-            </div>
-          </div> */}
         </div>
       </div>
     </section>

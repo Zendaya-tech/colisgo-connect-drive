@@ -4,13 +4,13 @@ import heroImage from "@/assets/hero-delivery.jpg";
 
 const HeroSection = () => {
   return (
-    <section className="relative bg-secondary overflow-hidden">
-      <div className="absolute inset-0 from-primary/20 via-transparent pointer-events-none" />
-      <div className="container mx-auto px-4 pt-32 pb-20">
-        <div className="flex flex-col items-center justify-center">
-          <div className="space-y-8 animate-fade-in flex flex-col items-center justify-center">
-            <div className="space-y-4 flex flex-col items-center justify-center">
-              <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold text-white leading-tight tracking-tight">
+    <section className="relative overflow-hidden bg-[url('/car.png')]   bg-cover bg-center" >
+      <div className="absolute z-0 inset-0 bg-blue-300/50 pointer-events-none" />
+      <div className="container mx-auto px-4 pt-32 pb-20 z-10 relative">
+        <div className="flex flex-col  justify-center">
+          <div className="space-y-8 animate-fade-in flex flex-col  justify-center">
+            <div className="space-y-4 flex flex-col  justify-center">
+              <h1 className="text-4xl md:text-6xl lg:text-5xl font-extrabold text-white leading-tight tracking-tight">
                 Envoyez.{" "}
                 <span className="text-primary">Voyagez.</span>{" "}
                 <span className="text-white">Recevez.</span>
@@ -20,13 +20,9 @@ const HeroSection = () => {
               </h2>
             </div>
 
-            <p className="text-lg text-gray-100 max-w-lg">
-              La première application de livraison collaborative qui connecte les expéditeurs,
-              les voyageurs et les destinataires pour des envois rapides, sécurisés et économiques.
-            </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button variant="hero" size="lg" className="hero-shadow px-8 py-6 text-lg">
+              <Button variant="hero" size="sm" className="hero-shadow ">
                 <Download className="w-5 h-5" />
                 Télécharger l'app
               </Button>
