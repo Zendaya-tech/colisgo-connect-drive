@@ -10,6 +10,7 @@ import Footer from "@/components/Footer";
 import Recommendations from "@/components/Recommendations";
 import FeaturedProperties from "@/components/FeaturedProperties";
 import FaqSection from "@/components/FaqSection";
+import EcoSection from "@/components/EcoSection";
 
 const Index = () => {
   return (
@@ -25,6 +26,7 @@ const Index = () => {
       </div>
 
       <HowItWorksSection />
+      <EcoSection />
       <FaqSection />
 
       {/* <AdvantagesSection /> */}
