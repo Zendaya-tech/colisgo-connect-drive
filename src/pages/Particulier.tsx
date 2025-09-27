@@ -105,7 +105,7 @@ const Particulier = () => {
       <Header />
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-[url('/car.png')]   bg-cover bg-center" >
+      <section className="relative overflow-hidden bg-[url('/particulier.png')]   bg-cover bg-center" >
         <div className="absolute z-0 inset-0 bg-blue-300/50 pointer-events-none" />
         <div className="container mx-auto px-4 pt-32 pb-20 z-10 relative">
           <div className="flex flex-col  justify-center">
@@ -127,7 +127,7 @@ const Particulier = () => {
                   <Download className="w-5 h-5" />
                   Télécharger l'app
                 </Button>
-                <Button variant="outline" size="lg" className="transition-smooth hover-lift px-8 py-6 text-lg">
+                <Button variant="outline" size="sm" className="">
                   <PlayCircle className="w-5 h-5" />
                   Voir la démo
                 </Button>
@@ -165,7 +165,7 @@ const Particulier = () => {
       </section>
 
 
-      <div className="space-y-20 rounded-t-[200px] overflow-hidden bg-white">
+      <div className=" overflow-hidden bg-white">
 
 
         {/* Intro section: Envoyez ou recevez simplement */}

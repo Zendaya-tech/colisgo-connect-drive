@@ -26,7 +26,7 @@ const HeroSection = () => {
                 <Download className="w-5 h-5" />
                 Télécharger l'app
               </Button>
-              <Button variant="outline" size="lg" className="transition-smooth hover-lift px-8 py-6 text-lg">
+              <Button variant="outline" size="sm" className="">
                 <PlayCircle className="w-5 h-5" />
                 Voir la démo
               </Button>

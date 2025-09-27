@@ -69,7 +69,7 @@ const FaqSection = () => {
               return (
                 <div
                   key={index}
-                  className="bg-gray-100 rounded-2xl border border-border/60 shadow-sm hover:shadow-md transition-shadow p-6 animate-fade-in"
+                  className="bg-gray-100 rounded-2xl border border-border/60   transition-shadow p-6 animate-fade-in"
                   style={{ animationDelay: `${index * 0.05}s` }}
                 >
                   <h3 className="text-lg md:text-xl font-semibold text-foreground mb-2">

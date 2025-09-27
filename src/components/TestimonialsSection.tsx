@@ -71,7 +71,7 @@ const TestimonialsSection = () => {
         </div>
 
         <div className="text-center mt-12">
-          <div className="inline-flex items-center space-x-4 bg-card rounded-2xl px-8 py-4 card-elevation">
+          <div className="inline-flex items-center space-x-4 bg-gray-100  rounded-2xl px-8 py-4 ">
             <div className="flex items-center space-x-1">
               {[...Array(5)].map((_, i) => (
                 <Star key={i} className="w-5 h-5 text-primary fill-current" />

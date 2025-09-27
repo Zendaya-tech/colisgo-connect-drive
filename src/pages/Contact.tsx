@@ -9,14 +9,13 @@ const Contact = () => {
     <div className="min-h-screen">
       <Header />
 
-      <section className="relative overflow-hidden bg-[url('/car.png')]   bg-cover bg-center" >
+      <section className="relative overflow-hidden bg-[url('/contact_hero.png')]   bg-cover bg-center" >
         <div className="absolute z-0 inset-0 bg-blue-300/50 pointer-events-none" />
         <div className="container mx-auto px-4 pt-32 pb-20 z-10 relative">
           <div className="flex flex-col  justify-center">
             <div className="space-y-8 animate-fade-in flex flex-col  justify-center">
               <div className="space-y-4 flex flex-col  justify-center">
                 <h1 className="text-4xl md:text-6xl lg:text-5xl font-extrabold text-white leading-tight tracking-tight">
-                  Envoyez.{" "}
                   <span className="text-primary">Le Support</span>{" "}
                   <span className="text-white">Qui fait sourire</span>
                 </h1>
@@ -31,7 +30,7 @@ const Contact = () => {
                   <Download className="w-5 h-5" />
                   Télécharger l'app
                 </Button>
-                <Button variant="outline" size="lg" className="transition-smooth hover-lift px-8 py-6 text-lg">
+                <Button variant="outline" size="sm" className="">
                   <PlayCircle className="w-5 h-5" />
                   Voir la démo
                 </Button>
@@ -90,9 +89,6 @@ const Contact = () => {
             </div>
             <div className="relative">
               <img src={deliveryImg} alt="FAQ ColisGo" className="w-full h-[360px] md:h-[420px] object-cover rounded-3xl" />
-              <div className="absolute -top-6 -right-6 bg-white rounded-2xl px-5 py-3 shadow-lg">
-                <span className="text-2xl">🙂</span>
-              </div>
             </div>
           </div>
         </div>

@@ -8,6 +8,10 @@ import Transporteur from "./pages/Transporteur";
 import Particulier from "./pages/Particulier";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
+import QuiSommesNous from "./pages/QuiSommesNous";
+import CommentCaMarche from "./pages/CommentCaMarche";
+import CGU from "./pages/CGU";
+import MentionsLegales from "./pages/MentionsLegales";
 
 const queryClient = new QueryClient();
 
@@ -22,6 +26,10 @@ const App = () => (
           <Route path="/transporteur" element={<Transporteur />} />
           <Route path="/particulier" element={<Particulier />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/qui-sommes-nous" element={<QuiSommesNous />} />
+          <Route path="/comment-ca-marche" element={<CommentCaMarche />} />
+          <Route path="/cgu" element={<CGU />} />
+          <Route path="/mentions-legales" element={<MentionsLegales />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

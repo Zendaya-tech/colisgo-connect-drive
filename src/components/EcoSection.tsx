@@ -7,11 +7,11 @@ type EcoSectionProps = {
 
 //ecologys advantages
 const advantages: string[] = [
-    "Prix 30 à 50% moins cher que les solutions classiques",
-    "Sécurité renforcée et assurance incluse",
-    "Suivi en temps réel de vos envois",
+    "Livraison écologique",
+    "plus de 500 000 tonnes de CO2 économisées",
+    "Réduction des émissions de CO2 de 70%",
     "Flexibilité des horaires et des itinéraires",
-    "Communauté fiable avec profils vérifiés",
+
 ];
 
 export default function EcoSection({ imageSrc = "/eco.png" }: EcoSectionProps) {
