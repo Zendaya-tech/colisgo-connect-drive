@@ -21,7 +21,7 @@ const HowItWorksSection = () => {
                 Validez votre réservation
               </h3>
               <p className="mt-3 text-muted-foreground">
-                Payez en ligne et bénéficiez de l’assurance Cocolis. Cocolis est tiers de confiance : le paiement est versé au transporteur une fois le colis livré.
+                Payez en ligne et bénéficiez de l’assurance colisgo. colisgo est tiers de confiance : le paiement est versé au transporteur une fois le colis livré.
               </p>
             </div>
             <div>
@@ -43,7 +43,7 @@ const HowItWorksSection = () => {
               <img src="/dancing.png" alt="Mascotte" className="w-full h-full object-contain" />
             </div>
             <h2 className="text-4xl md:text-5xl lg:text-5xl font-extrabold tracking-tight text-foreground max-w-xl md:text-right">
-              Expédier ou recevoir un colis avec Cocolis, comment ça marche ?
+              Expédier ou recevoir un colis avec colisgo, comment ça marche ?
             </h2>
           </div>
         </div>
