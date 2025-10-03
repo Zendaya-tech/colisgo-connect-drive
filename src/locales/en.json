@@ -1,0 +1,203 @@
+{
+  "header": {
+    "particuliers": "Individuals",
+    "transporteurs": "Carriers",
+    "howItWorks": "How it works",
+    "contact": "Contact",
+    "login": "Sign in",
+    "download": "Download"
+  },
+  "hero": {
+    "badge": "#1 Collaborative delivery platform",
+    "badgeMobile": "#1 Collaborative delivery",
+    "title": "Collaborative Delivery Reinvented",
+    "subtitle": "Connect senders and travelers for economical, ecological and secure delivery",
+    "features": {
+      "cheaper": "Delivery up to 70% cheaper",
+      "tracking": "Real-time package tracking",
+      "secure": "Insurance and secure payment included"
+    },
+    "downloadApp": "Download app",
+    "watchDemo": "Watch demo",
+    "appFeatures": {
+      "sendPackage": "Send a package",
+      "sendPackageDesc": "Fast and economical",
+      "becomeCarrier": "Become a carrier",
+      "becomeCarrierDesc": "Earn while traveling",
+      "secure": "100% Secure",
+      "secureDesc": "Insurance included"
+    }
+  },
+  "eco": {
+    "badge": "Environmental impact",
+    "title": "Responsible Delivery",
+    "subtitle": "Optimize existing trips to reduce carbon footprint",
+    "stats": {
+      "co2Less": "Less CO2",
+      "tonnesSaved": "Tonnes saved",
+      "ecological": "Ecological",
+      "emptyTrips": "Empty trips"
+    },
+    "visualSection": {
+      "title": "Every trip counts",
+      "subtitle": "Transform your travels into concrete ecological actions",
+      "optimizedTrips": "Optimized trips",
+      "reducedEmissions": "Reduced emissions"
+    }
+  },
+  "testimonials": {
+    "badge": "Customer testimonials",
+    "title": "What our users say",
+    "subtitle": "More than 15,000 users trust us for their daily shipments",
+    "rating": "based on 2,347 verified reviews",
+    "reviews": [
+      {
+        "name": "Marie Dubois",
+        "role": "Student in Paris",
+        "content": "I sent a birthday gift to my sister in Belgium. The traveler was super nice and I tracked the package in real time. A wonderful experience!"
+      },
+      {
+        "name": "Thomas Martin",
+        "role": "Traveling salesman",
+        "content": "As a salesman who travels often, ColisGo allows me to supplement my income easily. The app is intuitive and customers are very grateful."
+      },
+      {
+        "name": "Sophie Chen",
+        "role": "E-commerce entrepreneur",
+        "content": "For my e-commerce, ColisGo has become essential. Fast deliveries, reduced costs and exceptional customer service. I recommend 100%!"
+      }
+    ]
+  },
+  "home": {
+    "recommendations": {
+      "title": "Recommendations",
+      "exploreDestinations": "Explore destinations",
+      "popularRoutes": "Popular routes",
+      "secureTransport": "Secure transport",
+      "fragilePackages": "Fragile packages",
+      "saveOnShipping": "Save on shipping",
+      "advantageousRates": "Advantageous rates",
+      "expressDelivery": "Express delivery",
+      "urgentPackages": "Urgent packages",
+      "watchVideo": "Video",
+      "explore": "Explore"
+    },
+    "featuredProperties": {
+      "title": "Latest",
+      "titleHighlight": "Listings",
+      "transporter": "Transporter",
+      "traveler": "Traveler",
+      "rating": "Rating",
+      "weight": "Weight",
+      "departure": "Departure",
+      "pricePerKg": "€/kg",
+      "verified": "Verified",
+      "availableSpace": "Available space",
+      "requestedSpace": "Requested space",
+      "departure": "Departure"
+    }
+  },
+  "faq": {
+    "title": "Rideshare FAQ",
+    "subtitle": "Find answers to the most frequently asked questions.",
+    "readMore": "Read more",
+    "readLess": "Read less",
+    "questions": [
+      {
+        "question": "How do you guarantee the security of my packages?",
+        "answer": "Each traveler is verified with ID. We use a secure code system for each exchange and offer comprehensive insurance. Real-time GPS tracking allows you to follow your package at any time."
+      },
+      {
+        "question": "How much does it cost to send a package with ColisGo?",
+        "answer": "Our rates are 30 to 50% lower than traditional carriers. The final price depends on distance, weight and package size. Travelers propose their rates, you choose the offer that suits you."
+      },
+      {
+        "question": "What happens if my package is lost or damaged?",
+        "answer": "All shipments are covered by our partner insurance. In case of problems, our customer service intervenes immediately. The secure code system and traveler verification considerably minimize risks."
+      },
+      {
+        "question": "How to become a ColisGo traveler?",
+        "answer": "Simply create your profile, verify your identity and indicate your usual routes. You will receive shipping proposals on your routes. It's an excellent way to monetize your existing trips."
+      },
+      {
+        "question": "In which cities is ColisGo available?",
+        "answer": "ColisGo currently covers more than 1,250 cities in Europe, with continuous expansion. Our network grows daily thanks to our growing community of travelers."
+      },
+      {
+        "question": "Can I track my package in real time?",
+        "answer": "Absolutely! Our mobile app allows you to track your package via GPS in real time. You receive notifications at each step: pickup, transit, arrival and confirmed delivery."
+      },
+      {
+        "question": "Is there a weight or size limit for packages?",
+        "answer": "Packages must be hand-portable (max 20kg) and fit in standard cabin luggage. For larger shipments, our algorithm automatically finds travelers equipped with suitable vehicles."
+      },
+      {
+        "question": "How is payment secured?",
+        "answer": "All payments go through our secure platform. The traveler is only paid after delivery confirmation by the recipient. We accept credit cards, PayPal and bank transfers."
+      }
+    ]
+  },
+  "howItWorks": {
+    "title": "Send or receive a package with colisgo, how does it work?",
+    "steps": [
+      {
+        "title": "Create a transport request",
+        "description": "Enter the characteristics of the package to send (description, dimensions and weight). Add a photo and validate the price."
+      },
+      {
+        "title": "Validate your reservation",
+        "description": "Pay online and benefit from colisgo insurance. colisgo is a trusted third party: payment is made to the carrier once the package is delivered."
+      },
+      {
+        "title": "Receive proposals",
+        "description": "We transmit your shipping request to our community: travelers and carriers whose journey coincides with your delivery."
+      }
+    ],
+    "button": "How it works",
+    "mascotAlt": "Mascot"
+  },
+  "cta": {
+    "badge": "Available on mobile",
+    "title": "ColisGo, delivery that fits in your pocket.",
+    "subtitle": "For senders and carriers. Scan the QR code and get started.",
+    "features": [
+      "Free download",
+      "Real-time tracking",
+      "100% secure payment"
+    ],
+    "getItOn": "Get it on",
+    "googlePlay": "Google Play",
+    "downloadOn": "Download on the",
+    "appStore": "App Store",
+    "qrAlt": "QR code to download the app"
+  },
+  "footer": {
+    "tagline": "The collaborative delivery platform that revolutionizes package shipping. Simple, economical and secure.",
+    "services": "Services",
+    "company": "Company",
+    "downloadApp": "Download app",
+    "followUs": "Follow us",
+    "downloadOn": "Download on",
+    "availableOn": "Available on",
+    "appStore": "App Store",
+    "googlePlay": "Google Play",
+    "links": {
+      "individuals": "For individuals",
+      "carriers": "For carriers",
+      "howItWorks": "How it works",
+      "faq": "FAQ",
+      "aboutUs": "About us",
+      "contact": "Contact",
+      "testimonials": "Testimonials",
+      "careers": "Careers"
+    },
+    "legal": {
+      "copyright": "All rights reserved.",
+      "registration": "ColisGo is registered with ORIAS under number 20002332 • Rated 4.9/5 with 15,649 reviews",
+      "terms": "Terms",
+      "privacy": "Privacy",
+      "legalNotices": "Legal notices",
+      "cookies": "Cookies"
+    }
+  }
+}

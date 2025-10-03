@@ -1,0 +1,203 @@
+{
+  "header": {
+    "particuliers": "Particuliers",
+    "transporteurs": "Transporteurs",
+    "howItWorks": "Comment ça marche",
+    "contact": "Contact",
+    "login": "Se connecter",
+    "download": "Télécharger"
+  },
+  "hero": {
+    "badge": "Plateforme #1 de livraison collaborative",
+    "badgeMobile": "#1 Livraison collaborative",
+    "title": "Livraison Collaborative Réinventée",
+    "subtitle": "Connectez expéditeurs et voyageurs pour une livraison économique, écologique et sécurisée",
+    "features": {
+      "cheaper": "Livraison jusqu'à 70% moins chère",
+      "tracking": "Suivi en temps réel de votre colis",
+      "secure": "Assurance et paiement sécurisé inclus"
+    },
+    "downloadApp": "Télécharger l'app",
+    "watchDemo": "Voir la démo",
+    "appFeatures": {
+      "sendPackage": "Envoyer un colis",
+      "sendPackageDesc": "Rapide et économique",
+      "becomeCarrier": "Devenir transporteur",
+      "becomeCarrierDesc": "Gagnez en voyageant",
+      "secure": "100% Sécurisé",
+      "secureDesc": "Assurance incluse"
+    }
+  },
+  "eco": {
+    "badge": "Impact écologique",
+    "title": "Livraison Responsable",
+    "subtitle": "Optimisez les trajets existants pour réduire l'empreinte carbone",
+    "stats": {
+      "co2Less": "CO2 en moins",
+      "tonnesSaved": "Tonnes économisées",
+      "ecological": "Écologique",
+      "emptyTrips": "Trajet à vide"
+    },
+    "visualSection": {
+      "title": "Chaque trajet compte",
+      "subtitle": "Transformez vos voyages en actions écologiques concrètes",
+      "optimizedTrips": "Trajets optimisés",
+      "reducedEmissions": "Émissions réduites"
+    }
+  },
+  "testimonials": {
+    "badge": "Témoignages clients",
+    "title": "Ce que disent nos utilisateurs",
+    "subtitle": "Plus de 15 000 utilisateurs nous font confiance pour leurs envois quotidiens",
+    "rating": "basé sur 2,347 avis vérifiés",
+    "reviews": [
+      {
+        "name": "Marie Dubois",
+        "role": "Étudiante à Paris",
+        "content": "J'ai envoyé un cadeau d'anniversaire à ma sœur en Belgique. Le voyageur était super sympa et j'ai suivi le colis en temps réel. Une expérience formidable !"
+      },
+      {
+        "name": "Thomas Martin",
+        "role": "Commercial voyageur",
+        "content": "En tant que commercial qui voyage souvent, ColisGo me permet d'arrondir mes fins de mois facilement. L'app est intuitive et les clients très reconnaissants."
+      },
+      {
+        "name": "Sophie Chen",
+        "role": "Entrepreneuse e-commerce",
+        "content": "Pour mon e-commerce, ColisGo est devenu indispensable. Livraisons rapides, coûts réduits et service client exceptionnel. Je recommande à 100% !"
+      }
+    ]
+  },
+  "home": {
+    "recommendations": {
+      "title": "Recommandations",
+      "exploreDestinations": "Explorez les destinations",
+      "popularRoutes": "Routes populaires",
+      "secureTransport": "Transport sécurisé",
+      "fragilePackages": "Colis fragiles",
+      "saveOnShipping": "Économisez sur l'expédition",
+      "advantageousRates": "Tarifs avantageux",
+      "expressDelivery": "Livraison express",
+      "urgentPackages": "Colis urgents",
+      "watchVideo": "Vidéo",
+      "explore": "Explorer"
+    },
+    "featuredProperties": {
+      "title": "Les Dernières",
+      "titleHighlight": "Annonces",
+      "transporter": "Transporteur",
+      "traveler": "Voyageur",
+      "rating": "Note",
+      "weight": "Poids",
+      "departure": "Départ",
+      "pricePerKg": "€/kg",
+      "verified": "Vérifié",
+      "availableSpace": "Espace disponible",
+      "requestedSpace": "Espace demandé",
+      "departure": "Départ"
+    }
+  },
+  "faq": {
+    "title": "FAQ Covoiturage",
+    "subtitle": "Retrouvez les réponses aux questions les plus fréquentes.",
+    "readMore": "Lire la suite",
+    "readLess": "Lire moins",
+    "questions": [
+      {
+        "question": "Comment garantissez-vous la sécurité de mes colis ?",
+        "answer": "Chaque voyageur est vérifié avec pièce d'identité. Nous utilisons un système de codes sécurisés pour chaque échange et proposons une assurance complète. Le suivi GPS en temps réel vous permet de suivre votre colis à tout moment."
+      },
+      {
+        "question": "Combien coûte l'envoi d'un colis avec ColisGo ?",
+        "answer": "Nos tarifs sont 30 à 50% inférieurs aux transporteurs traditionnels. Le prix final dépend de la distance, du poids et de la taille du colis. Les voyageurs proposent leurs tarifs, vous choisissez l'offre qui vous convient."
+      },
+      {
+        "question": "Que se passe-t-il si mon colis est perdu ou endommagé ?",
+        "answer": "Tous les envois sont couverts par notre assurance partenaire. En cas de problème, notre service client intervient immédiatement. Le système de codes sécurisés et la vérification des voyageurs minimisent considérablement les risques."
+      },
+      {
+        "question": "Comment devenir voyageur ColisGo ?",
+        "answer": "Il suffit de créer votre profil, vérifier votre identité et indiquer vos trajets habituels. Vous recevrez des propositions d'envois sur vos parcours. C'est un excellent moyen de rentabiliser vos déplacements existants."
+      },
+      {
+        "question": "Dans quelles villes ColisGo est-il disponible ?",
+        "answer": "ColisGo couvre actuellement plus de 1,250 villes en Europe, avec une expansion continue. Notre réseau s'agrandit quotidiennement grâce à notre communauté grandissante de voyageurs."
+      },
+      {
+        "question": "Puis-je suivre mon colis en temps réel ?",
+        "answer": "Absolument ! Notre application mobile vous permet de suivre votre colis via GPS en temps réel. Vous recevez des notifications à chaque étape : prise en charge, transit, arrivée et livraison confirmée."
+      },
+      {
+        "question": "Y a-t-il une limite de poids ou de taille pour les colis ?",
+        "answer": "Les colis doivent être transportables à la main (max 20kg) et tenir dans un bagage cabine standard. Pour des envois plus volumineux, notre algorithme trouve automatiquement des voyageurs équipés de véhicules adaptés."
+      },
+      {
+        "question": "Comment le paiement est-il sécurisé ?",
+        "answer": "Tous les paiements transitent par notre plateforme sécurisée. Le voyageur n'est payé qu'après confirmation de la livraison par le destinataire. Nous acceptons cartes bancaires, PayPal et virements."
+      }
+    ]
+  },
+  "howItWorks": {
+    "title": "Expédier ou recevoir un colis avec colisgo, comment ça marche ?",
+    "steps": [
+      {
+        "title": "Créez une demande de transport",
+        "description": "Renseignez les caractéristiques du colis à envoyer (description, dimensions et poids). Ajoutez une photo et validez le prix."
+      },
+      {
+        "title": "Validez votre réservation",
+        "description": "Payez en ligne et bénéficiez de l'assurance colisgo. colisgo est tiers de confiance : le paiement est versé au transporteur une fois le colis livré."
+      },
+      {
+        "title": "Recevez des propositions",
+        "description": "Nous transmettons votre demande d'envoi à notre communauté : des voyageurs et des transporteurs dont le trajet coïncide avec votre livraison."
+      }
+    ],
+    "button": "Comment ça marche",
+    "mascotAlt": "Mascotte"
+  },
+  "cta": {
+    "badge": "Disponible sur mobile",
+    "title": "ColisGo, la livraison qui tient dans la poche.",
+    "subtitle": "Pour expéditeurs et transporteurs. Scannez le QR code et démarrez.",
+    "features": [
+      "Téléchargement gratuit",
+      "Suivi en temps réel",
+      "Paiement 100% sécurisé"
+    ],
+    "getItOn": "Get it on",
+    "googlePlay": "Google Play",
+    "downloadOn": "Download on the",
+    "appStore": "App Store",
+    "qrAlt": "QR code pour télécharger l'application"
+  },
+  "footer": {
+    "tagline": "La plateforme de livraison collaborative qui révolutionne l'envoi de colis. Simple, économique et sécurisée.",
+    "services": "Services",
+    "company": "Entreprise",
+    "downloadApp": "Télécharger l'app",
+    "followUs": "Suivez-nous",
+    "downloadOn": "Télécharger sur",
+    "availableOn": "Disponible sur",
+    "appStore": "App Store",
+    "googlePlay": "Google Play",
+    "links": {
+      "individuals": "Pour les particuliers",
+      "carriers": "Pour les transporteurs",
+      "howItWorks": "Comment ça marche",
+      "faq": "Questions fréquentes",
+      "aboutUs": "Qui sommes-nous",
+      "contact": "Contact",
+      "testimonials": "Témoignages",
+      "careers": "Carrières"
+    },
+    "legal": {
+      "copyright": "Tous droits réservés.",
+      "registration": "ColisGo est enregistré à l'ORIAS sous le numéro 20002332 • Noté 4.9/5 avec 15,649 avis",
+      "terms": "CGU",
+      "privacy": "Confidentialité",
+      "legalNotices": "Mentions légales",
+      "cookies": "Cookies"
+    }
+  }
+}
