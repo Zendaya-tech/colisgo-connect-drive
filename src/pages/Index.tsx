@@ -22,10 +22,9 @@ const Index = () => {
         {/* <ComparisonSection /> */}
         <Recommendations />
         <FeaturedProperties />
-
       </div>
 
-      <HowItWorksSection />
+      {/* <HowItWorksSection /> */}
       <EcoSection />
       <FaqSection />
 
@@ -33,7 +32,6 @@ const Index = () => {
       {/* <CommunitySection /> */}
 
       <CtaSection />
-
 
       <Footer />
     </div>

@@ -209,7 +209,7 @@ export default function EcoSection() {
                       }}
                       whileHover={{ scale: 1.1 }}
                     >
-                      🌍
+                      <img src="/earth.png" />
                     </motion.div>
                   </motion.div>
 

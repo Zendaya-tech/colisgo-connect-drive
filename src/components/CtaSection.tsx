@@ -5,7 +5,7 @@ import { getTranslationArray } from "@/types/translations";
 const CtaSection = () => {
   const { t } = useTranslation();
   return (
-    <section className="relative py-20 text-white bg-indigo-950">
+    <section className="relative py-20 text-white bg-blue-900">
       <div className="container mx-auto px-4">
         <div className="grid items-center gap-10 md:grid-cols-2">
           {/* Text */}
@@ -36,7 +36,10 @@ const CtaSection = () => {
                 className="group inline-flex items-center gap-3 rounded-xl border border-orange-400/30 bg-orange-500/10 px-4 py-3 text-left transition-colors hover:bg-orange-500/20"
               >
                 <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-orange-500/20 text-orange-300">
-                  <Play className="h-4 w-4" />
+                  <img
+                    src="./store_logos/play.png"
+                    className="w-8 h-8 text-white group-hover:text-orange-400 transition-colors"
+                  />
                 </span>
                 <span className="leading-tight">
                   <span className="block text-[10px] uppercase tracking-wider text-orange-200">
@@ -53,7 +56,10 @@ const CtaSection = () => {
                 className="group inline-flex items-center gap-3 rounded-xl border border-white/20 bg-white/5 px-4 py-3 text-left transition-colors hover:bg-white/10"
               >
                 <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-white/10 text-white">
-                  <Apple className="h-4 w-4" />
+                  <img
+                    src="./store_logos/appstore.png"
+                    className="w-8 h-8 text-white group-hover:text-orange-400 transition-colors"
+                  />{" "}
                 </span>
                 <span className="leading-tight">
                   <span className="block text-[10px] uppercase tracking-wider text-white/70">

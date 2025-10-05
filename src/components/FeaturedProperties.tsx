@@ -10,7 +10,7 @@ export default function FeaturedProperties() {
         "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=300&fit=crop&crop=face",
       name: "Marie L",
       location: "Paris → New York",
-      price: "15€/kg",
+      price: "15$/kg",
       rating: "4.8",
       image:
         "https://images.unsplash.com/photo-1510915228340-29c85a43dcfe?w=400&h=300&fit=crop&crop=face",
@@ -23,7 +23,7 @@ export default function FeaturedProperties() {
         "https://images.unsplash.com/photo-1494790108755-2616b612b5bc?w=400&h=300&fit=crop&crop=face",
       name: "Thomas D",
       location: "Lyon → Tokyo",
-      price: "12€/kg",
+      price: "12$/kg",
       rating: "4.9",
       //image de meuble
       image:
@@ -37,7 +37,7 @@ export default function FeaturedProperties() {
         "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=300&fit=crop&crop=face",
       name: "Sophie E",
       location: "Marseille → Londres",
-      price: "8€/kg",
+      price: "8$/kg",
       rating: "4.7",
       //image de meuble
       image:

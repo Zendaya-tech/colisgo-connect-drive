@@ -80,7 +80,7 @@ const HeroSection = () => {
 
             {/* CTA Buttons */}
             <div
-              className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start fade-in-up"
+              className="flex gap-4 justify-center lg:justify-start fade-in-up"
               style={{ animationDelay: "0.6s" }}
             >
               <Button
@@ -95,7 +95,7 @@ const HeroSection = () => {
               <Button
                 variant="outline"
                 size="lg"
-                className="border-2 border-white/20 text-white hover:bg-white/10 backdrop-blur-sm px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-semibold transition-all duration-300 text-sm sm:text-base hover:scale-105 group"
+                className="border-2 border-white/20 text-blue-800 hover:bg-white/10 backdrop-blur-sm px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-semibold transition-all duration-300 text-sm sm:text-base hover:scale-105 group"
               >
                 <PlayCircle className="w-4 h-4 sm:w-5 sm:h-5 mr-2 group-hover:rotate-12 transition-transform duration-300" />
                 {t("hero.watchDemo")}

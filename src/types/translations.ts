@@ -4,6 +4,13 @@ export interface Step {
   description: string;
 }
 
+export interface Profile {
+  id: string;
+  title: string;
+  description: string;
+  icon: string;
+}
+
 export interface FAQ {
   question: string;
   answer: string;
@@ -15,8 +22,25 @@ export interface Testimonial {
   content: string;
 }
 
+export interface ProcessStep {
+  number: string;
+  title: string;
+  description: string;
+  icon: string;
+}
+
+export interface SecurityFeature {
+  title: string;
+  description: string;
+  icon: string;
+}
+
 export interface TranslationArrays {
   "howItWorks.steps": Step[];
+  "howItWorks.profiles": Profile[];
+  "howItWorks.steps.list": ProcessStep[];
+  "howItWorks.security.features": SecurityFeature[];
+  "howItWorks.pricing.features": string[];
   "faq.questions": FAQ[];
   "testimonials.reviews": Testimonial[];
   "cta.features": string[];

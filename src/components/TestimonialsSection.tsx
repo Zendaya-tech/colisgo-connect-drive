@@ -39,7 +39,7 @@ const TestimonialsSection = () => {
   return (
     <section
       id="temoignages"
-      className="py-24 bg-gradient-to-b from-white to-slate-50"
+      className="py-24 bg-gradient-to-b from-slate-100 rounded-lg to-slate-50"
     >
       <div className="container mx-auto px-4">
         <div className="text-center space-y-6 mb-16">
@@ -164,7 +164,7 @@ const TestimonialsSection = () => {
         </div>
 
         {/* Overall rating */}
-        <div
+        {/* <div
           className="text-center mt-16 fade-in-up"
           style={{ animationDelay: "1.4s" }}
         >
@@ -187,7 +187,7 @@ const TestimonialsSection = () => {
               </span>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );

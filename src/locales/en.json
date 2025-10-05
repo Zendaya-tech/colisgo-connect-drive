@@ -90,11 +90,10 @@
       "rating": "Rating",
       "weight": "Weight",
       "departure": "Departure",
-      "pricePerKg": "€/kg",
+      "pricePerKg": "$/kg",
       "verified": "Verified",
       "availableSpace": "Available space",
-      "requestedSpace": "Requested space",
-      "departure": "Departure"
+      "requestedSpace": "Requested space"
     }
   },
   "faq": {
@@ -121,7 +120,7 @@
       },
       {
         "question": "In which cities is ColisGo available?",
-        "answer": "ColisGo currently covers more than 1,250 cities in Europe, with continuous expansion. Our network grows daily thanks to our growing community of travelers."
+        "answer": "ColisGo currently covers more than 1,250 cities in Dollarpe, with continuous expansion. Our network grows daily thanks to our growing community of travelers."
       },
       {
         "question": "Can I track my package in real time?",
@@ -138,22 +137,96 @@
     ]
   },
   "howItWorks": {
-    "title": "Send or receive a package with colisgo, how does it work?",
-    "steps": [
+    "title": "How it works?",
+    "subtitle": "ColisGo adapts to all user profiles",
+    "profiles": [
       {
-        "title": "Create a transport request",
-        "description": "Enter the characteristics of the package to send (description, dimensions and weight). Add a photo and validate the price."
+        "id": "individual-sender",
+        "title": "I am an individual who ships",
+        "description": "Do you need to send a package quickly and safely? With ColisGo, simply post your listing indicating the departure location, destination, weight and value of your package. A traveler who is already making this trip can accept your request and transport your package. Your payment is secured via the platform and is only released once delivery is confirmed. With ColisGo, shipping becomes simple, economical and collaborative.",
+        "icon": "package"
       },
       {
-        "title": "Validate your reservation",
-        "description": "Pay online and benefit from colisgo insurance. colisgo is a trusted third party: payment is made to the carrier once the package is delivered."
+        "id": "individual-carrier",
+        "title": "I am an individual who transports",
+        "description": "Do you travel regularly between two cities and have space in your vehicle? ColisGo allows you to monetize your trips by transporting packages for shippers. Accept a listing, pick up the package and make the delivery during your usual trip. You earn money while helping others, with the guarantee of secure payment through the platform. ColisGo transforms your travels into opportunities!",
+        "icon": "car"
       },
       {
-        "title": "Receive proposals",
-        "description": "We transmit your shipping request to our community: travelers and carriers whose journey coincides with your delivery."
+        "id": "professional-carrier",
+        "title": "I am a professional carrier",
+        "description": "Do you have a transport license and are looking to optimize your routes? With ColisGo, access a customer base looking for a reliable solution to ship their packages. Fill your available trips, accept shipments corresponding to your itinerary and increase your revenue. As a professional, you benefit from increased visibility and tools adapted to manage your shipments. ColisGo becomes a partner to develop your logistics activity.",
+        "icon": "truck"
+      },
+      {
+        "id": "business-sender",
+        "title": "I am a business that ships",
+        "description": "Do you want to offer your customers a flexible and affordable delivery solution? ColisGo connects your business with travelers and carriers available to handle your shipments. Reduce your logistics costs while guaranteeing fast and secure delivery. Whether you are a merchant, e-merchant or SME, ColisGo adapts to your needs by offering you collaborative and efficient logistics. With ColisGo, delivery becomes a strategic asset for your growth.",
+        "icon": "building"
       }
     ],
-    "button": "How it works",
+    "steps": {
+      "title": "The process in 3 simple steps",
+      "subtitle": "From creating your listing to delivery",
+      "list": [
+        {
+          "number": "01",
+          "title": "Create your listing",
+          "description": "Enter your package details: origin, destination, weight, dimensions and value. Add a photo if necessary.",
+          "icon": "edit"
+        },
+        {
+          "number": "02",
+          "title": "Choose your carrier",
+          "description": "Receive proposals from verified travelers. Compare prices, reviews and choose the one that suits you.",
+          "icon": "users"
+        },
+        {
+          "number": "03",
+          "title": "Track your delivery",
+          "description": "Pay securely and track your package in real time until delivery is confirmed by the recipient.",
+          "icon": "tracking"
+        }
+      ]
+    },
+    "security": {
+      "title": "Security and trust",
+      "subtitle": "Your peace of mind is our priority",
+      "features": [
+        {
+          "title": "Identity verification",
+          "description": "All our carriers are verified with official ID",
+          "icon": "shield"
+        },
+        {
+          "title": "Insurance included",
+          "description": "Each shipment is covered by our partner insurance up to $1000",
+          "icon": "protection"
+        },
+        {
+          "title": "Secure payment",
+          "description": "Payment is only released after delivery confirmation",
+          "icon": "payment"
+        },
+        {
+          "title": "GPS tracking",
+          "description": "Track your package in real time with our geolocation system",
+          "icon": "location"
+        }
+      ]
+    },
+    "pricing": {
+      "title": "Transparent pricing",
+      "subtitle": "Fair prices for everyone",
+      "description": "Our rates are up to 70% cheaper than traditional carriers",
+      "features": [
+        "No hidden fees",
+        "Negotiable prices with carriers",
+        "Secure online payment",
+        "Refund in case of problems"
+      ]
+    },
+    "button": "Get started now",
     "mascotAlt": "Mascot"
   },
   "cta": {

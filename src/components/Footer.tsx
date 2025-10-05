@@ -1,4 +1,13 @@
-import { Package, Mail, Phone, MapPin, Download, Apple } from "lucide-react";
+import {
+  Package,
+  Mail,
+  Phone,
+  MapPin,
+  Download,
+  Apple,
+  FacebookIcon,
+  LinkedinIcon,
+} from "lucide-react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
@@ -12,10 +21,9 @@ const Footer = () => {
           {/* Brand */}
           <div className="space-y-6 lg:col-span-2">
             <div className="flex items-center space-x-3">
-              <div className="w-10 h-10 bg-gradient-to-r from-orange-500 to-orange-600 rounded-xl flex items-center justify-center">
-                <Package className="w-6 h-6 text-white" />
-              </div>
-              <span className="text-3xl font-bold font-space">ColisGo</span>
+              <span className="text-3xl font-extrabold font-space">
+                ColisGo
+              </span>
             </div>
             <p className="text-white/70 text-lg leading-relaxed max-w-md">
               {t("footer.tagline")}
@@ -69,12 +77,12 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <a
-                  href="/#faq"
+                <Link
+                  to="/#faq"
                   className="hover:text-orange-400 transition-colors duration-300"
                 >
                   {t("footer.links.faq")}
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -125,12 +133,15 @@ const Footer = () => {
             <h4 className="font-bold mb-6 text-lg font-space">
               {t("footer.downloadApp")}
             </h4>
-            <div className="space-y-4">
+            <div className="sm:flex-col flex gap-4">
               <a
                 href="#"
                 className="flex items-center gap-3 bg-white/10 hover:bg-white/20 backdrop-blur-sm rounded-xl p-3 transition-all duration-300 group"
               >
-                <Apple className="w-8 h-8 text-white group-hover:text-orange-400 transition-colors" />
+                <img
+                  src="./store_logos/appstore.png"
+                  className="w-8 h-8 text-white group-hover:text-orange-400 transition-colors"
+                />{" "}
                 <div>
                   <div className="text-xs text-white/60">
                     {t("footer.downloadOn")}
@@ -143,7 +154,10 @@ const Footer = () => {
                 href="#"
                 className="flex items-center gap-3 bg-white/10 hover:bg-white/20 backdrop-blur-sm rounded-xl p-3 transition-all duration-300 group"
               >
-                <Download className="w-8 h-8 text-white group-hover:text-orange-400 transition-colors" />
+                <img
+                  src="./store_logos/play.png"
+                  className="w-8 h-8 text-white group-hover:text-orange-400 transition-colors"
+                />
                 <div>
                   <div className="text-xs text-white/60">
                     {t("footer.availableOn")}
@@ -164,7 +178,7 @@ const Footer = () => {
                   className="w-10 h-10 bg-white/10 hover:bg-blue-600 rounded-xl flex items-center justify-center transition-all duration-300 hover:scale-110"
                   aria-label="Facebook"
                 >
-                  <span className="text-lg">📘</span>
+                  <FacebookIcon className="w-6 h-6" />
                 </a>
                 <a
                   href="https://www.linkedin.com/company/colisgoexpress"
@@ -173,21 +187,7 @@ const Footer = () => {
                   className="w-10 h-10 bg-white/10 hover:bg-blue-700 rounded-xl flex items-center justify-center transition-all duration-300 hover:scale-110"
                   aria-label="LinkedIn"
                 >
-                  <span className="text-lg">💼</span>
-                </a>
-                <a
-                  href="#"
-                  className="w-10 h-10 bg-white/10 hover:bg-pink-500 rounded-xl flex items-center justify-center transition-all duration-300 hover:scale-110"
-                  aria-label="Instagram"
-                >
-                  <span className="text-lg">📷</span>
-                </a>
-                <a
-                  href="#"
-                  className="w-10 h-10 bg-white/10 hover:bg-red-600 rounded-xl flex items-center justify-center transition-all duration-300 hover:scale-110"
-                  aria-label="YouTube"
-                >
-                  <span className="text-lg">📺</span>
+                  <LinkedinIcon className="w-6 h-6" />
                 </a>
               </div>
             </div>
@@ -202,7 +202,6 @@ const Footer = () => {
                 © {new Date().getFullYear()} ColisGo.{" "}
                 {t("footer.legal.copyright")}
               </p>
-              <p>{t("footer.legal.registration")}</p>
             </div>
 
             <nav className="text-sm">

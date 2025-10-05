@@ -1,4 +1,12 @@
-import { Mail, MessageCircle, Linkedin, Facebook, Twitter, MapPin, Clock } from "lucide-react";
+import {
+  Mail,
+  MessageCircle,
+  Linkedin,
+  Facebook,
+  Twitter,
+  MapPin,
+  Clock,
+} from "lucide-react";
 
 const contactMethods = [
   {
@@ -7,7 +15,7 @@ const contactMethods = [
     value: "contact@colisgo.com",
     description: "Réponse sous 24h",
     action: "mailto:contact@colisgo.com",
-    color: "primary"
+    color: "primary",
   },
   {
     icon: MessageCircle,
@@ -15,8 +23,8 @@ const contactMethods = [
     value: "+33 6 12 34 56 78",
     description: "Support instantané",
     action: "https://wa.me/33612345678",
-    color: "green-500"
-  }
+    color: "green-500",
+  },
 ];
 
 const socialNetworks = [
@@ -25,22 +33,22 @@ const socialNetworks = [
     name: "LinkedIn",
     handle: "@ColisGo",
     url: "https://linkedin.com/company/colisgo",
-    color: "blue-600"
+    color: "blue-600",
   },
   {
     icon: Facebook,
     name: "Facebook",
     handle: "ColisGo Officiel",
     url: "https://facebook.com/colisgo",
-    color: "blue-500"
+    color: "blue-500",
   },
   {
     icon: Twitter,
     name: "Twitter",
     handle: "@ColisGo_FR",
     url: "https://twitter.com/colisgo_fr",
-    color: "sky-500"
-  }
+    color: "sky-500",
+  },
 ];
 
 const offices = [
@@ -48,20 +56,20 @@ const offices = [
     city: "Paris",
     address: "Station F, 5 Parvis Alan Turing",
     status: "Siège social",
-    icon: "🏢"
+    icon: "🏢",
   },
   {
     city: "Lyon",
     address: "La Halle Girard, 25 Rue Louis Becker",
     status: "Bureau régional",
-    icon: "🌟"
+    icon: "🌟",
   },
   {
     city: "Marseille",
-    address: "Euromed Center, 13002",
+    address: "Dollarmed Center, 13002",
     status: "Antenne Sud",
-    icon: "☀️"
-  }
+    icon: "☀️",
+  },
 ];
 
 const ContactSection = () => {
@@ -73,7 +81,8 @@ const ContactSection = () => {
             Restons en contact
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Une question ? Un projet ? Notre équipe est à votre écoute pour vous accompagner
+            Une question ? Un projet ? Notre équipe est à votre écoute pour vous
+            accompagner
           </p>
         </div>
 
@@ -87,22 +96,26 @@ const ContactSection = () => {
                   key={index}
                   href={method.action}
                   className="block bg-card rounded-2xl p-8 card-elevation hover-lift transition-smooth text-center animate-fade-in"
-                  style={{animationDelay: `${index * 0.2}s`}}
+                  style={{ animationDelay: `${index * 0.2}s` }}
                 >
-                  <div className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl mb-6 ${
-                    method.color === 'primary' ? 'bg-primary' : `bg-${method.color}`
-                  }`}>
+                  <div
+                    className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl mb-6 ${
+                      method.color === "primary"
+                        ? "bg-primary"
+                        : `bg-${method.color}`
+                    }`}
+                  >
                     <Icon className="w-8 h-8 text-white" />
                   </div>
-                  
+
                   <h3 className="text-xl font-bold text-foreground mb-2">
                     {method.title}
                   </h3>
-                  
+
                   <p className="text-lg text-primary font-semibold mb-2">
                     {method.value}
                   </p>
-                  
+
                   <p className="text-sm text-muted-foreground">
                     {method.description}
                   </p>
@@ -133,14 +146,16 @@ const ContactSection = () => {
                     rel="noopener noreferrer"
                     className="bg-card rounded-2xl p-6 card-elevation hover-lift transition-smooth text-center"
                   >
-                    <div className={`inline-flex items-center justify-center w-12 h-12 rounded-xl bg-${network.color} mb-4`}>
+                    <div
+                      className={`inline-flex items-center justify-center w-12 h-12 rounded-xl bg-${network.color} mb-4`}
+                    >
                       <Icon className="w-6 h-6 text-white" />
                     </div>
-                    
+
                     <h4 className="font-bold text-foreground mb-1">
                       {network.name}
                     </h4>
-                    
+
                     <p className="text-sm text-muted-foreground">
                       {network.handle}
                     </p>
@@ -155,21 +170,24 @@ const ContactSection = () => {
             <h3 className="text-2xl font-bold text-foreground mb-8">
               Nos bureaux en France
             </h3>
-            
+
             <div className="grid md:grid-cols-3 gap-6">
               {offices.map((office, index) => (
-                <div key={index} className="bg-card rounded-2xl p-6 card-elevation text-center">
+                <div
+                  key={index}
+                  className="bg-card rounded-2xl p-6 card-elevation text-center"
+                >
                   <div className="text-3xl mb-3">{office.icon}</div>
-                  
+
                   <h4 className="font-bold text-foreground mb-2">
                     {office.city}
                   </h4>
-                  
+
                   <div className="flex items-center justify-center space-x-2 text-sm text-muted-foreground mb-2">
                     <MapPin className="w-4 h-4" />
                     <span>{office.address}</span>
                   </div>
-                  
+
                   <div className="inline-block bg-primary/10 text-primary text-xs font-bold px-3 py-1 rounded-full">
                     {office.status}
                   </div>

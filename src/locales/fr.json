@@ -90,11 +90,10 @@
       "rating": "Note",
       "weight": "Poids",
       "departure": "Départ",
-      "pricePerKg": "€/kg",
+      "pricePerKg": "$/kg",
       "verified": "Vérifié",
       "availableSpace": "Espace disponible",
-      "requestedSpace": "Espace demandé",
-      "departure": "Départ"
+      "requestedSpace": "Espace demandé"
     }
   },
   "faq": {
@@ -121,7 +120,7 @@
       },
       {
         "question": "Dans quelles villes ColisGo est-il disponible ?",
-        "answer": "ColisGo couvre actuellement plus de 1,250 villes en Europe, avec une expansion continue. Notre réseau s'agrandit quotidiennement grâce à notre communauté grandissante de voyageurs."
+        "answer": "ColisGo couvre actuellement plus de 1,250 villes en Dollarpe, avec une expansion continue. Notre réseau s'agrandit quotidiennement grâce à notre communauté grandissante de voyageurs."
       },
       {
         "question": "Puis-je suivre mon colis en temps réel ?",
@@ -138,22 +137,96 @@
     ]
   },
   "howItWorks": {
-    "title": "Expédier ou recevoir un colis avec colisgo, comment ça marche ?",
-    "steps": [
+    "title": "Comment ça marche ?",
+    "subtitle": "ColisGo s'adapte à tous les profils utilisateurs",
+    "profiles": [
       {
-        "title": "Créez une demande de transport",
-        "description": "Renseignez les caractéristiques du colis à envoyer (description, dimensions et poids). Ajoutez une photo et validez le prix."
+        "id": "individual-sender",
+        "title": "Je suis un particulier qui expédie",
+        "description": "Vous avez besoin d'envoyer un colis rapidement et en toute sécurité ? Avec ColisGo, publiez simplement votre annonce en indiquant le lieu de départ, la destination, le poids et la valeur de votre colis. Un voyageur qui effectue déjà ce trajet pourra accepter votre demande et transporter votre colis. Votre paiement est sécurisé via la plateforme et n'est libéré qu'une fois la livraison confirmée. Avec ColisGo, expédier devient simple, économique et collaboratif.",
+        "icon": "package"
       },
       {
-        "title": "Validez votre réservation",
-        "description": "Payez en ligne et bénéficiez de l'assurance colisgo. colisgo est tiers de confiance : le paiement est versé au transporteur une fois le colis livré."
+        "id": "individual-carrier",
+        "title": "Je suis un particulier qui transporte",
+        "description": "Vous voyagez régulièrement entre deux villes et avez de la place dans votre véhicule ? ColisGo vous permet de rentabiliser vos trajets en transportant des colis pour des expéditeurs. Acceptez une annonce, récupérez le colis et effectuez la livraison pendant votre trajet habituel. Vous gagnez de l'argent tout en rendant service, avec la garantie d'un paiement sécurisé par la plateforme. ColisGo transforme vos déplacements en opportunités !",
+        "icon": "car"
       },
       {
-        "title": "Recevez des propositions",
-        "description": "Nous transmettons votre demande d'envoi à notre communauté : des voyageurs et des transporteurs dont le trajet coïncide avec votre livraison."
+        "id": "professional-carrier",
+        "title": "Je suis un transporteur professionnel",
+        "description": "Vous disposez d'une licence de transport et cherchez à optimiser vos tournées ? Avec ColisGo, accédez à une base de clients qui recherchent une solution fiable pour expédier leurs colis. Remplissez vos trajets disponibles, acceptez les envois correspondant à votre itinéraire et augmentez vos revenus. En tant que professionnel, vous bénéficiez d'une visibilité accrue et d'outils adaptés pour gérer vos expéditions. ColisGo devient un partenaire pour développer votre activité logistique.",
+        "icon": "truck"
+      },
+      {
+        "id": "business-sender",
+        "title": "Je suis une entreprise qui expédie",
+        "description": "Vous souhaitez offrir à vos clients une solution de livraison flexible et abordable ? ColisGo met en relation votre entreprise avec des voyageurs et des transporteurs disponibles pour assurer vos expéditions. Réduisez vos coûts logistiques tout en garantissant une livraison rapide et sécurisée. Que vous soyez un commerçant, un e-commerçant ou une PME, ColisGo s'adapte à vos besoins en vous offrant une logistique collaborative et efficace. Avec ColisGo, la livraison devient un atout stratégique pour votre croissance.",
+        "icon": "building"
       }
     ],
-    "button": "Comment ça marche",
+    "steps": {
+      "title": "Le processus en 3 étapes simples",
+      "subtitle": "De la création de votre annonce à la livraison",
+      "list": [
+        {
+          "number": "01",
+          "title": "Créez votre annonce",
+          "description": "Renseignez les détails de votre colis : origine, destination, poids, dimensions et valeur. Ajoutez une photo si nécessaire.",
+          "icon": "edit"
+        },
+        {
+          "number": "02", 
+          "title": "Choisissez votre transporteur",
+          "description": "Recevez des propositions de voyageurs vérifiés. Comparez les prix, les avis et choisissez celui qui vous convient.",
+          "icon": "users"
+        },
+        {
+          "number": "03",
+          "title": "Suivez votre livraison",
+          "description": "Payez en toute sécurité et suivez votre colis en temps réel jusqu'à sa livraison confirmée par le destinataire.",
+          "icon": "tracking"
+        }
+      ]
+    },
+    "security": {
+      "title": "Sécurité et confiance",
+      "subtitle": "Votre tranquillité d'esprit est notre priorité",
+      "features": [
+        {
+          "title": "Vérification d'identité",
+          "description": "Tous nos transporteurs sont vérifiés avec pièce d'identité officielle",
+          "icon": "shield"
+        },
+        {
+          "title": "Assurance incluse",
+          "description": "Chaque envoi est couvert par notre assurance partenaire jusqu'à 1000$",
+          "icon": "protection"
+        },
+        {
+          "title": "Paiement sécurisé",
+          "description": "Le paiement n'est libéré qu'après confirmation de livraison",
+          "icon": "payment"
+        },
+        {
+          "title": "Suivi GPS",
+          "description": "Suivez votre colis en temps réel grâce à notre système de géolocalisation",
+          "icon": "location"
+        }
+      ]
+    },
+    "pricing": {
+      "title": "Tarification transparente",
+      "subtitle": "Des prix justes pour tous",
+      "description": "Nos tarifs sont jusqu'à 70% moins chers que les transporteurs traditionnels",
+      "features": [
+        "Pas de frais cachés",
+        "Prix négociables avec les transporteurs",
+        "Paiement sécurisé en ligne",
+        "Remboursement en cas de problème"
+      ]
+    },
+    "button": "Commencer maintenant",
     "mascotAlt": "Mascotte"
   },
   "cta": {

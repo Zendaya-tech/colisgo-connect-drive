@@ -17,8 +17,8 @@ const Header = () => {
       <div className="container mx-auto px-4 h-20 flex items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex items-center space-x-3 group">
-          <div className="w-10 h-10 bg-gradient-to-r from-orange-500 to-orange-600 rounded-xl flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
-            <Package className="w-6 h-6 text-white" />
+          <div className="w-12 h-12  rounded-xl flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
+            <img className="w-12 h-12 text-white" src="/logo.png" />
           </div>
           <span className="text-2xl font-bold font-space bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent">
             ColisGo
