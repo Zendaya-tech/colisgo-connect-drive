@@ -14,7 +14,7 @@ import { useTranslation } from "react-i18next";
 const Footer = () => {
   const { t } = useTranslation();
   return (
-    <footer className="bg-gradient-to-b from-slate-900 to-black text-white">
+    <footer className="bg-black text-white">
       <div className="container mx-auto px-4 py-16">
         {/* Top grid */}
         <div className="grid gap-10 lg:grid-cols-5 md:grid-cols-3">
@@ -37,11 +37,11 @@ const Footer = () => {
               </div>
               <div className="flex items-center gap-3 text-white/60">
                 <Phone className="w-4 h-4" />
-                <span className="text-sm">+33 1 23 45 67 89</span>
+                <span className="text-sm">+1 418 812 9475</span>
               </div>
               <div className="flex items-center gap-3 text-white/60">
                 <MapPin className="w-4 h-4" />
-                <span className="text-sm">Paris, France</span>
+                <span className="text-sm">Chicoutimi, Québec</span>
               </div>
             </div>
           </div>

@@ -95,9 +95,9 @@ const Contact = () => {
             </div>
             <div className="relative">
               <img
-                src={deliveryImg}
+                src={"support1.jpg"}
                 alt="FAQ ColisGo"
-                className="w-full h-[360px] md:h-[420px] object-cover rounded-3xl"
+                className="w-full   rounded-3xl"
               />
             </div>
           </div>
@@ -110,9 +110,9 @@ const Contact = () => {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="order-2 md:order-1">
               <img
-                src={deliveryImg}
+                src={"/support2.jpg"}
                 alt="Support ColisGo"
-                className="w-full h-[360px] md:h-[420px] object-cover rounded-3xl"
+                className="w-full  object-cover rounded-3xl"
               />
             </div>
             <div className="order-1 md:order-2">
@@ -125,20 +125,24 @@ const Contact = () => {
                   Un problème que vous ne pouvez pas résoudre ? Envoyez‑nous un
                   mail à
                   <a
-                    href="mailto:contact@colisgo.com"
+                    href="mailto:contact@colisgo.org"
                     className="ml-1 font-semibold text-foreground underline underline-offset-4"
                   >
-                    contact@colisgo.com
+                    contact@colisgo.org
                   </a>
                   , notre équipe se fera un plaisir de vous aider !
                 </p>
+                <p>Nous répondons dans les 24h 7j/7.</p>
                 <p>
-                  Nous répondons dans les 24h (sauf weekends et jours fériés).
-                </p>
-                <p>
-                  Notre support est basé en France, disponible du lundi au
-                  vendredi de 9h30 à 17h30. Chez ColisGo, pas de robots, que des
-                  vrais humains !
+                  Notre équipe est basée à Chicoutimi, au Québec. Support basé
+                  au Québec disponible au
+                  <a
+                    href="tel:+14188129475"
+                    className="ml-1 font-semibold text-foreground underline underline-offset-4"
+                  >
+                    +1 418 812 9475
+                  </a>
+                  . Chez ColisGo, pas de robots, que des vrais humains !
                 </p>
               </div>
             </div>
@@ -168,19 +172,19 @@ const Contact = () => {
                 <div className="flex items-center gap-3">
                   <div className="w-2 h-2 bg-orange-500 rounded-full"></div>
                   <span className="text-sm text-muted-foreground">
-                    Réponse sous 24h
+                    Réponse sous 24h 7j/7
                   </span>
                 </div>
                 <div className="flex items-center gap-3">
                   <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
                   <span className="text-sm text-muted-foreground">
-                    Support en français
+                    Support basé au Québec
                   </span>
                 </div>
                 <div className="flex items-center gap-3">
                   <div className="w-2 h-2 bg-green-500 rounded-full"></div>
                   <span className="text-sm text-muted-foreground">
-                    Équipe basée en France
+                    Équipe basée à Chicoutimi
                   </span>
                 </div>
               </div>
