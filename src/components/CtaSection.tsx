@@ -5,7 +5,7 @@ import { getTranslationArray } from "@/types/translations";
 const CtaSection = () => {
   const { t } = useTranslation();
   return (
-    <section className="relative py-20 text-white bg-blue-900">
+    <section className="relative py-20 text-white bg-blue-950">
       <div className="container mx-auto px-4">
         <div className="grid items-center gap-10 md:grid-cols-2">
           {/* Text */}
@@ -78,9 +78,7 @@ const CtaSection = () => {
             <div className="rounded-2xl border border-white/15 bg-white/5  shadow-xl">
               <div className="rounded-xl bg-white p-3">
                 <img
-                  src={`https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=${encodeURIComponent(
-                    "https://colisgo.example.com/app"
-                  )}`}
+                  src={"/qrcode.png"}
                   alt={t("cta.qrAlt")}
                   className="w-full h-auto object-contain"
                 />

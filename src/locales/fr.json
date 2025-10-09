@@ -272,5 +272,55 @@
       "legalNotices": "Mentions légales",
       "cookies": "Cookies"
     }
+  },
+  "contact": {
+    "hero": {
+      "title": "Le Support",
+      "titleHighlight": "Qui fait sourire",
+      "subtitle": "En toute confiance.",
+      "downloadApp": "Télécharger l'app",
+      "watchDemo": "Voir la démo"
+    },
+    "faq": {
+      "title": "Avant tout, consultez notre FAQ",
+      "description": "Vous avez une question sur le fonctionnement de ColisGo ? Notre FAQ est là pour ça ! Que ce soit pour le paiement, l'assurance ou d'autres infos utiles, elle répond aux questions les plus posées par nos utilisateurs.",
+      "passwordReset": "Mot de passe oublié ? Pas de panique, vous pouvez le réinitialiser ici :",
+      "resetLink": "Réinitialiser mon mot de passe",
+      "button": "Consultez la FAQ ColisGo"
+    },
+    "support": {
+      "title": "Contactez notre équipe support",
+      "description": "Un problème que vous ne pouvez pas résoudre ? Envoyez‑nous un mail à",
+      "email": "contact@colisgo.org",
+      "description2": ", notre équipe se fera un plaisir de vous aider !",
+      "responseTime": "Nous répondons dans les 24h 7j/7.",
+      "location": "Notre équipe est basée à Chicoutimi, au Québec. Support basé au Québec disponible au",
+      "phone": "+1 418 812 9475",
+      "humanSupport": ". Chez ColisGo, pas de robots, que des vrais humains !"
+    },
+    "form": {
+      "title": "Une question spécifique ?",
+      "description": "Remplissez le formulaire ci-contre et notre équipe vous répondra dans les plus brefs délais.",
+      "required": "Tous les champs marqués d'un astérisque (*) sont obligatoires.",
+      "features": {
+        "response": "Réponse sous 24h 7j/7",
+        "location": "Support basé au Québec",
+        "team": "Équipe basée à Chicoutimi"
+      },
+      "fields": {
+        "lastName": "Nom",
+        "firstName": "Prénom",
+        "email": "Email",
+        "phone": "Numéro de téléphone",
+        "message": "Message",
+        "lastNamePlaceholder": "Votre nom",
+        "firstNamePlaceholder": "Votre prénom",
+        "emailPlaceholder": "votre.email@exemple.com",
+        "phonePlaceholder": "06 12 34 56 78",
+        "messagePlaceholder": "Décrivez votre demande ou votre problème..."
+      },
+      "submit": "Envoyer le message",
+      "privacy": "En envoyant ce formulaire, vous acceptez que vos données soient utilisées pour vous recontacter dans le cadre de votre demande."
+    }
   }
 }

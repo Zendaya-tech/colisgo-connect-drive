@@ -1,10 +1,12 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import deliveryImg from "@/assets/hero-delivery.jpg";
 import { Download, PlayCircle } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 const Contact = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="min-h-screen">
       <Header />
@@ -16,52 +18,29 @@ const Contact = () => {
             <div className="space-y-8 animate-fade-in flex flex-col  justify-center">
               <div className="space-y-4 flex flex-col  justify-center">
                 <h1 className="text-4xl md:text-6xl lg:text-5xl font-extrabold text-white leading-tight tracking-tight">
-                  <span className="text-primary">Le Support</span>{" "}
-                  <span className="text-white">Qui fait sourire</span>
+                  <span className="text-primary">
+                    {t("contact.hero.title")}
+                  </span>{" "}
+                  <span className="text-white">
+                    {t("contact.hero.titleHighlight")}
+                  </span>
                 </h1>
                 <h2 className="text-2xl md:text-3xl text-gray-200">
-                  En toute confiance.
+                  {t("contact.hero.subtitle")}
                 </h2>
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button variant="hero" size="sm" className="hero-shadow ">
                   <Download className="w-5 h-5" />
-                  Télécharger l'app
+                  {t("contact.hero.downloadApp")}
                 </Button>
                 <Button variant="outline" size="sm" className="">
                   <PlayCircle className="w-5 h-5" />
-                  Voir la démo
+                  {t("contact.hero.watchDemo")}
                 </Button>
               </div>
-
-              {/* <div className="flex items-center space-x-6 pt-4">
-              <div className="text-center">
-                <div className="text-2xl font-bold text-primary">10K+</div>
-                <div className="text-sm text-muted-foreground">Utilisateurs</div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl font-bold text-primary">5K+</div>
-                <div className="text-sm text-muted-foreground">Colis livrés</div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl font-bold text-primary">98%</div>
-                <div className="text-sm text-muted-foreground">Satisfaction</div>
-              </div>
-            </div> */}
             </div>
-
-            {/* <div className="relative flex justify-center lg:justify-end">
-            <div className="relative w-[420px] md:w-[520px]">
-              <img
-                src={"/hero.png"}
-                alt="ColisGo - Livraison collaborative"
-                className="w-full h-auto rounded-2xl shadow-2xl animate-float"
-              />
-              <div className="absolute -top-4 -left-4 w-10 h-10 bg-primary rounded-full opacity-90 animate-pulse-slow"></div>
-              <div className="absolute -bottom-4 -right-4 w-8 h-8 bg-secondary rounded-full opacity-90 animate-pulse-slow" style={{ animationDelay: '1s' }}></div>
-            </div>
-          </div> */}
           </div>
         </div>
       </section>
@@ -72,26 +51,19 @@ const Contact = () => {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <h1 className="text-4xl md:text-6xl font-extrabold text-foreground leading-tight mb-6">
-                Avant tout,
-                <br /> consultez notre FAQ
+                {t("contact.faq.title")}
               </h1>
               <div className="space-y-4 text-muted-foreground">
+                <p>{t("contact.faq.description")}</p>
                 <p>
-                  Vous avez une question sur le fonctionnement de ColisGo ?
-                  Notre FAQ est là pour ça ! Que ce soit pour le paiement,
-                  l’assurance ou d'autres infos utiles, elle répond aux
-                  questions les plus posées par nos utilisateurs.
-                </p>
-                <p>
-                  Mot de passe oublié ? Pas de panique, vous pouvez le
-                  réinitialiser ici :
+                  {t("contact.faq.passwordReset")}
                   <span className="ml-1 font-semibold text-foreground underline underline-offset-4">
-                    Réinitialiser mon mot de passe
+                    {t("contact.faq.resetLink")}
                   </span>
                   .
                 </p>
               </div>
-              <Button className="mt-6">Consultez la FAQ ColisGo</Button>
+              <Button className="mt-6">{t("contact.faq.button")}</Button>
             </div>
             <div className="relative">
               <img
@@ -117,32 +89,29 @@ const Contact = () => {
             </div>
             <div className="order-1 md:order-2">
               <h2 className="text-4xl md:text-6xl font-extrabold text-foreground leading-tight mb-6">
-                Contactez notre
-                <br /> équipe support
+                {t("contact.support.title")}
               </h2>
               <div className="space-y-4 text-muted-foreground">
                 <p>
-                  Un problème que vous ne pouvez pas résoudre ? Envoyez‑nous un
-                  mail à
+                  {t("contact.support.description")}
                   <a
                     href="mailto:contact@colisgo.org"
                     className="ml-1 font-semibold text-foreground underline underline-offset-4"
                   >
-                    contact@colisgo.org
+                    {t("contact.support.email")}
                   </a>
-                  , notre équipe se fera un plaisir de vous aider !
+                  {t("contact.support.description2")}
                 </p>
-                <p>Nous répondons dans les 24h 7j/7.</p>
+                <p>{t("contact.support.responseTime")}</p>
                 <p>
-                  Notre équipe est basée à Chicoutimi, au Québec. Support basé
-                  au Québec disponible au
+                  {t("contact.support.location")}
                   <a
                     href="tel:+14188129475"
                     className="ml-1 font-semibold text-foreground underline underline-offset-4"
                   >
-                    +1 418 812 9475
+                    {t("contact.support.phone")}
                   </a>
-                  . Chez ColisGo, pas de robots, que des vrais humains !
+                  {t("contact.support.humanSupport")}
                 </p>
               </div>
             </div>
@@ -156,35 +125,30 @@ const Contact = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-start">
             <div>
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-                Une question spécifique ?
+                {t("contact.form.title")}
               </h2>
               <div className="space-y-4 text-muted-foreground">
-                <p>
-                  Remplissez le formulaire ci-contre et notre équipe vous
-                  répondra dans les plus brefs délais.
-                </p>
-                <p>
-                  Tous les champs marqués d'un astérisque (*) sont obligatoires.
-                </p>
+                <p>{t("contact.form.description")}</p>
+                <p>{t("contact.form.required")}</p>
               </div>
 
               <div className="mt-8 space-y-4">
                 <div className="flex items-center gap-3">
                   <div className="w-2 h-2 bg-orange-500 rounded-full"></div>
                   <span className="text-sm text-muted-foreground">
-                    Réponse sous 24h 7j/7
+                    {t("contact.form.features.response")}
                   </span>
                 </div>
                 <div className="flex items-center gap-3">
                   <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
                   <span className="text-sm text-muted-foreground">
-                    Support basé au Québec
+                    {t("contact.form.features.location")}
                   </span>
                 </div>
                 <div className="flex items-center gap-3">
                   <div className="w-2 h-2 bg-green-500 rounded-full"></div>
                   <span className="text-sm text-muted-foreground">
-                    Équipe basée à Chicoutimi
+                    {t("contact.form.features.team")}
                   </span>
                 </div>
               </div>
@@ -198,7 +162,7 @@ const Contact = () => {
                       htmlFor="nom"
                       className="block text-sm font-medium text-gray-700 mb-2"
                     >
-                      Nom *
+                      {t("contact.form.fields.lastName")} *
                     </label>
                     <input
                       type="text"
@@ -206,7 +170,7 @@ const Contact = () => {
                       name="nom"
                       required
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-colors"
-                      placeholder="Votre nom"
+                      placeholder={t("contact.form.fields.lastNamePlaceholder")}
                     />
                   </div>
                   <div>
@@ -214,7 +178,7 @@ const Contact = () => {
                       htmlFor="prenom"
                       className="block text-sm font-medium text-gray-700 mb-2"
                     >
-                      Prénom *
+                      {t("contact.form.fields.firstName")} *
                     </label>
                     <input
                       type="text"
@@ -222,7 +186,9 @@ const Contact = () => {
                       name="prenom"
                       required
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-colors"
-                      placeholder="Votre prénom"
+                      placeholder={t(
+                        "contact.form.fields.firstNamePlaceholder"
+                      )}
                     />
                   </div>
                 </div>
@@ -232,7 +198,7 @@ const Contact = () => {
                     htmlFor="email"
                     className="block text-sm font-medium text-gray-700 mb-2"
                   >
-                    Email *
+                    {t("contact.form.fields.email")} *
                   </label>
                   <input
                     type="email"
@@ -240,7 +206,7 @@ const Contact = () => {
                     name="email"
                     required
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-colors"
-                    placeholder="votre.email@exemple.com"
+                    placeholder={t("contact.form.fields.emailPlaceholder")}
                   />
                 </div>
 
@@ -249,14 +215,14 @@ const Contact = () => {
                     htmlFor="telephone"
                     className="block text-sm font-medium text-gray-700 mb-2"
                   >
-                    Numéro de téléphone
+                    {t("contact.form.fields.phone")}
                   </label>
                   <input
                     type="tel"
                     id="telephone"
                     name="telephone"
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-colors"
-                    placeholder="06 12 34 56 78"
+                    placeholder={t("contact.form.fields.phonePlaceholder")}
                   />
                 </div>
 
@@ -265,7 +231,7 @@ const Contact = () => {
                     htmlFor="message"
                     className="block text-sm font-medium text-gray-700 mb-2"
                   >
-                    Message *
+                    {t("contact.form.fields.message")} *
                   </label>
                   <textarea
                     id="message"
@@ -273,7 +239,7 @@ const Contact = () => {
                     required
                     rows={5}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-colors resize-none"
-                    placeholder="Décrivez votre demande ou votre problème..."
+                    placeholder={t("contact.form.fields.messagePlaceholder")}
                   ></textarea>
                 </div>
 
@@ -281,13 +247,11 @@ const Contact = () => {
                   type="submit"
                   className="w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold py-3 px-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
                 >
-                  Envoyer le message
+                  {t("contact.form.submit")}
                 </Button>
 
                 <p className="text-xs text-gray-500 text-center">
-                  En envoyant ce formulaire, vous acceptez que vos données
-                  soient utilisées pour vous recontacter dans le cadre de votre
-                  demande.
+                  {t("contact.form.privacy")}
                 </p>
               </form>
             </div>

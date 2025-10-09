@@ -272,5 +272,55 @@
       "legalNotices": "Legal notices",
       "cookies": "Cookies"
     }
+  },
+  "contact": {
+    "hero": {
+      "title": "Support",
+      "titleHighlight": "That Makes You Smile",
+      "subtitle": "With complete confidence.",
+      "downloadApp": "Download app",
+      "watchDemo": "Watch demo"
+    },
+    "faq": {
+      "title": "First, check our FAQ",
+      "description": "Do you have a question about how ColisGo works? Our FAQ is there for that! Whether it's about payment, insurance or other useful info, it answers the most asked questions by our users.",
+      "passwordReset": "Forgot your password? Don't panic, you can reset it here:",
+      "resetLink": "Reset my password",
+      "button": "Check ColisGo FAQ"
+    },
+    "support": {
+      "title": "Contact our support team",
+      "description": "A problem you can't solve? Send us an email at",
+      "email": "contact@colisgo.org",
+      "description2": ", our team will be happy to help you!",
+      "responseTime": "We respond within 24h 7/7.",
+      "location": "Our team is based in Chicoutimi, Quebec. Quebec-based support available at",
+      "phone": "+1 418 812 9475",
+      "humanSupport": ". At ColisGo, no robots, only real humans!"
+    },
+    "form": {
+      "title": "A specific question?",
+      "description": "Fill out the form opposite and our team will respond to you as soon as possible.",
+      "required": "All fields marked with an asterisk (*) are required.",
+      "features": {
+        "response": "Response within 24h 7/7",
+        "location": "Quebec-based support",
+        "team": "Team based in Chicoutimi"
+      },
+      "fields": {
+        "lastName": "Last Name",
+        "firstName": "First Name",
+        "email": "Email",
+        "phone": "Phone Number",
+        "message": "Message",
+        "lastNamePlaceholder": "Your last name",
+        "firstNamePlaceholder": "Your first name",
+        "emailPlaceholder": "your.email@example.com",
+        "phonePlaceholder": "06 12 34 56 78",
+        "messagePlaceholder": "Describe your request or problem..."
+      },
+      "submit": "Send message",
+      "privacy": "By sending this form, you agree that your data will be used to contact you regarding your request."
+    }
   }
 }
