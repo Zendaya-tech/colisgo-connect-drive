@@ -217,13 +217,33 @@ const Contact = () => {
                   >
                     {t("contact.form.fields.phone")}
                   </label>
-                  <input
-                    type="tel"
-                    id="telephone"
-                    name="telephone"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-colors"
-                    placeholder={t("contact.form.fields.phonePlaceholder")}
-                  />
+                  <div className="flex gap-2">
+                    <select
+                      className="px-3 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-colors bg-white"
+                      defaultValue="+1"
+                    >
+                      <option value="+1">🇨🇦 +1</option>
+                      <option value="+33">🇫🇷 +33</option>
+                      <option value="+32">🇧🇪 +32</option>
+                      <option value="+41">🇨🇭 +41</option>
+                      <option value="+49">🇩🇪 +49</option>
+                      <option value="+44">🇬🇧 +44</option>
+                      <option value="+39">🇮🇹 +39</option>
+                      <option value="+34">🇪🇸 +34</option>
+                      <option value="+31">🇳🇱 +31</option>
+                    </select>
+                    <input
+                      type="tel"
+                      id="telephone"
+                      name="telephone"
+                      className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-colors"
+                      placeholder="(418) 812-9475"
+                    />
+                  </div>
+                  <p className="text-xs text-gray-500 mt-1">
+                    Format Canada: (XXX) XXX-XXXX • Format France: XX XX XX XX
+                    XX
+                  </p>
                 </div>
 
                 <div>
