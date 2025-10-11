@@ -316,7 +316,7 @@
         "lastNamePlaceholder": "Your last name",
         "firstNamePlaceholder": "Your first name",
         "emailPlaceholder": "your.email@example.com",
-        "phonePlaceholder": "06 12 34 56 78",
+        "phonePlaceholder": "(418) 812-9475",
         "messagePlaceholder": "Describe your request or problem..."
       },
       "submit": "Send message",

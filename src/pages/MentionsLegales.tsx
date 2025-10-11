@@ -28,14 +28,6 @@ const MentionsLegales = () => {
                   <li>
                     <strong>Siège social :</strong> Chicoutimi, Québec, Canada
                   </li>
-                  <li>
-                    <strong>Numéro d'entreprise du Québec (NEQ) :</strong> [À
-                    compléter]
-                  </li>
-                  <li>
-                    <strong>Directeur de la publication :</strong> [Nom du
-                    directeur]
-                  </li>
                 </ul>
               </div>
             </section>
@@ -82,22 +74,25 @@ const MentionsLegales = () => {
               <div className="bg-gray-50 p-4 rounded-lg">
                 <ul className="space-y-2 text-gray-700">
                   <li>
-                    <strong>Hébergeur :</strong> Vercel Inc.
+                    <strong>Hébergeur :</strong> LWS (Line Web Services)
                   </li>
                   <li>
-                    <strong>Adresse :</strong> 340 S Lemon Ave #4133, Walnut, CA
-                    91789, États-Unis
+                    <strong>Adresse :</strong> 4 rue Galvani, 75017 Paris,
+                    France
                   </li>
                   <li>
                     <strong>Site web :</strong>{" "}
                     <a
-                      href="https://vercel.com"
+                      href="https://www.lws.fr"
                       className="text-blue-600 hover:underline"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      vercel.com
+                      lws.fr
                     </a>
+                  </li>
+                  <li>
+                    <strong>Téléphone :</strong> +33 1 77 62 30 03
                   </li>
                 </ul>
               </div>
