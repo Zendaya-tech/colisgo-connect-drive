@@ -7,6 +7,10 @@
     "login": "Se connecter",
     "download": "Télécharger"
   },
+  "languages": {
+    "fr": "Français",
+    "en": "English"
+  },
   "hero": {
     "badge": "Plateforme #1 de livraison collaborative",
     "badgeMobile": "#1 Livraison collaborative",
@@ -120,7 +124,7 @@
       },
       {
         "question": "Dans quelles villes ColisGo est-il disponible ?",
-        "answer": "ColisGo couvre actuellement plus de 1,250 villes en Canada, avec une expansion continue. Notre réseau s'agrandit quotidiennement grâce à notre communauté grandissante de voyageurs."
+        "answer": "ColisGo couvre actuellement plus de 1,250 villes au Canada, avec une expansion continue. Notre réseau s'agrandit quotidiennement grâce à notre communauté grandissante de voyageurs."
       },
       {
         "question": "Puis-je suivre mon colis en temps réel ?",
@@ -273,6 +277,10 @@
       "cookies": "Cookies"
     }
   },
+  "languages": {
+    "fr": "Français",
+    "en": "English"
+  },
   "contact": {
     "hero": {
       "title": "Le Support",
@@ -319,6 +327,7 @@
         "phonePlaceholder": "(418) 812-9475",
         "messagePlaceholder": "Décrivez votre demande ou votre problème..."
       },
+      "phoneFormat": "Sélectionnez votre pays et entrez votre numéro de téléphone",
       "submit": "Envoyer le message",
       "sending": "Envoi en cours...",
       "success": "Votre message a été envoyé avec succès ! Nous vous répondrons dans les plus brefs délais.",

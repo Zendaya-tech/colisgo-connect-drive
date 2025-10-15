@@ -1,0 +1,112 @@
+import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
+import { useLanguage } from "@/hooks/useLanguage";
+
+interface Language {
+  code: string;
+  name: string;
+  countryCode: string;
+}
+
+export default function LanguageDropdown() {
+  const [isOpen, setIsOpen] = useState(false);
+  const { t } = useTranslation();
+  const { currentLanguage, changeLanguage } = useLanguage();
+
+  const languages: Language[] = [
+    { code: "fr", name: t("languages.fr"), countryCode: "FR" },
+    { code: "en", name: t("languages.en"), countryCode: "GB" },
+  ];
+
+  const currentLang =
+    languages.find((lang) => lang.code === currentLanguage) || languages[0];
+
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      const target = event.target as Element;
+      if (isOpen && !target.closest(".language-dropdown")) {
+        setIsOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, [isOpen]);
+
+  const handleLanguageSelect = (languageCode: string) => {
+    changeLanguage(languageCode);
+    setIsOpen(false);
+  };
+
+  return (
+    <div className="relative language-dropdown">
+      <button
+        onClick={() => setIsOpen(!isOpen)}
+        className="text-slate-700 hover:text-orange-500 px-3 py-2 rounded-xl hover:bg-slate-50 transition-all duration-300 flex items-center gap-2 font-medium text-sm border border-slate-200 shadow-sm hover:shadow-md"
+      >
+        <img
+          src={`https://purecatamphetamine.github.io/country-flag-icons/3x2/${currentLang.countryCode}.svg`}
+          alt={currentLang.name}
+          className="w-5 h-4 object-cover rounded-sm"
+        />
+
+        <span>{currentLang.name}</span>
+        <svg
+          className={`w-4 h-4 text-slate-500 transition-transform duration-300 ${
+            isOpen ? "rotate-180" : ""
+          }`}
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+        >
+          <path
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M6 9l6 6 6-6"
+          />
+        </svg>
+      </button>
+
+      {/* Language Menu Dropdown */}
+      {isOpen && (
+        <div className="absolute top-full right-0 mt-2 w-48 bg-white rounded-xl shadow-xl border border-slate-200 py-2 z-50 backdrop-blur-md">
+          {languages.map((language) => (
+            <button
+              key={language.code}
+              onClick={() => handleLanguageSelect(language.code)}
+              className={`w-full px-4 py-3 text-left hover:bg-slate-50 transition-colors duration-300 flex items-center gap-3 ${
+                currentLanguage === language.code
+                  ? "bg-orange-50 text-orange-600"
+                  : "text-slate-700"
+              }`}
+            >
+              <img
+                src={`https://purecatamphetamine.github.io/country-flag-icons/3x2/${language.countryCode}.svg`}
+                alt={language.name}
+                className="w-5 h-4 object-cover rounded-sm"
+              />
+              <span className="font-medium">{language.name}</span>
+              {currentLanguage === language.code && (
+                <svg
+                  className="w-4 h-4 ml-auto text-orange-600"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+              )}
+            </button>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}

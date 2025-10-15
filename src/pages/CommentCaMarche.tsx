@@ -32,19 +32,17 @@ const profiles = [
         icon: Edit3,
         title: "Créez votre annonce",
         description:
-          "Décrivez votre colis : origine, destination, poids, dimensions et valeur.",
+          "Décrivez votre colis : origine, destination, poids, dimensions et proposez un prix.",
       },
       {
         icon: Users,
-        title: "Recevez des propositions",
-        description:
-          "Les voyageurs disponibles vous proposent leurs services avec leurs tarifs.",
+        title: "transporteur intéressés",
+        description: "Les transporteurs manifestent leur intéret",
       },
       {
         icon: CreditCard,
         title: "Payez en sécurité",
-        description:
-          "Choisissez votre transporteur et payez via notre plateforme sécurisée.",
+        description: "payez via notre plateforme sécurisée.",
       },
       {
         icon: MapPin,

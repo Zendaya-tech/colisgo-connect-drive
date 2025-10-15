@@ -7,6 +7,10 @@
     "login": "Sign in",
     "download": "Download"
   },
+  "languages": {
+    "fr": "Français",
+    "en": "English"
+  },
   "hero": {
     "badge": "#1 Collaborative delivery platform",
     "badgeMobile": "#1 Collaborative delivery",
@@ -273,6 +277,10 @@
       "cookies": "Cookies"
     }
   },
+  "languages": {
+    "fr": "Français",
+    "en": "English"
+  },
   "contact": {
     "hero": {
       "title": "Support",
@@ -319,6 +327,7 @@
         "phonePlaceholder": "(418) 812-9475",
         "messagePlaceholder": "Describe your request or problem..."
       },
+      "phoneFormat": "Select your country and enter your phone number",
       "submit": "Send message",
       "sending": "Sending...",
       "success": "Your message has been sent successfully! We will respond to you as soon as possible.",

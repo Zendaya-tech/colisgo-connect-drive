@@ -5,6 +5,8 @@ import { Download, PlayCircle } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
+import PhoneInput from "react-phone-number-input";
+import "react-phone-number-input/style.css";
 
 const Contact = () => {
   const { t } = useTranslation();
@@ -13,6 +15,7 @@ const Contact = () => {
   const [submitStatus, setSubmitStatus] = useState<
     "idle" | "success" | "error"
   >("idle");
+  const [phoneValue, setPhoneValue] = useState<string | undefined>();
 
   const sendEmail = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -23,13 +26,14 @@ const Contact = () => {
 
     try {
       await emailjs.sendForm(
-        "colisgo", // Your service ID
+        "service_g9rp5js", // Your service ID
         "template_6xelug6", // You'll need to create a template in EmailJS and replace this
         form.current,
         "1RZnInwGiX02JlF0L" // You'll need to add your public key from EmailJS
       );
       setSubmitStatus("success");
       form.current.reset();
+      setPhoneValue(undefined);
     } catch (error) {
       console.error("EmailJS error:", error);
       setSubmitStatus("error");
@@ -262,33 +266,23 @@ const Contact = () => {
                   >
                     {t("contact.form.fields.phone")}
                   </label>
-                  <div className="flex gap-2">
-                    <select
-                      name="country_code"
-                      className="px-3 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-colors bg-white"
-                      defaultValue="+1"
-                    >
-                      <option value="+1">🇨🇦 +1</option>
-                      <option value="+33">🇫🇷 +33</option>
-                      <option value="+32">🇧🇪 +32</option>
-                      <option value="+41">🇨🇭 +41</option>
-                      <option value="+49">🇩🇪 +49</option>
-                      <option value="+44">🇬🇧 +44</option>
-                      <option value="+39">🇮🇹 +39</option>
-                      <option value="+34">🇪🇸 +34</option>
-                      <option value="+31">🇳🇱 +31</option>
-                    </select>
-                    <input
-                      type="tel"
-                      id="telephone"
-                      name="user_phone"
-                      className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-colors"
-                      placeholder="(418) 812-9475"
-                    />
-                  </div>
+                  <PhoneInput
+                    international
+                    countryCallingCodeEditable={false}
+                    defaultCountry="CA"
+                    value={phoneValue}
+                    onChange={setPhoneValue}
+                    name="user_phone"
+                    className="phone-input-custom"
+                    placeholder={t("contact.form.fields.phonePlaceholder")}
+                  />
+                  <input
+                    type="hidden"
+                    name="user_phone"
+                    value={phoneValue || ""}
+                  />
                   <p className="text-xs text-gray-500 mt-1">
-                    Format Canada: (XXX) XXX-XXXX • Format France: XX XX XX XX
-                    XX
+                    {t("contact.form.phoneFormat")}
                   </p>
                 </div>
 

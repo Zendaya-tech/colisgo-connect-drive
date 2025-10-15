@@ -26,7 +26,8 @@ const MentionsLegales = () => {
                     <strong>Forme juridique :</strong> Société par actions
                   </li>
                   <li>
-                    <strong>Siège social :</strong> Chicoutimi, Québec, Canada
+                    <strong>Siège social :</strong> 475 rue racine est
+                    Chicoutimi, Québec, Canada
                   </li>
                 </ul>
               </div>
@@ -57,8 +58,8 @@ const MentionsLegales = () => {
                     </a>
                   </li>
                   <li>
-                    <strong>Adresse postale :</strong> Chicoutimi, Québec,
-                    Canada
+                    <strong>Adresse postale :</strong>475 rue racine est
+                    Chicoutimi, Québec, Canada
                   </li>
                 </ul>
               </div>
@@ -77,7 +78,7 @@ const MentionsLegales = () => {
                     <strong>Hébergeur :</strong> LWS (Line Web Services)
                   </li>
                   <li>
-                    <strong>Adresse :</strong> 4 rue Galvani, 75017 Paris,
+                    <strong>Adresse :</strong> 10 rue pentièvre, 75008 Paris,
                     France
                   </li>
                   <li>
@@ -239,7 +240,7 @@ const MentionsLegales = () => {
             </section>
 
             <div className="text-center text-sm text-gray-500 mt-8 pt-8 border-t">
-              <p>Dernière mise à jour : Décembre 2024</p>
+              <p>Dernière mise à jour : Octobre 2025</p>
             </div>
           </div>
         </div>

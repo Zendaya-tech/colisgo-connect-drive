@@ -339,7 +339,8 @@ const PolitiqueConfidentialite = () => {
                     </a>
                   </li>
                   <li>
-                    <strong>Adresse postale :</strong> [Adresse de ColisGo]
+                    <strong>Adresse postale :</strong> 475 rue racine est
+                    Chicoutimi, Québec, Canada
                   </li>
                 </ul>
               </div>

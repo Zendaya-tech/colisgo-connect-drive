@@ -1,16 +1,13 @@
 import { Button } from "@/components/ui/button";
-import { Download, Package, Menu, X } from "lucide-react";
+import { Download, Menu, X } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
+import LanguageDropdown from "@/components/LanguageDropdown";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const { t, i18n } = useTranslation();
-
-  const changeLanguage = (lng: string) => {
-    i18n.changeLanguage(lng);
-  };
+  const { t } = useTranslation();
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200/50 shadow-sm">
@@ -26,38 +23,38 @@ const Header = () => {
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden lg:flex items-center space-x-8">
+        <nav className="ml-8 hidden text-sm w-full lg:flex items-center space-x-4">
           <Link
             to="/particulier"
             className="text-slate-600 hover:text-orange-500 font-medium transition-colors duration-300 relative group"
           >
             {t("header.particuliers")}
-            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-orange-500 group-hover:w-full transition-all duration-300"></span>
+            <span className="absolute  -bottom-1 left-0 w-0 h-0.5 bg-orange-500 group-hover:w-full transition-all duration-300"></span>
           </Link>
           <Link
             to="/transporteur"
             className="text-slate-600 hover:text-orange-500 font-medium transition-colors duration-300 relative group"
           >
             {t("header.transporteurs")}
-            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-orange-500 group-hover:w-full transition-all duration-300"></span>
+            <span className="absolute text-sm -bottom-1 left-0 w-0 h-0.5 bg-orange-500 group-hover:w-full transition-all duration-300"></span>
           </Link>
           <Link
             to="/international"
-            className="text-slate-600 hover:text-orange-500 font-medium transition-colors duration-300 relative group"
+            className="text-slate-600 text-sm hover:text-orange-500 font-medium transition-colors duration-300 relative group"
           >
-            🌍 ColisGo International
-            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-orange-500 group-hover:w-full transition-all duration-300"></span>
+            ColisGo International
+            <span className="absolute text-sm -bottom-1 left-0 w-0 h-0.5 bg-orange-500 group-hover:w-full transition-all duration-300"></span>
           </Link>
           <Link
             to="/comment-ca-marche"
             className="text-slate-600 hover:text-orange-500 font-medium transition-colors duration-300 relative group"
           >
             {t("header.howItWorks")}
-            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-orange-500 group-hover:w-full transition-all duration-300"></span>
+            <span className="absolute text-sm -bottom-1 left-0 w-0 h-0.5 bg-orange-500 group-hover:w-full transition-all duration-300"></span>
           </Link>
           <Link
             to="/contact"
-            className="text-slate-600 hover:text-orange-500 font-medium transition-colors duration-300 relative group"
+            className="text-slate-600 text-sm hover:text-orange-500 font-medium transition-colors duration-300 relative group"
           >
             {t("header.contact")}
             <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-orange-500 group-hover:w-full transition-all duration-300"></span>
@@ -67,14 +64,7 @@ const Header = () => {
         {/* Desktop CTA */}
         <div className="hidden lg:flex items-center space-x-4">
           {/* Language Selector */}
-          <select
-            value={i18n.language}
-            onChange={(e) => changeLanguage(e.target.value)}
-            className="bg-slate-50 hover:bg-slate-100 text-slate-600 text-sm rounded-lg px-3 py-2 border border-slate-200 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-orange-500/20"
-          >
-            <option value="fr">🇫🇷 FR</option>
-            <option value="en">🇬🇧 EN</option>
-          </select>
+          <LanguageDropdown />
 
           <Button className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold px-6 py-2 rounded-xl shadow-lg hover:shadow-orange-500/25 transition-all duration-300">
             <Download className="w-4 h-4 mr-2" />
@@ -136,14 +126,7 @@ const Header = () => {
             </Link>
             <div className="pt-4 border-t border-slate-200 space-y-3">
               {/* Mobile Language Selector */}
-              <select
-                value={i18n.language}
-                onChange={(e) => changeLanguage(e.target.value)}
-                className="w-full bg-slate-50 text-slate-600 text-sm rounded-lg px-3 py-2 border border-slate-200"
-              >
-                <option value="fr">🇫🇷 Français</option>
-                <option value="en">🇬🇧 English</option>
-              </select>
+              <LanguageDropdown />
 
               <Button className="w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold rounded-xl">
                 <Download className="w-4 h-4 mr-2" />
