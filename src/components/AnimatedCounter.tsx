@@ -17,21 +17,60 @@ const AnimatedCounter = ({
   const [displayValue, setDisplayValue] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
 
+  // Fonction pour vérifier si l'élément est visible
+  const checkVisibility = () => {
+    if (ref.current && !isVisible) {
+      const rect = ref.current.getBoundingClientRect();
+      const windowHeight =
+        window.innerHeight || document.documentElement.clientHeight;
+
+      if (rect.top <= windowHeight && rect.bottom >= 0) {
+        setIsVisible(true);
+      }
+    }
+  };
+
   useEffect(() => {
+    // Vérification initiale
+    checkVisibility();
+
+    // Fallback pour mobile - déclencher après un délai si pas encore visible
+    const fallbackTimer = setTimeout(() => {
+      if (!isVisible) {
+        setIsVisible(true);
+      }
+    }, 2000);
+
+    // Intersection Observer
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting && !isVisible) {
           setIsVisible(true);
+          clearTimeout(fallbackTimer);
         }
       },
-      { threshold: 0.1, rootMargin: "-100px" }
+      {
+        threshold: 0.1,
+        rootMargin: "100px", // Marge positive pour déclencher plus tôt sur mobile
+      }
     );
+
+    // Scroll listener comme backup pour mobile
+    const handleScroll = () => {
+      checkVisibility();
+    };
 
     if (ref.current) {
       observer.observe(ref.current);
     }
 
-    return () => observer.disconnect();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    return () => {
+      observer.disconnect();
+      window.removeEventListener("scroll", handleScroll);
+      clearTimeout(fallbackTimer);
+    };
   }, [isVisible]);
 
   useEffect(() => {
