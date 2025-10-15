@@ -7,15 +7,32 @@ import { useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
 import PhoneInput from "react-phone-number-input";
 import "react-phone-number-input/style.css";
+import { useNavigate } from "react-router-dom";
 
 const Contact = () => {
   const { t } = useTranslation();
+  const navigate = useNavigate();
   const form = useRef<HTMLFormElement>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<
     "idle" | "success" | "error"
   >("idle");
   const [phoneValue, setPhoneValue] = useState<string | undefined>();
+
+  const handleFaqClick = () => {
+    navigate("/");
+    // Attendre que la navigation et le scroll automatique vers le haut soient terminés
+    // avant de faire le scroll vers la FAQ
+    setTimeout(() => {
+      const faqSection = document.getElementById("faq");
+      if (faqSection) {
+        faqSection.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      }
+    }, 300);
+  };
 
   const sendEmail = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -98,7 +115,9 @@ const Contact = () => {
                   .
                 </p>
               </div>
-              <Button className="mt-6">{t("contact.faq.button")}</Button>
+              <Button onClick={handleFaqClick} className="mt-6">
+                {t("contact.faq.button")}
+              </Button>
             </div>
             <div className="relative">
               <img
