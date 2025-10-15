@@ -186,7 +186,7 @@ const HeroSection = () => {
                     </div>
 
                     {/* Bottom section with rating */}
-                    <div className="bg-slate-50 rounded-xl lg:rounded-2xl p-3 sm:p-4 text-center">
+                    {/* <div className="bg-slate-50 rounded-xl lg:rounded-2xl p-3 sm:p-4 text-center">
                       <div className="flex justify-center gap-1 mb-2">
                         {[...Array(5)].map((_, i) => (
                           <Star
@@ -198,7 +198,7 @@ const HeroSection = () => {
                       <p className="text-xs sm:text-sm text-slate-600">
                         <span className="font-bold">4.9/5</span> • 15,649 avis
                       </p>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               </div>

@@ -48,7 +48,7 @@
   "testimonials": {
     "badge": "Customer testimonials",
     "title": "What our users say",
-    "subtitle": "More than 15,000 users trust us for their daily shipments",
+    "subtitle": "Many users trust us for their daily shipments",
     "rating": "based on 2,347 verified reviews",
     "reviews": [
       {
@@ -120,7 +120,7 @@
       },
       {
         "question": "In which cities is ColisGo available?",
-        "answer": "ColisGo currently covers more than 1,250 cities in Dollarpe, with continuous expansion. Our network grows daily thanks to our growing community of travelers."
+        "answer": "ColisGo currently covers more than 1,250 cities in Canada, with continuous expansion. Our network grows daily thanks to our growing community of travelers."
       },
       {
         "question": "Can I track my package in real time?",
@@ -199,7 +199,7 @@
           "icon": "shield"
         },
         {
-          "title": "Insurance included",
+          "title": "optional Insurance ",
           "description": "Each shipment is covered by our partner insurance up to $1000",
           "icon": "protection"
         },
@@ -320,6 +320,9 @@
         "messagePlaceholder": "Describe your request or problem..."
       },
       "submit": "Send message",
+      "sending": "Sending...",
+      "success": "Your message has been sent successfully! We will respond to you as soon as possible.",
+      "error": "An error occurred while sending. Please try again or contact us directly.",
       "privacy": "By sending this form, you agree that your data will be used to contact you regarding your request."
     }
   }

@@ -42,6 +42,13 @@ const Header = () => {
             <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-orange-500 group-hover:w-full transition-all duration-300"></span>
           </Link>
           <Link
+            to="/international"
+            className="text-slate-600 hover:text-orange-500 font-medium transition-colors duration-300 relative group"
+          >
+            🌍 ColisGo International
+            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-orange-500 group-hover:w-full transition-all duration-300"></span>
+          </Link>
+          <Link
             to="/comment-ca-marche"
             className="text-slate-600 hover:text-orange-500 font-medium transition-colors duration-300 relative group"
           >
@@ -105,6 +112,13 @@ const Header = () => {
               onClick={() => setIsMenuOpen(false)}
             >
               {t("header.transporteurs")}
+            </Link>
+            <Link
+              to="/international"
+              className="block text-slate-600 hover:text-orange-500 font-medium py-2 transition-colors duration-300"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              🌍 ColisGo International
             </Link>
             <Link
               to="/comment-ca-marche"

@@ -3,9 +3,40 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Download, PlayCircle } from "lucide-react";
 import { useTranslation } from "react-i18next";
+import { useState, useRef } from "react";
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
   const { t } = useTranslation();
+  const form = useRef<HTMLFormElement>(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<
+    "idle" | "success" | "error"
+  >("idle");
+
+  const sendEmail = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!form.current) return;
+
+    setIsSubmitting(true);
+    setSubmitStatus("idle");
+
+    try {
+      await emailjs.sendForm(
+        "colisgo", // Your service ID
+        "template_6clrgr2", // You'll need to create a template in EmailJS and replace this
+        form.current,
+        "1RZnInwGiX02JlF0L" // You'll need to add your public key from EmailJS
+      );
+      setSubmitStatus("success");
+      form.current.reset();
+    } catch (error) {
+      console.error("EmailJS error:", error);
+      setSubmitStatus("error");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   return (
     <div className="min-h-screen">
@@ -155,7 +186,21 @@ const Contact = () => {
             </div>
 
             <div className="bg-white rounded-2xl p-8 shadow-lg">
-              <form className="space-y-6">
+              {submitStatus === "success" && (
+                <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg">
+                  <p className="text-green-800 text-sm">
+                    {t("contact.form.success")}
+                  </p>
+                </div>
+              )}
+              {submitStatus === "error" && (
+                <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg">
+                  <p className="text-red-800 text-sm">
+                    {t("contact.form.error")}
+                  </p>
+                </div>
+              )}
+              <form ref={form} onSubmit={sendEmail} className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
                     <label
@@ -167,7 +212,7 @@ const Contact = () => {
                     <input
                       type="text"
                       id="nom"
-                      name="nom"
+                      name="user_lastname"
                       required
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-colors"
                       placeholder={t("contact.form.fields.lastNamePlaceholder")}
@@ -183,7 +228,7 @@ const Contact = () => {
                     <input
                       type="text"
                       id="prenom"
-                      name="prenom"
+                      name="user_firstname"
                       required
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-colors"
                       placeholder={t(
@@ -203,7 +248,7 @@ const Contact = () => {
                   <input
                     type="email"
                     id="email"
-                    name="email"
+                    name="user_email"
                     required
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-colors"
                     placeholder={t("contact.form.fields.emailPlaceholder")}
@@ -219,6 +264,7 @@ const Contact = () => {
                   </label>
                   <div className="flex gap-2">
                     <select
+                      name="country_code"
                       className="px-3 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-colors bg-white"
                       defaultValue="+1"
                     >
@@ -235,7 +281,7 @@ const Contact = () => {
                     <input
                       type="tel"
                       id="telephone"
-                      name="telephone"
+                      name="user_phone"
                       className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-colors"
                       placeholder="(418) 812-9475"
                     />
@@ -265,9 +311,12 @@ const Contact = () => {
 
                 <Button
                   type="submit"
-                  className="w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold py-3 px-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
+                  disabled={isSubmitting}
+                  className="w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold py-3 px-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  {t("contact.form.submit")}
+                  {isSubmitting
+                    ? t("contact.form.sending")
+                    : t("contact.form.submit")}
                 </Button>
 
                 <p className="text-xs text-gray-500 text-center">

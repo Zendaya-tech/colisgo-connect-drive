@@ -25,7 +25,7 @@
       "becomeCarrier": "Devenir transporteur",
       "becomeCarrierDesc": "Gagnez en voyageant",
       "secure": "100% Sécurisé",
-      "secureDesc": "Assurance incluse"
+      "secureDesc": "Assurance optionnel"
     }
   },
   "eco": {
@@ -48,7 +48,7 @@
   "testimonials": {
     "badge": "Témoignages clients",
     "title": "Ce que disent nos utilisateurs",
-    "subtitle": "Plus de 15 000 utilisateurs nous font confiance pour leurs envois quotidiens",
+    "subtitle": "Plusieurs utilisateurs nous font confiance pour leurs envois quotidiens",
     "rating": "basé sur 2,347 avis vérifiés",
     "reviews": [
       {
@@ -120,7 +120,7 @@
       },
       {
         "question": "Dans quelles villes ColisGo est-il disponible ?",
-        "answer": "ColisGo couvre actuellement plus de 1,250 villes en Dollarpe, avec une expansion continue. Notre réseau s'agrandit quotidiennement grâce à notre communauté grandissante de voyageurs."
+        "answer": "ColisGo couvre actuellement plus de 1,250 villes en Canada, avec une expansion continue. Notre réseau s'agrandit quotidiennement grâce à notre communauté grandissante de voyageurs."
       },
       {
         "question": "Puis-je suivre mon colis en temps réel ?",
@@ -199,7 +199,7 @@
           "icon": "shield"
         },
         {
-          "title": "Assurance incluse",
+          "title": "Assurance optionnel",
           "description": "Chaque envoi est couvert par notre assurance partenaire jusqu'à 1000$",
           "icon": "protection"
         },
@@ -320,6 +320,9 @@
         "messagePlaceholder": "Décrivez votre demande ou votre problème..."
       },
       "submit": "Envoyer le message",
+      "sending": "Envoi en cours...",
+      "success": "Votre message a été envoyé avec succès ! Nous vous répondrons dans les plus brefs délais.",
+      "error": "Une erreur s'est produite lors de l'envoi. Veuillez réessayer ou nous contacter directement.",
       "privacy": "En envoyant ce formulaire, vous acceptez que vos données soient utilisées pour vous recontacter dans le cadre de votre demande."
     }
   }

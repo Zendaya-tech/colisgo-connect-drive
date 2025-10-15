@@ -8,6 +8,7 @@ import {
   FacebookIcon,
   LinkedinIcon,
   YoutubeIcon,
+  Instagram,
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
@@ -180,6 +181,15 @@ const Footer = () => {
                   aria-label="Facebook"
                 >
                   <FacebookIcon className="w-6 h-6" />
+                </a>
+                <a
+                  href="https://www.instagram.com/colisgoexpress?igsh=MWdyYWt4ajZqcXUwMA=="
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 bg-white/10 hover:bg-pink-600 rounded-xl flex items-center justify-center transition-all duration-300 hover:scale-110"
+                  aria-label="Instagram"
+                >
+                  <Instagram className="w-6 h-6" />
                 </a>
                 <a
                   href="https://www.linkedin.com/company/colisgoexpress"
