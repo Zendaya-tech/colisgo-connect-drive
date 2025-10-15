@@ -79,12 +79,12 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link
-                  to="#faq"
+                <a
+                  href="#faq"
                   className="hover:text-orange-400 transition-colors duration-300"
                 >
                   {t("footer.links.faq")}
-                </Link>
+                </a>
               </li>
             </ul>
           </div>

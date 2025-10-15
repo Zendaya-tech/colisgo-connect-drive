@@ -335,4 +335,14 @@
       "privacy": "En envoyant ce formulaire, vous acceptez que vos données soient utilisées pour vous recontacter dans le cadre de votre demande."
     }
   }
+  ,
+
+  "cookies": {
+    "title": "Cookies et confidentialité",
+    "description": "Nous utilisons des cookies pour améliorer votre expérience sur ColisGo et analyser l'utilisation de notre site. En continuant, vous acceptez notre utilisation des cookies conformément à notre",
+    "privacyPolicy": "politique de confidentialité",
+    "accept": "Accepter ",
+    "decline": "Refuser ",
+    "legalNote": "Vous pouvez modifier vos préférences à tout moment dans les paramètres."
+  }
 }

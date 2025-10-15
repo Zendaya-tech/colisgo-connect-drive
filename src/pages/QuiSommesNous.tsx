@@ -8,56 +8,110 @@ const QuiSommesNous = () => {
       <Header />
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800">
-        <div className="absolute inset-0 bg-[url('/dancing.png')] bg-cover bg-center opacity-20" />
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-900/50 to-transparent" />
-        <div className="container mx-auto px-4 pt-32 pb-20 relative z-10">
-          <div className="max-w-4xl">
-            <h1 className="text-5xl md:text-7xl font-extrabold text-white leading-tight tracking-tight mb-6">
-              Qui sommes‑nous ?
+      <section className="relative overflow-hidden bg-gradient-to-br from-slate-50 via-white to-orange-50">
+        {/* Decorative elements */}
+        <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-bl from-orange-100/30 to-transparent rounded-full blur-3xl" />
+        <div className="absolute bottom-0 left-0 w-80 h-80 bg-gradient-to-tr from-blue-100/30 to-transparent rounded-full blur-3xl" />
+
+        <div className="container mx-auto px-4 pt-32 pb-24 relative z-10">
+          <div className="max-w-4xl mx-auto text-center">
+            {/* Badge */}
+            <div className="inline-flex items-center gap-2 bg-orange-100 text-orange-700 px-4 py-2 rounded-full text-sm font-medium mb-8">
+              <div className="w-2 h-2 bg-orange-500 rounded-full animate-pulse"></div>
+              À propos de ColisGo
+            </div>
+
+            {/* Title */}
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold text-slate-900 leading-tight tracking-tight mb-8">
+              Qui sommes‑nous
+              <span className="text-orange-500">?</span>
             </h1>
-            <p className="text-xl md:text-2xl text-blue-100 max-w-3xl leading-relaxed">
+
+            {/* Subtitle */}
+            <p className="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed mb-12">
               ColisGo est une plateforme de livraison collaborative qui connecte
               expéditeurs, voyageurs et destinataires pour des envois plus
-              rapides, économiques et responsables.
+              <span className="font-semibold text-orange-600"> rapides</span>,
+              <span className="font-semibold text-blue-600"> économiques</span>{" "}
+              et
+              <span className="font-semibold text-green-600">
+                {" "}
+                responsables
+              </span>
+              .
             </p>
+
+            {/* Stats preview */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-2xl mx-auto">
+              <div className="text-center">
+                <div className="text-2xl md:text-3xl font-bold text-slate-900 mb-1">
+                  15K+
+                </div>
+                <div className="text-sm text-slate-500">Utilisateurs</div>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl md:text-3xl font-bold text-slate-900 mb-1">
+                  50K+
+                </div>
+                <div className="text-sm text-slate-500">Colis livrés</div>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl md:text-3xl font-bold text-slate-900 mb-1">
+                  1,250+
+                </div>
+                <div className="text-sm text-slate-500">Villes</div>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl md:text-3xl font-bold text-slate-900 mb-1">
+                  4.9/5
+                </div>
+                <div className="text-sm text-slate-500">Satisfaction</div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Mission & Vision Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-slate-50">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-12">
               {/* Mission */}
-              <div className="space-y-6">
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-orange-100 rounded-xl flex items-center justify-center">
-                    <CheckCircle className="w-6 h-6 text-orange-600" />
+              <div className="bg-white rounded-2xl p-8 shadow-sm border border-slate-100 hover:shadow-md transition-shadow duration-300">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-14 h-14 bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl flex items-center justify-center shadow-lg">
+                    <CheckCircle className="w-7 h-7 text-white" />
                   </div>
-                  <h2 className="text-3xl font-bold text-gray-900">
+                  <h2 className="text-3xl font-bold text-slate-900">
                     Notre Mission
                   </h2>
                 </div>
-                <p className="text-lg text-gray-600 leading-relaxed">
+                <p className="text-lg text-slate-600 leading-relaxed">
                   Aider nos clients à envoyer et recevoir leurs colis en toute
-                  tranquillité, grâce à un service rapide, simple et
-                  sécuritaire.
+                  tranquillité, grâce à un service
+                  <span className="font-semibold text-orange-600"> rapide</span>
+                  ,<span className="font-semibold text-blue-600"> simple</span>{" "}
+                  et
+                  <span className="font-semibold text-green-600">
+                    {" "}
+                    sécuritaire
+                  </span>
+                  .
                 </p>
               </div>
 
               {/* Vision */}
-              <div className="space-y-6">
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center">
-                    <Lightbulb className="w-6 h-6 text-blue-600" />
+              <div className="bg-white rounded-2xl p-8 shadow-sm border border-slate-100 hover:shadow-md transition-shadow duration-300">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-14 h-14 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center shadow-lg">
+                    <Lightbulb className="w-7 h-7 text-white" />
                   </div>
-                  <h2 className="text-3xl font-bold text-gray-900">
+                  <h2 className="text-3xl font-bold text-slate-900">
                     Notre Vision
                   </h2>
                 </div>
-                <p className="text-lg text-gray-600 leading-relaxed">
+                <p className="text-lg text-slate-600 leading-relaxed">
                   Devenir la plateforme de livraison collaborative de référence,
                   connectant les villes et les personnes pour rendre
                   l'expédition de colis simple, rapide et sécuritaire partout
@@ -67,11 +121,15 @@ const QuiSommesNous = () => {
             </div>
 
             <div className="relative">
-              <div className="bg-gradient-to-br from-orange-50 to-blue-50 rounded-3xl p-8 shadow-lg">
+              <div className="relative bg-gradient-to-br from-orange-50 via-white to-blue-50 rounded-3xl p-8 shadow-xl border border-slate-100">
+                {/* Decorative elements */}
+                <div className="absolute top-4 right-4 w-20 h-20 bg-orange-200/30 rounded-full blur-xl"></div>
+                <div className="absolute bottom-4 left-4 w-16 h-16 bg-blue-200/30 rounded-full blur-xl"></div>
+
                 <img
                   src="/hero.png"
                   alt="ColisGo - Livraison collaborative"
-                  className="w-full h-auto rounded-2xl"
+                  className="w-full h-auto rounded-2xl relative z-10 shadow-lg"
                 />
               </div>
             </div>
@@ -155,41 +213,60 @@ const QuiSommesNous = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-blue-700">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-white mb-4">
+      <section className="py-20 bg-gradient-to-br from-blue-950 via-slate-800 to-slate-900 relative overflow-hidden">
+        {/* Decorative background */}
+        <div className="absolute inset-0 bg-[url()] opacity-50"></div>
+
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm font-medium mb-6">
+              <div className="w-2 h-2 bg-orange-400 rounded-full animate-pulse"></div>
+              Nos performances
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
               ColisGo en chiffres
             </h2>
-            <p className="text-xl text-blue-100">
-              Une communauté grandissante qui nous fait confiance
+            <p className="text-xl text-slate-300 max-w-2xl mx-auto">
+              Une communauté grandissante qui nous fait confiance chaque jour
             </p>
           </div>
 
           <div className="grid md:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="text-4xl md:text-5xl font-bold text-white mb-2">
-                15K+
+            <div className="text-center group">
+              <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300">
+                <div className="text-4xl md:text-5xl font-bold text-white mb-2 group-hover:text-orange-400 transition-colors">
+                  15K+
+                </div>
+                <div className="text-slate-300 font-medium">
+                  Utilisateurs actifs
+                </div>
               </div>
-              <div className="text-blue-100">Utilisateurs actifs</div>
             </div>
-            <div className="text-center">
-              <div className="text-4xl md:text-5xl font-bold text-white mb-2">
-                50K+
+            <div className="text-center group">
+              <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300">
+                <div className="text-4xl md:text-5xl font-bold text-white mb-2 group-hover:text-blue-400 transition-colors">
+                  50K+
+                </div>
+                <div className="text-slate-300 font-medium">Colis livrés</div>
               </div>
-              <div className="text-blue-100">Colis livrés</div>
             </div>
-            <div className="text-center">
-              <div className="text-4xl md:text-5xl font-bold text-white mb-2">
-                1,250+
+            <div className="text-center group">
+              <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300">
+                <div className="text-4xl md:text-5xl font-bold text-white mb-2 group-hover:text-green-400 transition-colors">
+                  1,250+
+                </div>
+                <div className="text-slate-300 font-medium">
+                  Villes couvertes
+                </div>
               </div>
-              <div className="text-blue-100">Villes couvertes</div>
             </div>
-            <div className="text-center">
-              <div className="text-4xl md:text-5xl font-bold text-white mb-2">
-                4.9/5
+            <div className="text-center group">
+              <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300">
+                <div className="text-4xl md:text-5xl font-bold text-white mb-2 group-hover:text-yellow-400 transition-colors">
+                  4.9/5
+                </div>
+                <div className="text-slate-300 font-medium">Note moyenne</div>
               </div>
-              <div className="text-blue-100">Note moyenne</div>
             </div>
           </div>
         </div>

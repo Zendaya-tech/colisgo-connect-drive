@@ -80,7 +80,7 @@ const HeroSection = () => {
 
             {/* CTA Buttons */}
             <div
-              className="flex gap-4 justify-center lg:justify-start fade-in-up"
+              className="flex flex-col md:flex-row gap-4 justify-center lg:justify-start fade-in-up"
               style={{ animationDelay: "0.6s" }}
             >
               <Button

@@ -335,4 +335,15 @@
       "privacy": "By sending this form, you agree that your data will be used to contact you regarding your request."
     }
   }
+  ,
+  "cookies": {
+    "title": "Cookies & Privacy",
+    "description": "We use cookies to improve your experience on ColisGo and analyze our site usage. By continuing, you accept our use of cookies in accordance with our",
+    "privacyPolicy": "privacy policy",
+    "accept": "Accept all cookies",
+    "decline": "Decline optional cookies",
+    "legalNote": "You can change your preferences anytime in settings."
+  }
 }
+
+

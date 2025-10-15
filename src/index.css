@@ -475,4 +475,43 @@ All colors MUST be HSL.
 .phone-input-custom .PhoneInputInput {
   flex: 1;
   min-width: 0;
+}/*
+ Cookie Consent Popup Styles */
+.cookie-popup-enter {
+  transform: translateY(100%) scale(0.95);
+  opacity: 0;
+}
+
+.cookie-popup-enter-active {
+  transform: translateY(0) scale(1);
+  opacity: 1;
+  transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.cookie-popup-exit {
+  transform: translateY(0) scale(1);
+  opacity: 1;
+}
+
+.cookie-popup-exit-active {
+  transform: translateY(100%) scale(0.95);
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Animation pour l'icône cookie */
+@keyframes cookieBounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-3px);
+  }
+  60% {
+    transform: translateY(-2px);
+  }
+}
+
+.cookie-icon-bounce {
+  animation: cookieBounce 2s infinite;
 }
