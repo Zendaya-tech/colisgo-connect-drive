@@ -9,8 +9,7 @@ const getTestimonials = (t: any) => [
     role: t("testimonials.reviews.0.role"),
     content: t("testimonials.reviews.0.content"),
     rating: 5,
-    avatar:
-      "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face",
+    avatar: "photo1.jpg",
     verified: true,
   },
   {

@@ -1,5 +1,4 @@
-import { motion, useInView, useMotionValue, useSpring } from "framer-motion";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 interface AnimatedCounterProps {
   value: number;
@@ -15,27 +14,58 @@ const AnimatedCounter = ({
   className = "",
 }: AnimatedCounterProps) => {
   const ref = useRef<HTMLSpanElement>(null);
-  const motionValue = useMotionValue(0);
-  const springValue = useSpring(motionValue, { duration: duration * 1000 });
-  const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const [displayValue, setDisplayValue] = useState(0);
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    if (isInView) {
-      motionValue.set(value);
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !isVisible) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.1, rootMargin: "-100px" }
+    );
+
+    if (ref.current) {
+      observer.observe(ref.current);
     }
-  }, [motionValue, isInView, value]);
+
+    return () => observer.disconnect();
+  }, [isVisible]);
 
   useEffect(() => {
-    springValue.on("change", (latest) => {
-      if (ref.current) {
-        ref.current.textContent = Math.floor(latest).toLocaleString() + suffix;
+    if (!isVisible) return;
+
+    const startTime = Date.now();
+    const startValue = 0;
+    const endValue = value;
+    const animationDuration = duration * 1000;
+
+    const animate = () => {
+      const elapsed = Date.now() - startTime;
+      const progress = Math.min(elapsed / animationDuration, 1);
+
+      // Easing function (ease-out)
+      const easeOut = 1 - Math.pow(1 - progress, 3);
+      const currentValue = Math.floor(
+        startValue + (endValue - startValue) * easeOut
+      );
+
+      setDisplayValue(currentValue);
+
+      if (progress < 1) {
+        requestAnimationFrame(animate);
       }
-    });
-  }, [springValue, suffix]);
+    };
+
+    requestAnimationFrame(animate);
+  }, [isVisible, value, duration]);
 
   return (
     <span ref={ref} className={className}>
-      0{suffix}
+      {displayValue.toLocaleString()}
+      {suffix}
     </span>
   );
 };
