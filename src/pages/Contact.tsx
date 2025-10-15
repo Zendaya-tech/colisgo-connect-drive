@@ -24,7 +24,7 @@ const Contact = () => {
     try {
       await emailjs.sendForm(
         "colisgo", // Your service ID
-        "template_6clrgr2", // You'll need to create a template in EmailJS and replace this
+        "template_6xelug6", // You'll need to create a template in EmailJS and replace this
         form.current,
         "1RZnInwGiX02JlF0L" // You'll need to add your public key from EmailJS
       );
