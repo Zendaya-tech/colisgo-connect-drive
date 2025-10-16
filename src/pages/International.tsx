@@ -13,8 +13,10 @@ import {
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
+import { useTranslation } from "react-i18next";
 
 const International = () => {
+  const { t } = useTranslation();
   const routes = [
     {
       route: "Canada ↔ Europe",
@@ -45,7 +47,7 @@ const International = () => {
       flag: "🇫🇷",
       code: "FR",
       image: "/flags/france.jpg",
-      averagePrice: "25€",
+      averagePrice: "25$",
       description: "Paris, Lyon, Marseille",
     },
     {
@@ -53,7 +55,7 @@ const International = () => {
       flag: "🇨🇲",
       code: "CM",
       image: "/flags/cameroon.jpg",
-      averagePrice: "35€",
+      averagePrice: "35$",
       description: "Douala, Yaoundé",
     },
     {
@@ -61,7 +63,7 @@ const International = () => {
       flag: "🇨🇩",
       code: "CD",
       image: "/flags/drc.jpg",
-      averagePrice: "40€",
+      averagePrice: "40$",
       description: "Kinshasa, Lubumbashi",
     },
     {
@@ -69,7 +71,7 @@ const International = () => {
       flag: "🇨🇮",
       code: "CI",
       image: "/flags/ivory-coast.jpg",
-      averagePrice: "30€",
+      averagePrice: "30$",
       description: "Abidjan, Bouaké",
     },
     {
@@ -77,7 +79,7 @@ const International = () => {
       flag: "🇺🇸",
       code: "US",
       image: "/flags/usa.jpg",
-      averagePrice: "20€",
+      averagePrice: "20$",
       description: "New York, Los Angeles",
     },
     {
@@ -85,7 +87,7 @@ const International = () => {
       flag: "🇬🇧",
       code: "GB",
       image: "/flags/uk.jpg",
-      averagePrice: "22€",
+      averagePrice: "22$",
       description: "Londres, Manchester",
     },
     {
@@ -93,7 +95,7 @@ const International = () => {
       flag: "🇸🇳",
       code: "SN",
       image: "/flags/senegal.jpg",
-      averagePrice: "32€",
+      averagePrice: "32$",
       description: "Dakar, Saint-Louis",
     },
     {
@@ -101,7 +103,7 @@ const International = () => {
       flag: "🇨🇦",
       code: "CA",
       image: "/flags/canada.jpg",
-      averagePrice: "18€",
+      averagePrice: "18$",
       description: "Toronto, Montréal",
     },
   ];
@@ -172,22 +174,21 @@ const International = () => {
             <div className="space-y-8 animate-fade-in flex flex-col  justify-center">
               <div className="space-y-4 flex flex-col  justify-center">
                 <h1 className="text-4xl md:text-6xl lg:text-5xl font-extrabold text-white leading-tight tracking-tight">
-                  Envoyez. <span className="text-primary">Voyagez.</span>{" "}
-                  <span className="text-white">Recevez.</span>
+                  {t("international.hero.title")}
                 </h1>
                 <h2 className="text-2xl md:text-3xl text-gray-200">
-                  En toute confiance.
+                  {t("international.hero.subtitle")}
                 </h2>
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button variant="hero" size="sm" className="hero-shadow ">
                   <Download className="w-5 h-5" />
-                  Télécharger l'app
+                  {t("international.hero.downloadApp")}
                 </Button>
                 <Button variant="outline" size="sm" className="">
                   <PlayCircle className="w-5 h-5" />
-                  Voir la démo
+                  {t("international.hero.watchDemo")}
                 </Button>
               </div>
 

@@ -343,6 +343,392 @@
     "accept": "Accept all cookies",
     "decline": "Decline optional cookies",
     "legalNote": "You can change your preferences anytime in settings."
+  },
+  "particulier": {
+    "hero": {
+      "title": "Send. Travel. Receive.",
+      "subtitle": "With complete confidence.",
+      "downloadApp": "Download app",
+      "watchDemo": "Watch demo"
+    },
+    "profiles": {
+      "title": "How it works, according to your profile.",
+      "subtitle": "Sender? Carrier? Individual or professional? Discover the best way to use ColisGo according to your needs:",
+      "types": [
+        {
+          "title": "I am an individual who ships",
+          "description": "Do you want to use ColisGo as a sender or recipient of a package?",
+          "detailedText": "Do you need to send a package quickly and safely? With ColisGo, simply post your listing indicating the departure location, destination, weight and value of your package. A traveler who is already making this trip can accept your request and transport your package. Your payment is secured via the platform and is only released once delivery is confirmed. With ColisGo, shipping becomes simple, economical and collaborative."
+        },
+        {
+          "title": "I am an individual who transports",
+          "description": "Do you want to monetize your trips by transporting packages on your route?",
+          "detailedText": "Do you travel regularly between two cities and have space in your vehicle? ColisGo allows you to monetize your trips by transporting packages for shippers. Accept a listing, pick up the package and make the delivery during your usual trip. You earn money while helping others, with the guarantee of secure payment through the platform. ColisGo transforms your travels into opportunities!"
+        },
+        {
+          "title": "I am a professional carrier",
+          "description": "Do you have a transport license and want to find freight on ColisGo?",
+          "detailedText": "Do you have a transport license and are looking to optimize your routes? With ColisGo, access a customer base looking for a reliable solution to ship their packages. Fill your available trips, accept shipments corresponding to your itinerary and increase your revenue. As a professional, you benefit from increased visibility and tools adapted to manage your shipments. ColisGo becomes a partner to develop your logistics activity."
+        },
+        {
+          "title": "I am a business that ships",
+          "description": "Are you looking for a flexible and economical solution to deliver to your customers?",
+          "detailedText": "Do you want to offer your customers a flexible and affordable delivery solution? ColisGo connects your business with travelers and carriers available to handle your shipments. Reduce your logistics costs while guaranteeing fast and secure delivery. Whether you are a merchant, e-merchant or SME, ColisGo adapts to your needs by offering you collaborative and efficient logistics. With ColisGo, delivery becomes a strategic asset for your growth."
+        }
+      ],
+      "buttons": {
+        "learnMore": "Learn more",
+        "reduce": "Reduce"
+      }
+    }
+  },
+  "commentCaMarche": {
+    "hero": {
+      "title": "How does it work?",
+      "subtitle": "Discover how ColisGo revolutionizes collaborative delivery",
+      "downloadApp": "Download app",
+      "watchDemo": "Watch demo"
+    },
+    "profiles": [
+      {
+        "title": "Individual who ships",
+        "subtitle": "Send your packages with complete simplicity",
+        "steps": [
+          {
+            "title": "Create your listing",
+            "description": "Describe your package: origin, destination, weight, dimensions and propose a price."
+          },
+          {
+            "title": "Interested carriers",
+            "description": "Carriers express their interest"
+          },
+          {
+            "title": "Pay securely",
+            "description": "Pay via our secure platform."
+          },
+          {
+            "title": "Track your package",
+            "description": "Real-time GPS tracking until confirmed delivery."
+          }
+        ]
+      },
+      {
+        "title": "Individual who transports",
+        "subtitle": "Earn money on your trips",
+        "steps": [
+          {
+            "title": "Find listings",
+            "description": "Check shipping requests on your usual routes."
+          },
+          {
+            "title": "Accept a mission",
+            "description": "Express your interest in available rides"
+          },
+          {
+            "title": "Pick up the package",
+            "description": "Go to the starting point to pick up the package."
+          },
+          {
+            "title": "Deliver and earn",
+            "description": "Make the delivery and receive your payment automatically."
+          }
+        ]
+      },
+      {
+        "title": "Professional carrier",
+        "subtitle": "Develop your transport business",
+        "steps": [
+          {
+            "title": "Create your pro profile",
+            "description": "Enter your licenses, vehicles and coverage areas."
+          },
+          {
+            "title": "Access requests",
+            "description": "Consult an expanded base of professional and individual clients."
+          },
+          {
+            "title": "Optimize your routes",
+            "description": "Fill your available trips with profitable shipments."
+          },
+          {
+            "title": "Develop your business",
+            "description": "Increase your revenue with adapted management tools."
+          }
+        ]
+      },
+      {
+        "title": "Business that ships",
+        "subtitle": "Logistics solutions for businesses",
+        "steps": [
+          {
+            "title": "Business account",
+            "description": "Create your professional account with dedicated billing."
+          },
+          {
+            "title": "Volume shipments",
+            "description": "Post multiple shipments simultaneously with negotiated rates."
+          },
+          {
+            "title": "Carrier network",
+            "description": "Access our network of verified and reliable carriers."
+          },
+          {
+            "title": "Centralized tracking",
+            "description": "Dashboard to track all your shipments in real time."
+          }
+        ]
+      }
+    ],
+    "features": {
+      "title": "Why choose ColisGo?",
+      "subtitle": "The advantages of collaborative delivery",
+      "list": [
+        {
+          "title": "100% Secure",
+          "description": "Identity verification and optional insurance"
+        },
+        {
+          "title": "Fast",
+          "description": "Faster delivery than traditional carriers"
+        },
+        {
+          "title": "Economical",
+          "description": "Up to 70% cheaper than the competition"
+        }
+      ]
+    },
+    "cta": {
+      "title": "Ready to get started?",
+      "subtitle": "Join thousands of users who trust ColisGo",
+      "sendPackage": "Send a package",
+      "becomeCarrier": "Become a carrier"
+    }
+  },
+  "quiSommesNous": {
+    "hero": {
+      "badge": "About ColisGo",
+      "title": "Who are we",
+      "subtitle": "ColisGo is a collaborative delivery platform that connects senders, travelers and recipients for faster, more economical and responsible shipments.",
+      "stats": [
+        { "value": "15K+", "label": "Users" },
+        { "value": "50K+", "label": "Packages delivered" },
+        { "value": "1,250+", "label": "Cities" },
+        { "value": "4.9/5", "label": "Satisfaction" }
+      ]
+    },
+    "mission": {
+      "title": "Our Mission",
+      "description": "Help our customers send and receive their packages with complete peace of mind, thanks to a fast, simple and secure service."
+    },
+    "vision": {
+      "title": "Our Vision",
+      "description": "Become the reference collaborative delivery platform, connecting cities and people to make package shipping simple, fast and secure worldwide."
+    },
+    "values": {
+      "title": "Our Values",
+      "subtitle": "These values guide each of our actions and define our commitment to our users and our community.",
+      "list": [
+        {
+          "title": "Trust",
+          "description": "We place security and reliability at the heart of every shipment so that our customers send and receive their packages with complete peace of mind."
+        },
+        {
+          "title": "Simplicity",
+          "description": "We make the shipping experience smooth and accessible, thanks to an intuitive and easy-to-use platform."
+        },
+        {
+          "title": "Speed",
+          "description": "We value efficiency and responsiveness so that each package arrives at its destination in the best possible time."
+        },
+        {
+          "title": "Collaboration",
+          "description": "We believe in the power of sharing and solidarity between travelers and shippers to create a more human and sustainable delivery model."
+        }
+      ]
+    },
+    "stats": {
+      "badge": "Our performance",
+      "title": "ColisGo in numbers",
+      "subtitle": "A growing community that trusts us every day",
+      "list": [
+        { "value": "15K+", "label": "Active users" },
+        { "value": "50K+", "label": "Packages delivered" },
+        { "value": "1,250+", "label": "Cities covered" },
+        { "value": "4.9/5", "label": "Average rating" }
+      ]
+    },
+    "cta": {
+      "title": "Join the collaborative delivery revolution",
+      "subtitle": "Whether you are a sender or carrier, discover a new way to send and deliver, simpler, more economical and more human.",
+      "downloadApp": "Download the application",
+      "learnMore": "Learn more"
+    }
+  },
+  "international": {
+    "hero": {
+      "title": "Send. Travel. Receive.",
+      "subtitle": "With complete confidence.",
+      "downloadApp": "Download app",
+      "watchDemo": "Watch demo"
+    },
+    "workflow": {
+      "title": "How it works",
+      "subtitle": "Our platform connects travelers and senders",
+      "traveler": {
+        "title": "Traveler",
+        "description": "Create a listing of your available kilos and monetize your trip by transporting packages for the community."
+      },
+      "sender": {
+        "title": "Sender",
+        "description": "Book kilos from a traveler and send your packages at reduced prices worldwide."
+      }
+    },
+    "routes": {
+      "title": "Main available routes",
+      "subtitle": "Most frequented transport corridors",
+      "list": [
+        {
+          "route": "Canada ↔ Europe",
+          "description": "Regular connection between Canada and Europe",
+          "frequency": "Daily"
+        },
+        {
+          "route": "Canada ↔ Africa",
+          "description": "Direct Canada-Africa connection",
+          "frequency": "3x/week"
+        },
+        {
+          "route": "Europe ↔ Africa",
+          "description": "Very busy Europe-Africa route",
+          "frequency": "Daily"
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "How does it work?",
+      "subtitle": "Simple process in 5 steps",
+      "steps": [
+        {
+          "title": "Create your account",
+          "description": "Sign up for ColisGo International in minutes"
+        },
+        {
+          "title": "Annual subscription",
+          "description": "Subscribe for only $10 per year (travelers and senders)"
+        },
+        {
+          "title": "Post or book",
+          "description": "Create a listing or find a traveler for your package"
+        },
+        {
+          "title": "Pay $5 per shipment",
+          "description": "Fixed and transparent rate for each shipment"
+        },
+        {
+          "title": "Track your package",
+          "description": "Complete traceability until delivery"
+        }
+      ],
+      "pricing": {
+        "title": "Transparent pricing",
+        "annual": {
+          "price": "$10",
+          "title": "Annual subscription",
+          "subtitle": "Travelers and senders"
+        },
+        "perShipment": {
+          "price": "$5",
+          "title": "Per shipment",
+          "subtitle": "Fixed amount"
+        }
+      }
+    },
+    "advantages": {
+      "title": "Why choose ColisGo International?",
+      "subtitle": "The advantages of our service",
+      "list": [
+        {
+          "title": "Speed and flexibility",
+          "description": "Shipping according to travelers' schedules"
+        },
+        {
+          "title": "Economical",
+          "description": "Cheaper than traditional carriers"
+        },
+        {
+          "title": "Secure",
+          "description": "Identity verification and secure platform"
+        },
+        {
+          "title": "Ecological",
+          "description": "Reduction of carbon footprint"
+        }
+      ]
+    },
+    "destinations": {
+      "title": "Popular destinations",
+      "subtitle": "Our main destinations with average rates",
+      "averagePrice": "Average price"
+    },
+    "security": {
+      "title": "Security and compliance",
+      "subtitle": "Your security is our priority",
+      "features": [
+        {
+          "title": "Identity verification",
+          "description": "Mandatory verification for all members"
+        },
+        {
+          "title": "Legal compliance",
+          "description": "Compliance with Canadian and international laws"
+        },
+        {
+          "title": "Authorized products",
+          "description": "List of prohibited products in our Terms of Use"
+        }
+      ]
+    }
+  },
+  "transporteur": {
+    "hero": {
+      "title": "Transport. Earn. Safely.",
+      "subtitle": "Join the ColisGo community.",
+      "downloadApp": "Download app",
+      "watchDemo": "Watch demo"
+    },
+    "howItWorks": {
+      "title": "How does it work for carriers?",
+      "subtitle": "Quick registration, proposals adapted to your routes, payment after delivery.",
+      "steps": [
+        {
+          "title": "Sign up",
+          "description": "Create your carrier profile in minutes",
+          "details": [
+            "Quick identity verification",
+            "Enter your usual routes",
+            "Set your availability"
+          ]
+        },
+        {
+          "title": "Receive proposals",
+          "description": "Our algorithm suggests packages on your routes",
+          "details": [
+            "Packages adapted to your trips",
+            "Attractive rates offered",
+            "Total flexibility to accept"
+          ]
+        },
+        {
+          "title": "Transport & Earn",
+          "description": "Pick up, transport and deliver safely",
+          "details": [
+            "Secure codes for each exchange",
+            "Automatic GPS tracking",
+            "Immediate payment after delivery"
+          ]
+        }
+      ]
+    }
   }
 }
 

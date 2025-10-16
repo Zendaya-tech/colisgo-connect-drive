@@ -18,10 +18,14 @@ import {
   User,
   Download,
   PlayCircle,
+  ChevronDown,
+  ChevronUp,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import deliveryImg from "@/assets/hero-delivery.jpg";
 import CtaSection from "@/components/CtaSection";
+import { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 const senderSteps = [
   {
@@ -91,34 +95,14 @@ const senderBenefits = [
   },
 ];
 
-const types = [
-  {
-    icon: Package,
-    title: "Je suis un particulier qui expédie",
-    description:
-      "Vous voulez utiliser ColisGo en tant qu'expéditeur ou destinataire d'un colis ?",
-  },
-  {
-    icon: Truck,
-    title: "Je suis un particulier qui transporte",
-    description:
-      "Vous souhaitez rentabiliser vos trajets en transportant des colis sur votre route ?",
-  },
-  {
-    icon: User,
-    title: "Je suis un transporteur professionnel",
-    description:
-      "Vous disposez d'une licence de transport et souhaitez trouver du fret sur ColisGo ?",
-  },
-  {
-    icon: Building2,
-    title: "Je suis une entreprise qui expédie",
-    description:
-      "Vous cherchez une solution flexible et économique pour livrer vos clients ?",
-  },
-];
-
 const Particulier = () => {
+  const { t } = useTranslation();
+  const [expandedCard, setExpandedCard] = useState<number | null>(null);
+
+  const toggleCard = (index: number) => {
+    setExpandedCard(expandedCard === index ? null : index);
+  };
+
   return (
     <div className="min-h-screen">
       <Header />
@@ -131,22 +115,21 @@ const Particulier = () => {
             <div className="space-y-8 animate-fade-in flex flex-col  justify-center">
               <div className="space-y-4 flex flex-col  justify-center">
                 <h1 className="text-4xl md:text-6xl lg:text-5xl font-extrabold text-white leading-tight tracking-tight">
-                  Envoyez. <span className="text-primary">Voyagez.</span>{" "}
-                  <span className="text-white">Recevez.</span>
+                  {t("particulier.hero.title")}
                 </h1>
                 <h2 className="text-2xl md:text-3xl text-gray-200">
-                  En toute confiance.
+                  {t("particulier.hero.subtitle")}
                 </h2>
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button variant="hero" size="sm" className="hero-shadow ">
                   <Download className="w-5 h-5" />
-                  Télécharger l'app
+                  {t("particulier.hero.downloadApp")}
                 </Button>
                 <Button variant="outline" size="sm" className="">
                   <PlayCircle className="w-5 h-5" />
-                  Voir la démo
+                  {t("particulier.hero.watchDemo")}
                 </Button>
               </div>
 
@@ -189,35 +172,81 @@ const Particulier = () => {
           <div className="container mx-auto px-4">
             <div className="text-center max-w-3xl mx-auto">
               <h3 className="text-2xl md:text-3xl font-extrabold text-foreground">
-                Comment ça marche, en fonction de votre profil.
+                {t("particulier.profiles.title")}
               </h3>
               <p className="mt-2 text-sm md:text-base text-muted-foreground">
-                Expéditeur ? Transporteur ? Particulier ou professionnel ?
-                Découvrez la meilleure façon d'utiliser ColisGo selon vos
-                besoins :
+                {t("particulier.profiles.subtitle")}
               </p>
             </div>
 
-            <div className="mt-10 grid gap-6 md:grid-cols-4">
-              {/* Cards */}
-              {types.map((type, index) => (
-                <div className="bg-gray-100 rounded-2xl p-6 text-center ">
-                  <div className="mx-auto mb-4 inline-flex w-12 h-12 items-center justify-center rounded-xl bg-secondary/10">
-                    <type.icon className="w-6 h-6 text-secondary" />
-                  </div>
-                  <h4 className="font-semibold text-foreground">
-                    {type.title}
-                  </h4>
-                  <p className="mt-2 text-sm text-muted-foreground">
-                    {type.description}
-                  </p>
-                  <Button variant="outline" size="sm" className="mt-4">
-                    En savoir plus
-                  </Button>
-                </div>
-              ))}
+            <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+              {t("particulier.profiles.types", { returnObjects: true }).map(
+                (type: any, index: number) => (
+                  <div
+                    key={index}
+                    className={`bg-gray-100 rounded-2xl p-6 text-center transition-all duration-300 ${
+                      expandedCard === index
+                        ? "md:col-span-2 lg:col-span-4"
+                        : ""
+                    }`}
+                  >
+                    <div className="mx-auto mb-4 inline-flex w-12 h-12 items-center justify-center rounded-xl bg-secondary/10">
+                      {index === 0 && (
+                        <Package className="w-6 h-6 text-secondary" />
+                      )}
+                      {index === 1 && (
+                        <Truck className="w-6 h-6 text-secondary" />
+                      )}
+                      {index === 2 && (
+                        <User className="w-6 h-6 text-secondary" />
+                      )}
+                      {index === 3 && (
+                        <Building2 className="w-6 h-6 text-secondary" />
+                      )}
+                    </div>
+                    <h4 className="font-semibold text-foreground">
+                      {type.title}
+                    </h4>
+                    <p className="mt-2 text-sm text-muted-foreground">
+                      {type.description}
+                    </p>
 
-              {/* Cards */}
+                    {/* Contenu étendu */}
+                    <div
+                      className={`overflow-hidden transition-all duration-500 ${
+                        expandedCard === index
+                          ? "max-h-96 opacity-100 mt-4"
+                          : "max-h-0 opacity-0"
+                      }`}
+                    >
+                      <div className="border-t border-gray-200 pt-4">
+                        <p className="text-sm text-gray-700 text-left leading-relaxed">
+                          {type.detailedText}
+                        </p>
+                      </div>
+                    </div>
+
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      className="mt-4"
+                      onClick={() => toggleCard(index)}
+                    >
+                      {expandedCard === index ? (
+                        <>
+                          <ChevronUp className="w-4 h-4 mr-1" />
+                          {t("particulier.profiles.buttons.reduce")}
+                        </>
+                      ) : (
+                        <>
+                          <ChevronDown className="w-4 h-4 mr-1" />
+                          {t("particulier.profiles.buttons.learnMore")}
+                        </>
+                      )}
+                    </Button>
+                  </div>
+                )
+              )}
             </div>
           </div>
         </section>

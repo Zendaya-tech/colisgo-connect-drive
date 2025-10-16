@@ -347,7 +347,7 @@ const PolitiqueConfidentialite = () => {
             </section>
 
             <div className="text-center text-sm text-gray-500 mt-8 pt-8 border-t">
-              <p>Dernière mise à jour : [Date de mise à jour]</p>
+              <p>Dernière mise à jour : octobre 2025</p>
             </div>
           </div>
         </div>

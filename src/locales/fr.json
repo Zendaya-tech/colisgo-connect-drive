@@ -57,7 +57,7 @@
     "reviews": [
       {
         "name": "Adrien loyem",
-        "role": "Étudiante à chicoutini",
+        "role": "Étudiant à chicoutini",
         "content": "J'ai envoyé un cadeau d'anniversaire à ma sœur en Belgique. Le voyageur était super sympa et j'ai suivi le colis en temps réel. Une expérience formidable !"
       },
       {
@@ -344,5 +344,391 @@
     "accept": "Accepter ",
     "decline": "Refuser ",
     "legalNote": "Vous pouvez modifier vos préférences à tout moment dans les paramètres."
+  },
+  "particulier": {
+    "hero": {
+      "title": "Envoyez. Voyagez. Recevez.",
+      "subtitle": "En toute confiance.",
+      "downloadApp": "Télécharger l'app",
+      "watchDemo": "Voir la démo"
+    },
+    "profiles": {
+      "title": "Comment ça marche, en fonction de votre profil.",
+      "subtitle": "Expéditeur ? Transporteur ? Particulier ou professionnel ? Découvrez la meilleure façon d'utiliser ColisGo selon vos besoins :",
+      "types": [
+        {
+          "title": "Je suis un particulier qui expédie",
+          "description": "Vous voulez utiliser ColisGo en tant qu'expéditeur ou destinataire d'un colis ?",
+          "detailedText": "Vous avez besoin d'envoyer un colis rapidement et en toute sécurité ? Avec ColisGo, publiez simplement votre annonce en indiquant le lieu de départ, la destination, le poids et la valeur de votre colis. Un voyageur qui effectue déjà ce trajet pourra accepter votre demande et transporter votre colis. Votre paiement est sécurisé via la plateforme et n'est libéré qu'une fois la livraison confirmée. Avec ColisGo, expédier devient simple, économique et collaboratif."
+        },
+        {
+          "title": "Je suis un particulier qui transporte",
+          "description": "Vous souhaitez rentabiliser vos trajets en transportant des colis sur votre route ?",
+          "detailedText": "Vous voyagez régulièrement entre deux villes et avez de la place dans votre véhicule ? ColisGo vous permet de rentabiliser vos trajets en transportant des colis pour des expéditeurs. Acceptez une annonce, récupérez le colis et effectuez la livraison pendant votre trajet habituel. Vous gagnez de l'argent tout en rendant service, avec la garantie d'un paiement sécurisé par la plateforme. ColisGo transforme vos déplacements en opportunités !"
+        },
+        {
+          "title": "Je suis un transporteur professionnel",
+          "description": "Vous disposez d'une licence de transport et souhaitez trouver du fret sur ColisGo ?",
+          "detailedText": "Vous disposez d'une licence de transport et cherchez à optimiser vos tournées ? Avec ColisGo, accédez à une base de clients qui recherchent une solution fiable pour expédier leurs colis. Remplissez vos trajets disponibles, acceptez les envois correspondant à votre itinéraire et augmentez vos revenus. En tant que professionnel, vous bénéficiez d'une visibilité accrue et d'outils adaptés pour gérer vos expéditions. ColisGo devient un partenaire pour développer votre activité logistique."
+        },
+        {
+          "title": "Je suis une entreprise qui expédie",
+          "description": "Vous cherchez une solution flexible et économique pour livrer vos clients ?",
+          "detailedText": "Vous souhaitez offrir à vos clients une solution de livraison flexible et abordable ? ColisGo met en relation votre entreprise avec des voyageurs et des transporteurs disponibles pour assurer vos expéditions. Réduisez vos coûts logistiques tout en garantissant une livraison rapide et sécurisée. Que vous soyez un commerçant, un e-commerçant ou une PME, ColisGo s'adapte à vos besoins en vous offrant une logistique collaborative et efficace. Avec ColisGo, la livraison devient un atout stratégique pour votre croissance."
+        }
+      ],
+      "buttons": {
+        "learnMore": "En savoir plus",
+        "reduce": "Réduire"
+      }
+    }
+  },
+  "commentCaMarche": {
+    "hero": {
+      "title": "Comment ça marche ?",
+      "subtitle": "Découvrez comment ColisGo révolutionne la livraison collaborative",
+      "downloadApp": "Télécharger l'app",
+      "watchDemo": "Voir la démo"
+    },
+    "profiles": [
+      {
+        "title": "Particulier qui expédie",
+        "subtitle": "Envoyez vos colis en toute simplicité",
+        "steps": [
+          {
+            "title": "Créez votre annonce",
+            "description": "Décrivez votre colis : origine, destination, poids, dimensions et proposez un prix."
+          },
+          {
+            "title": "transporteur intéressés",
+            "description": "Les transporteurs manifestent leur intéret"
+          },
+          {
+            "title": "Payez en sécurité",
+            "description": "payez via notre plateforme sécurisée."
+          },
+          {
+            "title": "Suivez votre colis",
+            "description": "Suivi GPS en temps réel jusqu'à la livraison confirmée."
+          }
+        ]
+      },
+      {
+        "title": "Particulier qui transporte",
+        "subtitle": "Gagnez de l'argent sur vos trajets",
+        "steps": [
+          {
+            "title": "Trouvez des annonces",
+            "description": "Consultez les demandes d'envoi sur vos trajets habituels."
+          },
+          {
+            "title": "Acceptez une mission",
+            "description": "Manifester votre intéret pour les courses disponibles"
+          },
+          {
+            "title": "Récupérez le colis",
+            "description": "Rendez-vous au point de départ pour récupérer le colis."
+          },
+          {
+            "title": "Livrez et gagnez",
+            "description": "Effectuez la livraison et recevez votre paiement automatiquement."
+          }
+        ]
+      },
+      {
+        "title": "Transporteur professionnel",
+        "subtitle": "Développez votre activité de transport",
+        "steps": [
+          {
+            "title": "Créez votre profil pro",
+            "description": "Renseignez vos licences, véhicules et zones de couverture."
+          },
+          {
+            "title": "Accédez aux demandes",
+            "description": "Consultez une base élargie de clients professionnels et particuliers."
+          },
+          {
+            "title": "Optimisez vos tournées",
+            "description": "Remplissez vos trajets disponibles avec des envois rentables."
+          },
+          {
+            "title": "Développez votre activité",
+            "description": "Augmentez vos revenus avec des outils de gestion adaptés."
+          }
+        ]
+      },
+      {
+        "title": "Entreprise qui expédie",
+        "subtitle": "Solutions logistiques pour entreprises",
+        "steps": [
+          {
+            "title": "Compte entreprise",
+            "description": "Créez votre compte professionnel avec facturation dédiée."
+          },
+          {
+            "title": "Envois en volume",
+            "description": "Publiez plusieurs envois simultanément avec tarifs négociés."
+          },
+          {
+            "title": "Réseau de transporteurs",
+            "description": "Accédez à notre réseau de transporteurs vérifiés et fiables."
+          },
+          {
+            "title": "Suivi centralisé",
+            "description": "Tableau de bord pour suivre tous vos envois en temps réel."
+          }
+        ]
+      }
+    ],
+    "features": {
+      "title": "Pourquoi choisir ColisGo ?",
+      "subtitle": "Les avantages de la livraison collaborative",
+      "list": [
+        {
+          "title": "100% Sécurisé",
+          "description": "Vérification d'identité et assurance optionel"
+        },
+        {
+          "title": "Rapide",
+          "description": "Livraison plus rapide que les transporteurs classiques"
+        },
+        {
+          "title": "Économique",
+          "description": "Jusqu'à 70% moins cher que la concurrence"
+        }
+      ]
+    },
+    "cta": {
+      "title": "Prêt à commencer ?",
+      "subtitle": "Rejoignez des milliers d'utilisateurs qui font confiance à ColisGo",
+      "sendPackage": "Envoyer un colis",
+      "becomeCarrier": "Devenir transporteur"
+    }
+  },
+  "quiSommesNous": {
+    "hero": {
+      "badge": "À propos de ColisGo",
+      "title": "Qui sommes‑nous",
+      "subtitle": "ColisGo est une plateforme de livraison collaborative qui connecte expéditeurs, voyageurs et destinataires pour des envois plus rapides, économiques et responsables.",
+      "stats": [
+        { "value": "15K+", "label": "Utilisateurs" },
+        { "value": "50K+", "label": "Colis livrés" },
+        { "value": "1,250+", "label": "Villes" },
+        { "value": "4.9/5", "label": "Satisfaction" }
+      ]
+    },
+    "mission": {
+      "title": "Notre Mission",
+      "description": "Aider nos clients à envoyer et recevoir leurs colis en toute tranquillité, grâce à un service rapide, simple et sécuritaire."
+    },
+    "vision": {
+      "title": "Notre Vision",
+      "description": "Devenir la plateforme de livraison collaborative de référence, connectant les villes et les personnes pour rendre l'expédition de colis simple, rapide et sécuritaire partout dans le monde."
+    },
+    "values": {
+      "title": "Nos Valeurs",
+      "subtitle": "Ces valeurs guident chacune de nos actions et définissent notre engagement envers nos utilisateurs et notre communauté.",
+      "list": [
+        {
+          "title": "Confiance",
+          "description": "Nous plaçons la sécurité et la fiabilité au cœur de chaque expédition afin que nos clients envoient et reçoivent leurs colis en toute tranquillité."
+        },
+        {
+          "title": "Simplicité",
+          "description": "Nous rendons l'expérience d'expédition fluide et accessible, grâce à une plateforme intuitive et facile à utiliser."
+        },
+        {
+          "title": "Rapidité",
+          "description": "Nous valorisons l'efficacité et la réactivité pour que chaque colis arrive à destination dans les meilleurs délais."
+        },
+        {
+          "title": "Collaboration",
+          "description": "Nous croyons à la force du partage et à la solidarité entre voyageurs et expéditeurs pour créer un modèle de livraison plus humain et durable."
+        }
+      ]
+    },
+    "stats": {
+      "badge": "Nos performances",
+      "title": "ColisGo en chiffres",
+      "subtitle": "Une communauté grandissante qui nous fait confiance chaque jour",
+      "list": [
+        { "value": "15K+", "label": "Utilisateurs actifs" },
+        { "value": "50K+", "label": "Colis livrés" },
+        { "value": "1,250+", "label": "Villes couvertes" },
+        { "value": "4.9/5", "label": "Note moyenne" }
+      ]
+    },
+    "cta": {
+      "title": "Rejoignez la révolution de la livraison collaborative",
+      "subtitle": "Que vous soyez expéditeur ou transporteur, découvrez une nouvelle façon d'envoyer et de livrer, plus simple, plus économique et plus humaine.",
+      "downloadApp": "Télécharger l'application",
+      "learnMore": "En savoir plus"
+    }
+  },
+  "international": {
+    "hero": {
+      "title": "Envoyez. Voyagez. Recevez.",
+      "subtitle": "En toute confiance.",
+      "downloadApp": "Télécharger l'app",
+      "watchDemo": "Voir la démo"
+    },
+    "workflow": {
+      "title": "Comment ça fonctionne",
+      "subtitle": "Notre plateforme met en relation voyageurs et expéditeurs",
+      "traveler": {
+        "title": "Voyageur",
+        "description": "Créez une annonce de vos kilos disponibles et monétisez votre voyage en transportant des colis pour la communauté."
+      },
+      "sender": {
+        "title": "Expéditeur",
+        "description": "Réservez des kilos auprès d'un voyageur et envoyez vos colis à prix réduit partout dans le monde."
+      }
+    },
+    "routes": {
+      "title": "Principales routes disponibles",
+      "subtitle": "Corridors de transport les plus fréquentés",
+      "list": [
+        {
+          "route": "Canada ↔ Europe",
+          "description": "Liaison régulière entre le Canada et l'Europe",
+          "frequency": "Quotidienne"
+        },
+        {
+          "route": "Canada ↔ Afrique",
+          "description": "Connexion directe Canada-Afrique",
+          "frequency": "3x/semaine"
+        },
+        {
+          "route": "Europe ↔ Afrique",
+          "description": "Route Europe-Afrique très fréquentée",
+          "frequency": "Quotidienne"
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Comment ça marche ?",
+      "subtitle": "Processus simple en 5 étapes",
+      "steps": [
+        {
+          "title": "Créez votre compte",
+          "description": "Inscrivez-vous sur ColisGo International en quelques minutes"
+        },
+        {
+          "title": "Abonnement annuel",
+          "description": "Souscrivez pour seulement 10$ par an (voyageurs et expéditeurs)"
+        },
+        {
+          "title": "Publiez ou réservez",
+          "description": "Créez une annonce ou trouvez un voyageur pour votre colis"
+        },
+        {
+          "title": "Payez 5$ par envoi",
+          "description": "Tarif fixe et transparent pour chaque expédition"
+        },
+        {
+          "title": "Suivez votre colis",
+          "description": "Traçabilité complète jusqu'à la livraison"
+        }
+      ],
+      "pricing": {
+        "title": "Tarification transparente",
+        "annual": {
+          "price": "10$",
+          "title": "Abonnement annuel",
+          "subtitle": "Voyageurs et expéditeurs"
+        },
+        "perShipment": {
+          "price": "5$",
+          "title": "Par envoi",
+          "subtitle": "Montant fixe"
+        }
+      }
+    },
+    "advantages": {
+      "title": "Pourquoi choisir ColisGo International ?",
+      "subtitle": "Les avantages de notre service",
+      "list": [
+        {
+          "title": "Rapidité et flexibilité",
+          "description": "Expédition selon les horaires des voyageurs"
+        },
+        {
+          "title": "Économique",
+          "description": "Moins cher que les transporteurs traditionnels"
+        },
+        {
+          "title": "Sécurisé",
+          "description": "Vérification d'identité et plateforme sécurisée"
+        },
+        {
+          "title": "Écologique",
+          "description": "Réduction de l'empreinte carbone"
+        }
+      ]
+    },
+    "destinations": {
+      "title": "Destinations populaires",
+      "subtitle": "Nos principales destinations avec tarifs moyens",
+      "averagePrice": "Prix moyen"
+    },
+    "security": {
+      "title": "Sécurité et conformité",
+      "subtitle": "Votre sécurité est notre priorité",
+      "features": [
+        {
+          "title": "Vérification d'identité",
+          "description": "Vérification obligatoire pour tous les membres"
+        },
+        {
+          "title": "Conformité légale",
+          "description": "Respect des lois canadiennes et internationales"
+        },
+        {
+          "title": "Produits autorisés",
+          "description": "Liste des produits interdits dans nos CGU"
+        }
+      ]
+    }
+  },
+  "transporteur": {
+    "hero": {
+      "title": "Transportez. Gagnez. En toute sécurité.",
+      "subtitle": "Rejoignez la communauté ColisGo.",
+      "downloadApp": "Télécharger l'app",
+      "watchDemo": "Voir la démo"
+    },
+    "howItWorks": {
+      "title": "Comment ça marche pour les transporteurs ?",
+      "subtitle": "Inscription rapide, propositions adaptées à vos trajets, paiement après livraison.",
+      "steps": [
+        {
+          "title": "Inscrivez-vous",
+          "description": "Créez votre profil transporteur en quelques minutes",
+          "details": [
+            "Vérification d'identité rapide",
+            "Renseignez vos trajets habituels",
+            "Définissez vos disponibilités"
+          ]
+        },
+        {
+          "title": "Recevez des propositions",
+          "description": "Notre algorithme vous propose des colis sur vos parcours",
+          "details": [
+            "Colis adaptés à vos trajets",
+            "Tarifs attractifs proposés",
+            "Flexibilité totale d'acceptation"
+          ]
+        },
+        {
+          "title": "Transportez & Gagnez",
+          "description": "Récupérez, transportez et livrez en toute sécurité",
+          "details": [
+            "Codes sécurisés pour chaque échange",
+            "Suivi GPS automatique",
+            "Paiement immédiat après livraison"
+          ]
+        }
+      ]
+    }
   }
 }

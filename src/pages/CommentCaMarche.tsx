@@ -22,150 +22,6 @@ import {
 import { Button } from "@/components/ui/button";
 import { useTranslation } from "react-i18next";
 
-const profiles = [
-  {
-    id: "particulier-expedie",
-    title: "Particulier qui expédie",
-    icon: Package,
-    color: "blue",
-    steps: [
-      {
-        icon: Edit3,
-        title: "Créez votre annonce",
-        description:
-          "Décrivez votre colis : origine, destination, poids, dimensions et proposez un prix.",
-      },
-      {
-        icon: Users,
-        title: "transporteur intéressés",
-        description: "Les transporteurs manifestent leur intéret",
-      },
-      {
-        icon: CreditCard,
-        title: "Payez en sécurité",
-        description: "payez via notre plateforme sécurisée.",
-      },
-      {
-        icon: MapPin,
-        title: "Suivez votre colis",
-        description: "Suivi GPS en temps réel jusqu'à la livraison confirmée.",
-      },
-    ],
-  },
-  {
-    id: "particulier-transporte",
-    title: "Particulier qui transporte",
-    icon: Car,
-    color: "orange",
-    steps: [
-      {
-        icon: Search,
-        title: "Trouvez des annonces",
-        description:
-          "Consultez les demandes d'envoi sur vos trajets habituels.",
-      },
-      {
-        icon: CheckCircle,
-        title: "Acceptez une mission",
-        description: "Manifester votre intéret pour les courses disponibles",
-      },
-      {
-        icon: Package,
-        title: "Récupérez le colis",
-        description: "Rendez-vous au point de départ pour récupérer le colis.",
-      },
-      {
-        icon: MapPin,
-        title: "Livrez et gagnez",
-        description:
-          "Effectuez la livraison et recevez votre paiement automatiquement.",
-      },
-    ],
-  },
-  {
-    id: "transporteur-pro",
-    title: "Transporteur professionnel",
-    icon: Truck,
-    color: "blue",
-    steps: [
-      {
-        icon: Building2,
-        title: "Créez votre profil pro",
-        description:
-          "Renseignez vos licences, véhicules et zones de couverture.",
-      },
-      {
-        icon: Search,
-        title: "Accédez aux demandes",
-        description:
-          "Consultez une base élargie de clients professionnels et particuliers.",
-      },
-      {
-        icon: Users,
-        title: "Optimisez vos tournées",
-        description:
-          "Remplissez vos trajets disponibles avec des envois rentables.",
-      },
-      {
-        icon: Dollar,
-        title: "Développez votre activité",
-        description:
-          "Augmentez vos revenus avec des outils de gestion adaptés.",
-      },
-    ],
-  },
-  {
-    id: "entreprise",
-    title: "Entreprise qui expédie",
-    icon: Building2,
-    color: "orange",
-    steps: [
-      {
-        icon: Building2,
-        title: "Compte entreprise",
-        description:
-          "Créez votre compte professionnel avec facturation dédiée.",
-      },
-      {
-        icon: Package,
-        title: "Envois en volume",
-        description:
-          "Publiez plusieurs envois simultanément avec tarifs négociés.",
-      },
-      {
-        icon: Users,
-        title: "Réseau de transporteurs",
-        description:
-          "Accédez à notre réseau de transporteurs vérifiés et fiables.",
-      },
-      {
-        icon: Smartphone,
-        title: "Suivi centralisé",
-        description:
-          "Tableau de bord pour suivre tous vos envois en temps réel.",
-      },
-    ],
-  },
-];
-
-const features = [
-  {
-    icon: Shield,
-    title: "100% Sécurisé",
-    description: "Vérification d'identité et assurance optionel",
-  },
-  {
-    icon: Clock,
-    title: "Rapide",
-    description: "Livraison plus rapide que les transporteurs classiques",
-  },
-  {
-    icon: CreditCard,
-    title: "Économique",
-    description: "Jusqu'à 70% moins cher que la concurrence",
-  },
-];
-
 const CommentCaMarche = () => {
   const { t } = useTranslation();
   return (
@@ -177,15 +33,15 @@ const CommentCaMarche = () => {
         <div className="container mx-auto px-4 pt-32 pb-20">
           <div className="text-center max-w-3xl mx-auto">
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Comment ça marche ?
+              {t("commentCaMarche.hero.title")}
             </h1>
             <p className="text-xl text-blue-100 mb-8">
-              Découvrez comment ColisGo révolutionne la livraison collaborative
+              {t("commentCaMarche.hero.subtitle")}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="bg-orange-500 hover:bg-orange-600">
                 <Download className="w-5 h-5 mr-2" />
-                Télécharger l'app
+                {t("commentCaMarche.hero.downloadApp")}
               </Button>
               <Button
                 variant="outline"
@@ -209,15 +65,17 @@ const CommentCaMarche = () => {
                 <Package className="w-8 h-8 text-white" />
               </div>
               <h2 className="text-3xl font-bold text-gray-900 mb-3">
-                Particulier qui expédie
+                {t("commentCaMarche.profiles.0.title")}
               </h2>
               <p className="text-gray-600 max-w-xl mx-auto">
-                Envoyez vos colis en toute simplicité
+                {t("commentCaMarche.profiles.0.subtitle")}
               </p>
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {profiles[0].steps.map((step, index) => (
+              {t("commentCaMarche.profiles.0.steps", {
+                returnObjects: true,
+              }).map((step: any, index: number) => (
                 <div
                   key={index}
                   className="bg-white rounded-lg p-6 border border-gray-200"
@@ -226,7 +84,14 @@ const CommentCaMarche = () => {
                     <div className="w-8 h-8 bg-blue-900 rounded-full flex items-center justify-center text-white font-semibold text-sm mr-3">
                       {index + 1}
                     </div>
-                    <step.icon className="w-5 h-5 text-blue-900" />
+                    {index === 0 && <Edit3 className="w-5 h-5 text-blue-900" />}
+                    {index === 1 && <Users className="w-5 h-5 text-blue-900" />}
+                    {index === 2 && (
+                      <CreditCard className="w-5 h-5 text-blue-900" />
+                    )}
+                    {index === 3 && (
+                      <MapPin className="w-5 h-5 text-blue-900" />
+                    )}
                   </div>
                   <h3 className="font-semibold text-gray-900 mb-2">
                     {step.title}
@@ -248,15 +113,17 @@ const CommentCaMarche = () => {
                 <Car className="w-8 h-8 text-white" />
               </div>
               <h2 className="text-3xl font-bold text-gray-900 mb-3">
-                Particulier qui transporte
+                {t("commentCaMarche.profiles.1.title")}
               </h2>
               <p className="text-gray-600 max-w-xl mx-auto">
-                Gagnez de l'argent sur vos trajets
+                {t("commentCaMarche.profiles.1.subtitle")}
               </p>
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {profiles[1].steps.map((step, index) => (
+              {t("commentCaMarche.profiles.1.steps", {
+                returnObjects: true,
+              }).map((step: any, index: number) => (
                 <div
                   key={index}
                   className="bg-white rounded-lg p-6 border border-gray-200"
@@ -265,7 +132,18 @@ const CommentCaMarche = () => {
                     <div className="w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center text-white font-semibold text-sm mr-3">
                       {index + 1}
                     </div>
-                    <step.icon className="w-5 h-5 text-orange-500" />
+                    {index === 0 && (
+                      <Search className="w-5 h-5 text-orange-500" />
+                    )}
+                    {index === 1 && (
+                      <CheckCircle className="w-5 h-5 text-orange-500" />
+                    )}
+                    {index === 2 && (
+                      <Package className="w-5 h-5 text-orange-500" />
+                    )}
+                    {index === 3 && (
+                      <MapPin className="w-5 h-5 text-orange-500" />
+                    )}
                   </div>
                   <h3 className="font-semibold text-gray-900 mb-2">
                     {step.title}
@@ -287,15 +165,17 @@ const CommentCaMarche = () => {
                 <Truck className="w-8 h-8 text-white" />
               </div>
               <h2 className="text-3xl font-bold text-gray-900 mb-3">
-                Transporteur professionnel
+                {t("commentCaMarche.profiles.2.title")}
               </h2>
               <p className="text-gray-600 max-w-xl mx-auto">
-                Développez votre activité de transport
+                {t("commentCaMarche.profiles.2.subtitle")}
               </p>
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {profiles[2].steps.map((step, index) => (
+              {t("commentCaMarche.profiles.2.steps", {
+                returnObjects: true,
+              }).map((step: any, index: number) => (
                 <div
                   key={index}
                   className="bg-white rounded-lg p-6 border border-gray-200"
@@ -304,7 +184,16 @@ const CommentCaMarche = () => {
                     <div className="w-8 h-8 bg-blue-900 rounded-full flex items-center justify-center text-white font-semibold text-sm mr-3">
                       {index + 1}
                     </div>
-                    <step.icon className="w-5 h-5 text-blue-900" />
+                    {index === 0 && (
+                      <Building2 className="w-5 h-5 text-blue-900" />
+                    )}
+                    {index === 1 && (
+                      <Search className="w-5 h-5 text-blue-900" />
+                    )}
+                    {index === 2 && <Users className="w-5 h-5 text-blue-900" />}
+                    {index === 3 && (
+                      <Dollar className="w-5 h-5 text-blue-900" />
+                    )}
                   </div>
                   <h3 className="font-semibold text-gray-900 mb-2">
                     {step.title}
@@ -326,15 +215,17 @@ const CommentCaMarche = () => {
                 <Building2 className="w-8 h-8 text-white" />
               </div>
               <h2 className="text-3xl font-bold text-gray-900 mb-3">
-                Entreprise qui expédie
+                {t("commentCaMarche.profiles.3.title")}
               </h2>
               <p className="text-gray-600 max-w-xl mx-auto">
-                Solutions logistiques pour entreprises
+                {t("commentCaMarche.profiles.3.subtitle")}
               </p>
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {profiles[3].steps.map((step, index) => (
+              {t("commentCaMarche.profiles.3.steps", {
+                returnObjects: true,
+              }).map((step: any, index: number) => (
                 <div
                   key={index}
                   className="bg-white rounded-lg p-6 border border-gray-200"
@@ -343,7 +234,18 @@ const CommentCaMarche = () => {
                     <div className="w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center text-white font-semibold text-sm mr-3">
                       {index + 1}
                     </div>
-                    <step.icon className="w-5 h-5 text-orange-500" />
+                    {index === 0 && (
+                      <Building2 className="w-5 h-5 text-orange-500" />
+                    )}
+                    {index === 1 && (
+                      <Package className="w-5 h-5 text-orange-500" />
+                    )}
+                    {index === 2 && (
+                      <Users className="w-5 h-5 text-orange-500" />
+                    )}
+                    {index === 3 && (
+                      <Smartphone className="w-5 h-5 text-orange-500" />
+                    )}
                   </div>
                   <h3 className="font-semibold text-gray-900 mb-2">
                     {step.title}
@@ -361,28 +263,32 @@ const CommentCaMarche = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Pourquoi choisir ColisGo ?
+              {t("commentCaMarche.features.title")}
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Les avantages de la livraison collaborative
+              {t("commentCaMarche.features.subtitle")}
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            {features.map((feature, index) => (
-              <div
-                key={index}
-                className="bg-white rounded-lg p-6 text-center border border-gray-200"
-              >
-                <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-orange-500 flex items-center justify-center text-white">
-                  <feature.icon className="w-8 h-8" />
+            {t("commentCaMarche.features.list", { returnObjects: true }).map(
+              (feature: any, index: number) => (
+                <div
+                  key={index}
+                  className="bg-white rounded-lg p-6 text-center border border-gray-200"
+                >
+                  <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-orange-500 flex items-center justify-center text-white">
+                    {index === 0 && <Shield className="w-8 h-8" />}
+                    {index === 1 && <Clock className="w-8 h-8" />}
+                    {index === 2 && <CreditCard className="w-8 h-8" />}
+                  </div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                    {feature.title}
+                  </h3>
+                  <p className="text-gray-600">{feature.description}</p>
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                  {feature.title}
-                </h3>
-                <p className="text-gray-600">{feature.description}</p>
-              </div>
-            ))}
+              )
+            )}
           </div>
         </div>
       </section>
@@ -392,19 +298,19 @@ const CommentCaMarche = () => {
         <div className="container mx-auto px-4 text-center">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl font-bold text-white mb-4">
-              Prêt à commencer ?
+              {t("commentCaMarche.cta.title")}
             </h2>
             <p className="text-blue-100 mb-8">
-              Rejoignez des milliers d'utilisateurs qui font confiance à ColisGo
+              {t("commentCaMarche.cta.subtitle")}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="bg-orange-500 hover:bg-orange-600">
                 <Package className="w-5 h-5 mr-2" />
-                Envoyer un colis
+                {t("commentCaMarche.cta.sendPackage")}
               </Button>
               <Button size="lg" className="bg-orange-500 hover:bg-orange-600">
                 <Car className="w-5 h-5 mr-2" />
-                Devenir transporteur
+                {t("commentCaMarche.cta.becomeCarrier")}
               </Button>
             </div>
           </div>
